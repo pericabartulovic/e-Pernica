@@ -1,0 +1,89 @@
+body, html {
+    height: 100%;
+    margin: 0;
+    background-image: url("biljeznica.png");
+    height: 100%; 
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+
+
+#navigacija{    
+    padding: 0rem 1rem;
+}
+
+ul{
+    float: left;
+}
+li{
+    text-shadow: 0 0 10px white;
+}
+.wrapper-main{
+    padding-top: 200px;
+    width: 300px;
+    margin: 0 auto;
+}
+.pozdrav{
+    text-align: center;
+    display: inline-block;
+}
+#login_out_upozorenje{
+        color: steelblue;
+}
+#login_out_upozorenje2{
+    color: rgb(255, 255, 255);
+    margin-left: auto;
+    margin-right:40rem;
+    text-shadow: 0 0 3px white;
+}
+
+
+
+#signupbutton{
+    color: rgb(194, 194, 194);
+    text-decoration: none;
+    border: midnightblue;
+    margin-top: 10px;
+    
+}
+a#signupbutton:hover{
+    background-color: rgb(23, 162, 184);
+    text-shadow: 0 0 10px rgb(255, 255, 255);
+    color: mintcream;
+    border-radius: 2px;
+}
+.wrapper-main{
+    margin-top: 10px;
+}
+.section-default{
+    width: 500px;
+    margin: auto;
+    background-color: rgba(0,0,0,.075);
+}
+a.nav-link.active{
+    color: seashell;
+    padding: 0.5rem 0rem 0.5rem 1rem;
+}
+li:hover{
+    text-shadow: 0 0 20px white;
+    font-size: large;
+}
+.form-inline{
+    margin-block: 3px;
+}
+
+input.form-control.mr-sm-2{
+    margin-top: 3px;
+}
+
+/* .form-group{
+margin-left: 5px;
+} */
+/* .btn.btn-light{
+    margin: 0px 0px 5px 200px;
+}
+.sigup_form_button{
+    margin-left: 5px;
+} */
