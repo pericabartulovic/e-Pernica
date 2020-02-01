@@ -7,13 +7,13 @@ if(isset($_POST['login-submit'])){
     $password = $_POST["pwd"];
 
     if ((!$mailuid) || (!$password)) {
-        header("Location: ../login.php?error=emptyfields");
+        header("Location: ../index.php?error=emptyfields");
         exit(); 
     } else {
         $sql = "SELECT * FROM users WHERE uidUsers =? OR emailUsers = ?";
         $upit = $konekcija->prepare($sql);   //mysqli_stmt_init($konekcija);
         if (!$upit) {                        //!mysqli_stmt_prepare($stmt, $sql) u zagrade
-            header("Location: ../login.php?error=sqlerror");
+            header("Location: ../index.php?error=sqlerror");
             exit();
         } else {
                                             //mysqli_stmt_bind_param($stmt, "ss", $mailuid, $mailuid);
@@ -22,23 +22,23 @@ if(isset($_POST['login-submit'])){
             if ($row = $upit->fetch()/* $row = mysqli_fetch_assoc($result) */) {
                 $pwdCheck = password_verify($password, $row['pwdUsers']);
                 if ($pwdCheck == false){
-                    header("Location: ../login.php?error=neispravna_lozinka");
+                    header("Location: ../index.php?error=neispravna_lozinka");
                     exit();
                 } elseif($pwdCheck == true){
                     session_start();
                     $_SESSION['userId'] = $row['idUsers'];
                     $_SESSION['userUid'] = $row['uidUsers'];
                     
-                    header("Location: ../index.php?login=success");
+                    header("Location: ../ulogiran.php?index=success");
                     exit();
                 }
             } else {
-                header("Location: ../login.php?error=nouser");
+                header("Location: ../index.php?error=nouser");
                 exit();
             }
         }
     }
 } else {
-    header("Location: ../login.php");
+    header("Location: ../index.php");
     exit(); 
 }
