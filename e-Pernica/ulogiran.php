@@ -41,7 +41,7 @@ require "header.php";
                 <li class="izbor">Trenutni prosjek</li>
                 <li class="izbor">Prosjek predmeta</li>
                 <li class="izbor">Najslabija karika</li>
-                <li class="izbor">Neopravdani!</li>
+                <li class="izbor">Neopravdani sati!</li>
             </ul>
         </div>
     </div>
