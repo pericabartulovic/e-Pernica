@@ -1,11 +1,12 @@
 <?php
 require "header.php";
 ?>
-
+</nav>
+</header>
 <main>
     <div class="wrapper-main">
         <section class="section-default">
-            <h1 class="sigup_form_button">Registriraj se:</h1>
+            <h4 class="signup-form-button">Registriraj se:</h4>
             <?php
             if (isset($_GET["error"])) {
                 if ($_GET["error"] == "emptyfields") {
@@ -15,7 +16,7 @@ require "header.php";
                 } elseif ($_GET["error"] == "invaliduid") {
                     echo '<p style="margin-left: 5px; color: crimson">Neispravno korisničko ime!</p>';
                 } elseif ($_GET["error"] == "invalidmail") {
-                    echo '<p style="margin-left: 5px; color: crimson">Neispravan e-mail!</p>';
+                    echo '<p style="margin-left: 5px; color: crimson">Neispravan e-mail format!</p>';
                 } elseif ($_GET["error"] == "passwordcheck") {
                     echo '<p style="margin-left: 5px; color: crimson">Vaše lozinke se ne podudaraju!</p>';
                 } elseif ($_GET["error"] == "usertaken") {
@@ -24,11 +25,13 @@ require "header.php";
               } 
               elseif (isset($_GET["signup"])) {
                   if ($_GET["signup"] == "success") {
-                    echo '<p style="margin-left: 5px; color: forestgreen">Registracija uspješna!</p>';
+                    echo '<p style="margin-left: 5px; color: forestgreen">Registracija uspješna!</p> 
+                    <a class="btn btn-outline-info btn-sm" href="index.php">Na prijavu...</a>
+                    <style type="text/css">#sakrij{display:none;}</style>';
                   }   
               }        
             ?>
-            <form action="includes/signup.inc.php" method="post">
+            <form id="sakrij" action="includes/signup.inc.php" method="post">
                 <div class="form-group">
                     <input type="text" name="uid" placeholder="Korisničko ime">
                 </div>
@@ -42,7 +45,7 @@ require "header.php";
                     <input type="password" name="pwd-ponovi" placeholder="Ponovite lozinku">
                 </div>
                 <div class="form-group">
-                    <button type="submit" class="btn btn-light" name="signup-submit">Signup</button>
+                    <button type="submit" class="btn btn-outline-info btn-sm" name="signup-submit">Signup</button>
                 </div>
             </form>
         </section>
