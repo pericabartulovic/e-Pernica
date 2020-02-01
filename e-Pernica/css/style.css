@@ -7,8 +7,24 @@ body, html {
     background-repeat: no-repeat;
     background-size: contain;
 }
-
-
+* {
+    box-sizing: border-box;
+  }
+ 
+  
+  .meni {
+    width: 20%;
+    float: left;
+    padding: 15px;
+    border: 5px solid rgb(65, 36, 145);
+  }
+  
+  .sredisnji {
+    width: 60%;
+     float: left;
+    padding: 15px;
+    border: 5px solid rgb(65, 36, 145);
+  }
 
 #navigacija{    
     padding: 0rem 1rem;
@@ -16,6 +32,7 @@ body, html {
 
 ul{
     float: left;
+    list-style: none;
 }
 li{
     text-shadow: 0 0 10px white;
@@ -25,12 +42,17 @@ li{
     width: 300px;
     margin: 0 auto;
 }
+.wrapper-main2{
+    padding-top: 150px;
+    width: 85%;
+    margin: 0 auto;
+}
 .pozdrav{
     text-align: center;
     display: inline-block;
 }
 #login_out_upozorenje{
-        color: steelblue;
+        color: #3c3e92;
 }
 #login_out_upozorenje2{
     color: rgb(255, 255, 255);
@@ -38,15 +60,11 @@ li{
     margin-right:40rem;
     text-shadow: 0 0 3px white;
 }
-
-
-
 #signupbutton{
-    color: rgb(194, 194, 194);
+    color: #a0a2c9;
     text-decoration: none;
-    border: midnightblue;
-    margin-top: 10px;
-    
+    margin-top: 2rem;
+    margin-left: 0.5rem;    
 }
 a#signupbutton:hover{
     background-color: rgb(23, 162, 184);
@@ -56,11 +74,6 @@ a#signupbutton:hover{
 }
 .wrapper-main{
     margin-top: 10px;
-}
-.section-default{
-    width: 500px;
-    margin: auto;
-    background-color: rgba(0,0,0,.075);
 }
 a.nav-link.active{
     color: seashell;
@@ -73,9 +86,11 @@ li:hover{
 .form-inline{
     margin-block: 3px;
 }
-
 input.form-control.mr-sm-2{
     margin-top: 3px;
+}
+.signup-form-button{
+    color: #3c3e92;
 }
 
 /* .form-group{
