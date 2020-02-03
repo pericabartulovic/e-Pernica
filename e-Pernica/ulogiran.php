@@ -23,32 +23,37 @@ require "header.php";
 
 <main>
     <div class="wrapper-main2">
-        <div class="meni">
-            <ul>
-                <li class="izbor">Test alert!</li>
-                <li class="izbor">Iznenađenja</li>
-                <li class="izbor">InfoProf</li>
-            </ul>
+        <div class="meniLijevo">
+            <div role="group" aria-label="Group of buttons">
+                <!-- izbrisana classa class="btn-group-vertical" -->
+                <div id="sveOkoUpozorenja"><button type="button" class="btn btn-lg btn-danger" data-toggle="popover" title="Testovi koji se bliže:" data-content="Trenutno nema posebnih upozorenja...">Test upozorenja</button>
+                    <div id="okoUpozorenja"><button id="upozorenje" type="button" class="btn btn-danger">!</button>
+                        <div id="plus"><button id="plusGumb" type="button" class="btn btn-outline-danger" data-toggle="tooltip" title="Unesi datum novog testa">+</button></div>
+                    </div>
+                </div>
+                <button type="button" class="btn btn-lg btn-warning" data-toggle="popover" title="Ne zaboravi..." data-content="And here's some amazing content. It's very engaging. Right?">Iznenađenja u rasporedu</button>
+                <button type="button" class="btn btn-lg btn-info">Informacije profesora</button>
+            </div>
         </div>
 
         <div class="sredisnji">
-            <h1>The City</h1>
-            <p>Chania is the capital of the Chania region on the island of Crete. The city can be divided in two parts, the old town and the modern city.</p>
-            <p>Resize the browser window to see how the content respond to the resizing.</p>
+            <h1>Raspored sati:</h1>
+            <p>Ovdje će doći tjedni raspored sati...</p>
+            <p>Može li se ugraditi alterirajući?</p>
         </div>
-        <div class="meni">
-            <ul>
-                <li class="izbor">Trenutni prosjek</li>
-                <li class="izbor">Prosjek predmeta</li>
-                <li class="izbor">Najslabija karika</li>
-                <li class="izbor">Neopravdani sati!</li>
-            </ul>
+        <div class="meniDesno">
+            <div id="grupaDesno" role="group" aria-label="Group of buttons">
+                <!-- izbrisana classa class="btn-group-vertical" -->
+                <button type="button" class="btn btn-lg btn-primary">Prosjek ukupno:</button>
+                <button type="button" class="btn btn-lg btn-secondary">Neopravdani sati: </button>
+                <button type="button" class="btn btn-lg btn-success">Što bi se dalo poboljšati</button>
+            </div>
         </div>
     </div>
 
 
 </main>
-
+<script src="js/jquery.js"></script>
 <?php
 require "footer.php";
 ?>

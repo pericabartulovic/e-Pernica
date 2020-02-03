@@ -1,32 +1,84 @@
 body, html {
     height: 100%;
     margin: 0;
+}    
+    
+ .prvaPoz{  
     background-image: url("biljeznica.png");
     height: 100%; 
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;
 }
+.drugaPoz{  
+    background-image: url("biljeznica3.png");
+    height: 100%; 
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+
 * {
     box-sizing: border-box;
   }
  
-  
-  .meni {
+  .meniLijevo {
     width: 20%;
+    float: left;
+    padding: 15px;
+  }
+
+.okvir_upozorenja{
+    width: 12px;
+    float: inline-end;
+    margin-right: 55px;
+
+}
+#upozorenje{
+    margin-bottom: 2px;
+    padding: 0px 8px;
+    font-weight: bold;
+}
+#sveOkoUpozorenja{
+    float: left;
+}
+#okoUpozorenja{
+    float: right;
+    margin-left: 3px;
+}
+#plus{
+    margin: -2px 2px -1px 0px;
+}
+#plusGumb{
+    padding: 0px 5px;
+    font-weight: bold;
+}
+.meniDesno {
+    width: 15%;
+    float: left;
+    padding: 15px;
+  }
+#grupaDesno{
+    float: right;
+}
+
+  .sredisnji {
+    width: 60%;
     float: left;
     padding: 15px;
     border: 5px solid rgb(65, 36, 145);
   }
-  
-  .sredisnji {
-    width: 60%;
-     float: left;
-    padding: 15px;
-    border: 5px solid rgb(65, 36, 145);
-  }
 
-#navigacija{    
+.btn.btn-lg{
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+    margin-bottom: 50px;
+} 
+
+ #navigacija{    
     padding: 0rem 1rem;
 }
 
@@ -38,13 +90,13 @@ li{
     text-shadow: 0 0 10px white;
 }
 .wrapper-main{
-    padding-top: 200px;
+    padding-top: 250px;
     width: 300px;
     margin: 0 auto;
 }
 .wrapper-main2{
     padding-top: 150px;
-    width: 85%;
+    width: 90%;
     margin: 0 auto;
 }
 .pozdrav{
