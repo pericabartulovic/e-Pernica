@@ -1,6 +1,11 @@
 $(document).ready(function(){
-    
-    // alert('Ova aplikacija je samo informativnog karaktera i kao pomoć u školi', 'jquery basic alert box');
+   
+  if(localStorage.getItem("prviPut")==null){
+    alert("Ova aplikacija je samo informativnog karaktera i služi kao pripomoć u školi");
+    localStorage.setItem("prviPut","done");
+ }
+ 
+  //alert('Ova aplikacija je samo informativnog karaktera i služi kao pripomoć u školi', 'jquery basic alert box');
 
     $('body').removeClass('prvaPoz').addClass('drugaPoz');
 
@@ -8,10 +13,6 @@ $(document).ready(function(){
 
     $(function () {
         $('[data-toggle="popover"]').popover()
-      })
-
-
-
-
+      });
 
 });

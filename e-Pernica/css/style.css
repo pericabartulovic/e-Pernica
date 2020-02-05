@@ -19,9 +19,7 @@ body, html {
 }
 
 
-* {
-    box-sizing: border-box;
-  }
+* {box-sizing: border-box;}
  
   .meniLijevo {
     width: 20%;
@@ -54,9 +52,13 @@ body, html {
     padding: 0px 5px;
     font-weight: bold;
 }
+#maliG{
+    padding: 0px;
+    width: 50%;
+}
 .meniDesno {
-    width: 15%;
-    float: left;
+    width: 20%;
+    float: right;
     padding: 15px;
   }
 #grupaDesno{
@@ -64,7 +66,7 @@ body, html {
 }
 
   .sredisnji {
-    width: 60%;
+    width: 55%;
     float: left;
     padding: 15px;
     border: 5px solid rgb(65, 36, 145);
@@ -77,8 +79,7 @@ body, html {
     border-bottom-left-radius: 5px;
     margin-bottom: 50px;
 } 
-
- #navigacija{    
+#navigacija{    
     padding: 0rem 1rem;
 }
 
@@ -88,6 +89,9 @@ ul{
 }
 li{
     text-shadow: 0 0 10px white;
+}
+.bezDonje {
+    margin-bottom: 0px;
 }
 .wrapper-main{
     padding-top: 250px;
@@ -109,7 +113,7 @@ li{
 #login_out_upozorenje2{
     color: rgb(255, 255, 255);
     margin-left: auto;
-    margin-right:40rem;
+    margin-right:auto;
     text-shadow: 0 0 3px white;
 }
 #signupbutton{
@@ -135,14 +139,62 @@ li:hover{
     text-shadow: 0 0 20px white;
     font-size: large;
 }
-.form-inline{
-    margin-block: 3px;
+#logOutGumb{
+    display: contents;
 }
 input.form-control.mr-sm-2{
     margin-top: 3px;
 }
 .signup-form-button{
     color: #3c3e92;
+}
+ /* The popup form - po defaultu skrivno */
+  .form-popup {
+    display: none;
+    position: fixed;;
+    border: 3px solid #f1f1f1;
+    z-index: 9;
+  }
+  
+  /* stilovi za kontejner */
+  .form-container {
+    max-width: 300px;
+    padding: 10px;
+    background-color: white;
+  }
+  /* širina polja */
+  .form-container input[type=date], .form-container input[type=tekst] {
+    width: 100%;
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    border: none;
+    background: #f1f1f1;
+  }
+
+  /* Stilovi gumba */
+  .form-container .btn {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+    opacity: 0.8;
+    margin-left: 40px;
+  }
+  
+  /* crvena za odustani */
+  .form-container .cancel {
+    background-color: red;
+  }
+  
+  /* hover efekti */
+  .form-container .btn:hover, .open-button:hover {
+    opacity: 1;
+  }
+
+.izbor {
+    word-wrap: normal;
+    margin-left: 10px;
+    margin-right: 15px;
 }
 
 /* .form-group{

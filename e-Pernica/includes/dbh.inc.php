@@ -3,7 +3,7 @@
 $servername = "localhost";
 $dBUsername = "root";
 $dBPassword = "";
-$baza = "loginsystempro";
+$baza = "e-pernica";
 
 try {
     $konekcija = new PDO("mysql:host=$servername;dbname=$baza", $dBUsername, $dBPassword);
