@@ -34,9 +34,10 @@ body, html {
 
 }
 #upozorenje{
-    margin-bottom: 2px;
+    margin-bottom: 3px;
     padding: 0px 8px;
-    font-weight: bold;
+    border-radius: 12px;
+    border-color: rgb(255, 255, 255);
 }
 #sveOkoUpozorenja{
     float: left;
@@ -51,6 +52,7 @@ body, html {
 #plusGumb{
     padding: 0px 5px;
     font-weight: bold;
+    width: 1.6rem;
 }
 #maliG{
     padding: 0px;
@@ -148,7 +150,7 @@ input.form-control.mr-sm-2{
 .signup-form-button{
     color: #3c3e92;
 }
- /* The popup form - po defaultu skrivno */
+ /* The popup form - po defaultu skriveno */
   .form-popup {
     display: none;
     position: fixed;;

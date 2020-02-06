@@ -1,7 +1,7 @@
 <?php
-setlocale(LC_ALL,'croatian');
+setlocale(LC_ALL, 'croatian');
 require "header.php";
-require ("includes/funkcije.inc.php");
+require("includes/funkcije.inc.php");
 $korisnik = provjeri_korisnika($konekcija);
 ?>
 
@@ -37,7 +37,6 @@ $korisnik = provjeri_korisnika($konekcija);
     }
     $id = $_SESSION["userId"];
     $testovi = dohvati_testove($id, $konekcija);
-
     ?>
 
     <div class="wrapper-main2">
@@ -49,22 +48,32 @@ $korisnik = provjeri_korisnika($konekcija);
                     <div class="collapse" id="collapseExample">
                         <div class="card card-body">
                             <?php
-
                             foreach ($testovi as $test) {
-                            $date=date_create($test["datum"]);
+                                $date = date_create($test["datum"]);
                             ?>
                                 <h5 class="bezDonje"><?php echo ($test["predmet"]) ?></h5>
-                                <h6 class="bezDonje"><?php echo date_format($date,"d.m.Y."); ?></h6>
-                                <p class="bezDonje">
-                                    <small class="bezDonje"><?php echo ($test["vrsta"]) ?></small>
-                                </p>
+                                <h6 class="bezDonje"><?php echo date_format($date, "d.m.Y."); ?></h6>
+                                <p class="bezDonje"><?php echo ($test["vrsta"]) ?></p>
                                 <a id="maliG" href="brisi.php?id=<?php echo ($test["id"]) ?>" class="btn btn-outline-danger btn-sm">Izbriši</a>
                             <?php
                             }
                             ?>
                         </div>
                     </div>
-                    <div id="okoUpozorenja"><button id="upozorenje" type="button" class="btn btn-danger">!</button>
+                    <div id="okoUpozorenja">
+                        <button id="upozorenje" type="button" class="btn btn-danger" data-toggle="tooltip" title="Broj ispita u narednih 5 dana!">
+                             <?php 
+                               $datumDanas = date("Y-m-d");
+                               $brojac = 0;
+                                foreach ($testovi as $dt){
+                                    $datumTesta = ($dt["datum"]);
+                                    $razlikaDana = ((strtotime($datumTesta) - strtotime($datumDanas))/60/60/24);//pretvara stringove u timestamp i onda računa dane (u ovom slučaju)
+                                    if ($razlikaDana > 0 && $razlikaDana <= 5){
+                                        $brojac += 1;
+                                    } else echo '';
+                                } echo $brojac?>
+                                                              
+                        </button>
                         <div id="plus"><button id="plusGumb" type="button" class="btn btn-outline-danger open-button " data-toggle="tooltip" title="Unesi novi test" onclick="openForm()">+</button>
                             <div class="form-popup" id="test">
                                 <form method="POST" action="ulogiran.php" class="form-container">
