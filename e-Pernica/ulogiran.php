@@ -168,6 +168,7 @@ $korisnik = provjeri_korisnika($konekcija);
                                     <label for="predmet"><b>Predmet</b></label>
                                     <select class="izbor" name="predmet" required>
                                         <option selected>Predmet...</option>
+                                        <option value="Sat razrednika">Sat raredn.</option>
                                         <option value="Hrvatski jez.">Hrvatski jez.</option>
                                         <option value="Engleski jez.">Engleski jez.</option>
                                         <option value="Njemački jez.">Njemački jez.</option>
@@ -269,6 +270,7 @@ $korisnik = provjeri_korisnika($konekcija);
                                                     <th scope="row"><input type="text" name="0" value="0."></th>
                                                     <td><select class="izbor2" name="nultipon">
                                                             <option selected>-</option>
+                                                            <option value="Sat razrednika">Sat raredn.</option>                                                            
                                                             <option value="Hrvatski jez.">Hrvatski jez.</option>
                                                             <option value="Engleski jez.">Engleski jez.</option>
                                                             <option value="Njemački jez.">Njemački jez.</option>
@@ -289,6 +291,7 @@ $korisnik = provjeri_korisnika($konekcija);
                                                     </td>
                                                     <td><select class="izbor2" name="nultiuto">
                                                             <option selected>-</option>
+                                                            <option value="Sat razrednika">Sat raredn.</option>
                                                             <option value="Hrvatski jez.">Hrvatski jez.</option>
                                                             <option value="Engleski jez.">Engleski jez.</option>
                                                             <option value="Njemački jez.">Njemački jez.</option>
@@ -309,6 +312,7 @@ $korisnik = provjeri_korisnika($konekcija);
                                                     </td>
                                                     <td><select class="izbor2" name="nultisri">
                                                             <option selected>-</option>
+                                                            <option value="Sat razrednika">Sat raredn.</option>
                                                             <option value="Hrvatski jez.">Hrvatski jez.</option>
                                                             <option value="Engleski jez.">Engleski jez.</option>
                                                             <option value="Njemački jez.">Njemački jez.</option>
@@ -329,6 +333,7 @@ $korisnik = provjeri_korisnika($konekcija);
                                                     </td>
                                                     <td><select class="izbor2" name="nulticet">
                                                             <option selected>-</option>
+                                                            <option value="Sat razrednika">Sat raredn.</option>
                                                             <option value="Hrvatski jez.">Hrvatski jez.</option>
                                                             <option value="Engleski jez.">Engleski jez.</option>
                                                             <option value="Njemački jez.">Njemački jez.</option>
@@ -349,6 +354,7 @@ $korisnik = provjeri_korisnika($konekcija);
                                                     </td>
                                                     <td><select class="izbor2" name="nultipet">
                                                             <option selected>-</option>
+                                                            <option value="Sat razrednika">Sat raredn.</option>
                                                             <option value="Hrvatski jez.">Hrvatski jez.</option>
                                                             <option value="Engleski jez.">Engleski jez.</option>
                                                             <option value="Njemački jez.">Njemački jez.</option>
@@ -372,6 +378,7 @@ $korisnik = provjeri_korisnika($konekcija);
                                                     <th scope="row"><input type="text" name="1" value="1."></th>
                                                     <td><select class="izbor2" name="prvipon">
                                                             <option selected>-</option>
+                                                            <option value="Sat razrednika">Sat raredn.</option>
                                                             <option value="Hrvatski jez.">Hrvatski jez.</option>
                                                             <option value="Engleski jez.">Engleski jez.</option>
                                                             <option value="Njemački jez.">Njemački jez.</option>
@@ -392,6 +399,7 @@ $korisnik = provjeri_korisnika($konekcija);
                                                     </td>
                                                     <td><select class="izbor2" name="prviuto">
                                                             <option selected>-</option>
+                                                            <option value="Sat razrednika">Sat raredn.</option>
                                                             <option value="Hrvatski jez.">Hrvatski jez.</option>
                                                             <option value="Engleski jez.">Engleski jez.</option>
                                                             <option value="Njemački jez.">Njemački jez.</option>
@@ -412,6 +420,7 @@ $korisnik = provjeri_korisnika($konekcija);
                                                     </td>
                                                     <td><select class="izbor2" name="prvisri">
                                                             <option selected>-</option>
+                                                            <option value="Sat razrednika">Sat raredn.</option>
                                                             <option value="Hrvatski jez.">Hrvatski jez.</option>
                                                             <option value="Engleski jez.">Engleski jez.</option>
                                                             <option value="Njemački jez.">Njemački jez.</option>
@@ -432,6 +441,7 @@ $korisnik = provjeri_korisnika($konekcija);
                                                     </td>
                                                     <td><select class="izbor2" name="prvicet">
                                                             <option selected>-</option>
+                                                            <option value="Sat razrednika">Sat raredn.</option>
                                                             <option value="Hrvatski jez.">Hrvatski jez.</option>
                                                             <option value="Engleski jez.">Engleski jez.</option>
                                                             <option value="Njemački jez.">Njemački jez.</option>
@@ -452,6 +462,7 @@ $korisnik = provjeri_korisnika($konekcija);
                                                     </td>
                                                     <td><select class="izbor2" name="prvipet">
                                                             <option selected>-</option>
+                                                            <option value="Sat razrednika">Sat raredn.</option>
                                                             <option value="Hrvatski jez.">Hrvatski jez.</option>
                                                             <option value="Engleski jez.">Engleski jez.</option>
                                                             <option value="Njemački jez.">Njemački jez.</option>
@@ -476,6 +487,7 @@ $korisnik = provjeri_korisnika($konekcija);
                                                     <th scope="row"><input type="text" name="2" value="2."></th>
                                                     <td><select class="izbor2" name="drugipon">
                                                             <option selected>-</option>
+                                                            <option value="Sat razrednika">Sat raredn.</option>
                                                             <option value="Hrvatski jez.">Hrvatski jez.</option>
                                                             <option value="Engleski jez.">Engleski jez.</option>
                                                             <option value="Njemački jez.">Njemački jez.</option>
@@ -496,6 +508,7 @@ $korisnik = provjeri_korisnika($konekcija);
                                                     </td>
                                                     <td><select class="izbor2" name="drugiuto">
                                                             <option selected>-</option>
+                                                            <option value="Sat razrednika">Sat raredn.</option>
                                                             <option value="Hrvatski jez.">Hrvatski jez.</option>
                                                             <option value="Engleski jez.">Engleski jez.</option>
                                                             <option value="Njemački jez.">Njemački jez.</option>
@@ -516,6 +529,7 @@ $korisnik = provjeri_korisnika($konekcija);
                                                     </td>
                                                     <td><select class="izbor2" name="drugisri">
                                                             <option selected>-</option>
+                                                            <option value="Sat razrednika">Sat raredn.</option>
                                                             <option value="Hrvatski jez.">Hrvatski jez.</option>
                                                             <option value="Engleski jez.">Engleski jez.</option>
                                                             <option value="Njemački jez.">Njemački jez.</option>
@@ -536,6 +550,7 @@ $korisnik = provjeri_korisnika($konekcija);
                                                     </td>
                                                     <td><select class="izbor2" name="drugicet">
                                                             <option selected>-</option>
+                                                            <option value="Sat razrednika">Sat raredn.</option>
                                                             <option value="Hrvatski jez.">Hrvatski jez.</option>
                                                             <option value="Engleski jez.">Engleski jez.</option>
                                                             <option value="Njemački jez.">Njemački jez.</option>
@@ -556,6 +571,7 @@ $korisnik = provjeri_korisnika($konekcija);
                                                     </td>
                                                     <td><select class="izbor2" name="drugipet">
                                                             <option selected>-</option>
+                                                            <option value="Sat razrednika">Sat raredn.</option>
                                                             <option value="Hrvatski jez.">Hrvatski jez.</option>
                                                             <option value="Engleski jez.">Engleski jez.</option>
                                                             <option value="Njemački jez.">Njemački jez.</option>
@@ -580,6 +596,7 @@ $korisnik = provjeri_korisnika($konekcija);
                                                     <th scope="row"><input type="text" name="3" value="3."></th>
                                                     <td><select class="izbor2" name="trecipon">
                                                             <option selected>-</option>
+                                                            <option value="Sat razrednika">Sat raredn.</option>
                                                             <option value="Hrvatski jez.">Hrvatski jez.</option>
                                                             <option value="Engleski jez.">Engleski jez.</option>
                                                             <option value="Njemački jez.">Njemački jez.</option>
@@ -600,6 +617,7 @@ $korisnik = provjeri_korisnika($konekcija);
                                                     </td>
                                                     <td><select class="izbor2" name="treciuto">
                                                             <option selected>-</option>
+                                                            <option value="Sat razrednika">Sat raredn.</option>
                                                             <option value="Hrvatski jez.">Hrvatski jez.</option>
                                                             <option value="Engleski jez.">Engleski jez.</option>
                                                             <option value="Njemački jez.">Njemački jez.</option>
@@ -620,6 +638,7 @@ $korisnik = provjeri_korisnika($konekcija);
                                                     </td>
                                                     <td><select class="izbor2" name="trecisri">
                                                             <option selected>-</option>
+                                                            <option value="Sat razrednika">Sat raredn.</option>
                                                             <option value="Hrvatski jez.">Hrvatski jez.</option>
                                                             <option value="Engleski jez.">Engleski jez.</option>
                                                             <option value="Njemački jez.">Njemački jez.</option>
@@ -640,6 +659,7 @@ $korisnik = provjeri_korisnika($konekcija);
                                                     </td>
                                                     <td><select class="izbor2" name="trecicet">
                                                             <option selected>-</option>
+                                                            <option value="Sat razrednika">Sat raredn.</option>
                                                             <option value="Hrvatski jez.">Hrvatski jez.</option>
                                                             <option value="Engleski jez.">Engleski jez.</option>
                                                             <option value="Njemački jez.">Njemački jez.</option>
@@ -660,6 +680,7 @@ $korisnik = provjeri_korisnika($konekcija);
                                                     </td>
                                                     <td><select class="izbor2" name="trecipet">
                                                             <option selected>-</option>
+                                                            <option value="Sat razrednika">Sat raredn.</option>
                                                             <option value="Hrvatski jez.">Hrvatski jez.</option>
                                                             <option value="Engleski jez.">Engleski jez.</option>
                                                             <option value="Njemački jez.">Njemački jez.</option>
@@ -684,6 +705,7 @@ $korisnik = provjeri_korisnika($konekcija);
                                                     <th scope="row"><input type="text" name="4" value="4."></th>
                                                     <td><select class="izbor2" name="cetvrtipon">
                                                             <option selected>-</option>
+                                                            <option value="Sat razrednika">Sat raredn.</option>
                                                             <option value="Hrvatski jez.">Hrvatski jez.</option>
                                                             <option value="Engleski jez.">Engleski jez.</option>
                                                             <option value="Njemački jez.">Njemački jez.</option>
@@ -704,6 +726,7 @@ $korisnik = provjeri_korisnika($konekcija);
                                                     </td>
                                                     <td><select class="izbor2" name="cetvrtiuto">
                                                             <option selected>-</option>
+                                                            <option value="Sat razrednika">Sat raredn.</option>
                                                             <option value="Hrvatski jez.">Hrvatski jez.</option>
                                                             <option value="Engleski jez.">Engleski jez.</option>
                                                             <option value="Njemački jez.">Njemački jez.</option>
@@ -724,6 +747,7 @@ $korisnik = provjeri_korisnika($konekcija);
                                                     </td>
                                                     <td><select class="izbor2" name="cetvrtisri">
                                                             <option selected>-</option>
+                                                            <option value="Sat razrednika">Sat raredn.</option>
                                                             <option value="Hrvatski jez.">Hrvatski jez.</option>
                                                             <option value="Engleski jez.">Engleski jez.</option>
                                                             <option value="Njemački jez.">Njemački jez.</option>
@@ -744,6 +768,7 @@ $korisnik = provjeri_korisnika($konekcija);
                                                     </td>
                                                     <td><select class="izbor2" name="cetvrticet">
                                                             <option selected>-</option>
+                                                            <option value="Sat razrednika">Sat raredn.</option>
                                                             <option value="Hrvatski jez.">Hrvatski jez.</option>
                                                             <option value="Engleski jez.">Engleski jez.</option>
                                                             <option value="Njemački jez.">Njemački jez.</option>
@@ -764,6 +789,7 @@ $korisnik = provjeri_korisnika($konekcija);
                                                     </td>
                                                     <td><select class="izbor2" name="cetvrtipet">
                                                             <option selected>-</option>
+                                                            <option value="Sat razrednika">Sat raredn.</option>
                                                             <option value="Hrvatski jez.">Hrvatski jez.</option>
                                                             <option value="Engleski jez.">Engleski jez.</option>
                                                             <option value="Njemački jez.">Njemački jez.</option>
@@ -787,6 +813,7 @@ $korisnik = provjeri_korisnika($konekcija);
                                                     <th scope="row"><input type="text" name="5" value="5."></th>
                                                     <td><select class="izbor2" name="petipon">
                                                             <option selected>-</option>
+                                                            <option value="Sat razrednika">Sat raredn.</option>
                                                             <option value="Hrvatski jez.">Hrvatski jez.</option>
                                                             <option value="Engleski jez.">Engleski jez.</option>
                                                             <option value="Njemački jez.">Njemački jez.</option>
@@ -807,6 +834,7 @@ $korisnik = provjeri_korisnika($konekcija);
                                                     </td>
                                                     <td><select class="izbor2" name="petiuto">
                                                             <option selected>-</option>
+                                                            <option value="Sat razrednika">Sat raredn.</option>
                                                             <option value="Hrvatski jez.">Hrvatski jez.</option>
                                                             <option value="Engleski jez.">Engleski jez.</option>
                                                             <option value="Njemački jez.">Njemački jez.</option>
@@ -827,6 +855,7 @@ $korisnik = provjeri_korisnika($konekcija);
                                                     </td>
                                                     <td><select class="izbor2" name="petisri">
                                                             <option selected>-</option>
+                                                            <option value="Sat razrednika">Sat raredn.</option>
                                                             <option value="Hrvatski jez.">Hrvatski jez.</option>
                                                             <option value="Engleski jez.">Engleski jez.</option>
                                                             <option value="Njemački jez.">Njemački jez.</option>
@@ -847,6 +876,7 @@ $korisnik = provjeri_korisnika($konekcija);
                                                     </td>
                                                     <td><select class="izbor2" name="peticet">
                                                             <option selected>-</option>
+                                                            <option value="Sat razrednika">Sat raredn.</option>
                                                             <option value="Hrvatski jez.">Hrvatski jez.</option>
                                                             <option value="Engleski jez.">Engleski jez.</option>
                                                             <option value="Njemački jez.">Njemački jez.</option>
@@ -867,6 +897,7 @@ $korisnik = provjeri_korisnika($konekcija);
                                                     </td>
                                                     <td><select class="izbor2" name="petipet">
                                                             <option selected>-</option>
+                                                            <option value="Sat razrednika">Sat raredn.</option>
                                                             <option value="Hrvatski jez.">Hrvatski jez.</option>
                                                             <option value="Engleski jez.">Engleski jez.</option>
                                                             <option value="Njemački jez.">Njemački jez.</option>
@@ -890,6 +921,7 @@ $korisnik = provjeri_korisnika($konekcija);
                                                     <th scope="row"><input type="text" name="6" value="6."></th>
                                                     <td><select class="izbor2" name="sestipon">
                                                             <option selected>-</option>
+                                                            <option value="Sat razrednika">Sat raredn.</option>
                                                             <option value="Hrvatski jez.">Hrvatski jez.</option>
                                                             <option value="Engleski jez.">Engleski jez.</option>
                                                             <option value="Njemački jez.">Njemački jez.</option>
@@ -910,6 +942,7 @@ $korisnik = provjeri_korisnika($konekcija);
                                                     </td>
                                                     <td><select class="izbor2" name="sestiuto">
                                                             <option selected>-</option>
+                                                            <option value="Sat razrednika">Sat raredn.</option>
                                                             <option value="Hrvatski jez.">Hrvatski jez.</option>
                                                             <option value="Engleski jez.">Engleski jez.</option>
                                                             <option value="Njemački jez.">Njemački jez.</option>
@@ -930,6 +963,7 @@ $korisnik = provjeri_korisnika($konekcija);
                                                     </td>
                                                     <td><select class="izbor2" name="sestisri">
                                                             <option selected>-</option>
+                                                            <option value="Sat razrednika">Sat raredn.</option>
                                                             <option value="Hrvatski jez.">Hrvatski jez.</option>
                                                             <option value="Engleski jez.">Engleski jez.</option>
                                                             <option value="Njemački jez.">Njemački jez.</option>
@@ -950,6 +984,7 @@ $korisnik = provjeri_korisnika($konekcija);
                                                     </td>
                                                     <td><select class="izbor2" name="sesticet">
                                                             <option selected>-</option>
+                                                            <option value="Sat razrednika">Sat raredn.</option>
                                                             <option value="Hrvatski jez.">Hrvatski jez.</option>
                                                             <option value="Engleski jez.">Engleski jez.</option>
                                                             <option value="Njemački jez.">Njemački jez.</option>
@@ -970,6 +1005,7 @@ $korisnik = provjeri_korisnika($konekcija);
                                                     </td>
                                                     <td><select class="izbor2" name="sestipet">
                                                             <option selected>-</option>
+                                                            <option value="Sat razrednika">Sat raredn.</option>
                                                             <option value="Hrvatski jez.">Hrvatski jez.</option>
                                                             <option value="Engleski jez.">Engleski jez.</option>
                                                             <option value="Njemački jez.">Njemački jez.</option>
@@ -993,6 +1029,7 @@ $korisnik = provjeri_korisnika($konekcija);
                                                     <th scope="row"><input type="text" name="7" value="7."></th>
                                                     <td><select class="izbor2" name="sedmipon">
                                                             <option selected>-</option>
+                                                            <option value="Sat razrednika">Sat raredn.</option>
                                                             <option value="Hrvatski jez.">Hrvatski jez.</option>
                                                             <option value="Engleski jez.">Engleski jez.</option>
                                                             <option value="Njemački jez.">Njemački jez.</option>
@@ -1013,6 +1050,7 @@ $korisnik = provjeri_korisnika($konekcija);
                                                     </td>
                                                     <td><select class="izbor2" name="sedmiuto">
                                                             <option selected>-</option>
+                                                            <option value="Sat razrednika">Sat raredn.</option>
                                                             <option value="Hrvatski jez.">Hrvatski jez.</option>
                                                             <option value="Engleski jez.">Engleski jez.</option>
                                                             <option value="Njemački jez.">Njemački jez.</option>
@@ -1033,6 +1071,7 @@ $korisnik = provjeri_korisnika($konekcija);
                                                     </td>
                                                     <td><select class="izbor2" name="sedmisri">
                                                             <option selected>-</option>
+                                                            <option value="Sat razrednika">Sat raredn.</option>
                                                             <option value="Hrvatski jez.">Hrvatski jez.</option>
                                                             <option value="Engleski jez.">Engleski jez.</option>
                                                             <option value="Njemački jez.">Njemački jez.</option>
@@ -1053,6 +1092,7 @@ $korisnik = provjeri_korisnika($konekcija);
                                                     </td>
                                                     <td><select class="izbor2" name="sedmicet">
                                                             <option selected>-</option>
+                                                            <option value="Sat razrednika">Sat raredn.</option>
                                                             <option value="Hrvatski jez.">Hrvatski jez.</option>
                                                             <option value="Engleski jez.">Engleski jez.</option>
                                                             <option value="Njemački jez.">Njemački jez.</option>
@@ -1073,6 +1113,7 @@ $korisnik = provjeri_korisnika($konekcija);
                                                     </td>
                                                     <td><select class="izbor2" name="sedmipet">
                                                             <option selected>-</option>
+                                                            <option value="Sat razrednika">Sat raredn.</option>
                                                             <option value="Hrvatski jez.">Hrvatski jez.</option>
                                                             <option value="Engleski jez.">Engleski jez.</option>
                                                             <option value="Njemački jez.">Njemački jez.</option>
