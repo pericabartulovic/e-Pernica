@@ -1,0 +1,1044 @@
+<table id="tablica" class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Pon</th>
+                        <th scope="col">Uto</th>
+                        <th scope="col">Sri</th>
+                        <th scope="col">Čet</th>
+                        <th scope="col">Pet</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">0</th>
+                        <td><select class="izbor2" name="predmet" required>
+                                <option selected>Izaberi predmet...</option>
+                                <option value="Hrvatski jez.">Hrvatski jez.</option>
+                                <option value="Engleski jez.">Engleski jez.</option>
+                                <option value="Njemački jez.">Njemački jez.</option>
+                                <option value="Matematika">Matematika</option>
+                                <option value="Fizika">Fizika</option>
+                                <option value="Kemija">Kemija</option>
+                                <option value="Priroda">Priroda</option>
+                                <option value="Biologija">Biologija</option>
+                                <option value="Povijest">Povijest</option>
+                                <option value="Geografija">Geografija</option>
+                                <option value="Informatika">Informatika</option>
+                                <option value="Tehnička kul">Tehnička kul.</option>
+                                <option value="Glazbena kul.">Glazbena kul.</option>
+                                <option value="Likovna kul.">Likovna kul.</option>
+                                <option value="Vjeronauk">Vjeronauk</option>
+                            </select></td>
+                        <td><select class="izbor2" name="predmet" required>
+                                <option selected>Izaberi predmet...</option>
+                                <option value="Hrvatski jez.">Hrvatski jez.</option>
+                                <option value="Engleski jez.">Engleski jez.</option>
+                                <option value="Njemački jez.">Njemački jez.</option>
+                                <option value="Matematika">Matematika</option>
+                                <option value="Fizika">Fizika</option>
+                                <option value="Kemija">Kemija</option>
+                                <option value="Priroda">Priroda</option>
+                                <option value="Biologija">Biologija</option>
+                                <option value="Povijest">Povijest</option>
+                                <option value="Geografija">Geografija</option>
+                                <option value="Informatika">Informatika</option>
+                                <option value="Tehnička kul">Tehnička kul.</option>
+                                <option value="Glazbena kul.">Glazbena kul.</option>
+                                <option value="Likovna kul.">Likovna kul.</option>
+                                <option value="Vjeronauk">Vjeronauk</option>
+                            </select></td>
+                        <td><select class="izbor2" name="predmet" required>
+                                <option selected>Izaberi predmet...</option>
+                                <option value="Hrvatski jez.">Hrvatski jez.</option>
+                                <option value="Engleski jez.">Engleski jez.</option>
+                                <option value="Njemački jez.">Njemački jez.</option>
+                                <option value="Matematika">Matematika</option>
+                                <option value="Fizika">Fizika</option>
+                                <option value="Kemija">Kemija</option>
+                                <option value="Priroda">Priroda</option>
+                                <option value="Biologija">Biologija</option>
+                                <option value="Povijest">Povijest</option>
+                                <option value="Geografija">Geografija</option>
+                                <option value="Informatika">Informatika</option>
+                                <option value="Tehnička kul">Tehnička kul.</option>
+                                <option value="Glazbena kul.">Glazbena kul.</option>
+                                <option value="Likovna kul.">Likovna kul.</option>
+                                <option value="Vjeronauk">Vjeronauk</option>
+                            </select></td>
+                        <td><select class="izbor2" name="predmet" required>
+                                <option selected>Izaberi predmet...</option>
+                                <option value="Hrvatski jez.">Hrvatski jez.</option>
+                                <option value="Engleski jez.">Engleski jez.</option>
+                                <option value="Njemački jez.">Njemački jez.</option>
+                                <option value="Matematika">Matematika</option>
+                                <option value="Fizika">Fizika</option>
+                                <option value="Kemija">Kemija</option>
+                                <option value="Priroda">Priroda</option>
+                                <option value="Biologija">Biologija</option>
+                                <option value="Povijest">Povijest</option>
+                                <option value="Geografija">Geografija</option>
+                                <option value="Informatika">Informatika</option>
+                                <option value="Tehnička kul">Tehnička kul.</option>
+                                <option value="Glazbena kul.">Glazbena kul.</option>
+                                <option value="Likovna kul.">Likovna kul.</option>
+                                <option value="Vjeronauk">Vjeronauk</option>
+                            </select></td>
+                        <td><select class="izbor2" name="predmet" required>
+                                <option selected>Izaberi predmet...</option>
+                                <option value="Hrvatski jez.">Hrvatski jez.</option>
+                                <option value="Engleski jez.">Engleski jez.</option>
+                                <option value="Njemački jez.">Njemački jez.</option>
+                                <option value="Matematika">Matematika</option>
+                                <option value="Fizika">Fizika</option>
+                                <option value="Kemija">Kemija</option>
+                                <option value="Priroda">Priroda</option>
+                                <option value="Biologija">Biologija</option>
+                                <option value="Povijest">Povijest</option>
+                                <option value="Geografija">Geografija</option>
+                                <option value="Informatika">Informatika</option>
+                                <option value="Tehnička kul">Tehnička kul.</option>
+                                <option value="Glazbena kul.">Glazbena kul.</option>
+                                <option value="Likovna kul.">Likovna kul.</option>
+                                <option value="Vjeronauk">Vjeronauk</option>
+                            </select></td>
+                    </tr>
+                    <tr>
+                        <th scope="row">1</th>
+                        <td><select class="izbor2" name="predmet" required>
+                                <option selected>Izaberi predmet...</option>
+                                <option value="Hrvatski jez.">Hrvatski jez.</option>
+                                <option value="Engleski jez.">Engleski jez.</option>
+                                <option value="Njemački jez.">Njemački jez.</option>
+                                <option value="Matematika">Matematika</option>
+                                <option value="Fizika">Fizika</option>
+                                <option value="Kemija">Kemija</option>
+                                <option value="Priroda">Priroda</option>
+                                <option value="Biologija">Biologija</option>
+                                <option value="Povijest">Povijest</option>
+                                <option value="Geografija">Geografija</option>
+                                <option value="Informatika">Informatika</option>
+                                <option value="Tehnička kul">Tehnička kul.</option>
+                                <option value="Glazbena kul.">Glazbena kul.</option>
+                                <option value="Likovna kul.">Likovna kul.</option>
+                                <option value="Vjeronauk">Vjeronauk</option>
+                            </select></td>
+                        <td><select class="izbor2" name="predmet" required>
+                                <option selected>Izaberi predmet...</option>
+                                <option value="Hrvatski jez.">Hrvatski jez.</option>
+                                <option value="Engleski jez.">Engleski jez.</option>
+                                <option value="Njemački jez.">Njemački jez.</option>
+                                <option value="Matematika">Matematika</option>
+                                <option value="Fizika">Fizika</option>
+                                <option value="Kemija">Kemija</option>
+                                <option value="Priroda">Priroda</option>
+                                <option value="Biologija">Biologija</option>
+                                <option value="Povijest">Povijest</option>
+                                <option value="Geografija">Geografija</option>
+                                <option value="Informatika">Informatika</option>
+                                <option value="Tehnička kul">Tehnička kul.</option>
+                                <option value="Glazbena kul.">Glazbena kul.</option>
+                                <option value="Likovna kul.">Likovna kul.</option>
+                                <option value="Vjeronauk">Vjeronauk</option>
+                            </select></td>
+                        <td><select class="izbor2" name="predmet" required>
+                                <option selected>Izaberi predmet...</option>
+                                <option value="Hrvatski jez.">Hrvatski jez.</option>
+                                <option value="Engleski jez.">Engleski jez.</option>
+                                <option value="Njemački jez.">Njemački jez.</option>
+                                <option value="Matematika">Matematika</option>
+                                <option value="Fizika">Fizika</option>
+                                <option value="Kemija">Kemija</option>
+                                <option value="Priroda">Priroda</option>
+                                <option value="Biologija">Biologija</option>
+                                <option value="Povijest">Povijest</option>
+                                <option value="Geografija">Geografija</option>
+                                <option value="Informatika">Informatika</option>
+                                <option value="Tehnička kul">Tehnička kul.</option>
+                                <option value="Glazbena kul.">Glazbena kul.</option>
+                                <option value="Likovna kul.">Likovna kul.</option>
+                                <option value="Vjeronauk">Vjeronauk</option>
+                            </select></td>
+                        <td><select class="izbor2" name="predmet" required>
+                                <option selected>Izaberi predmet...</option>
+                                <option value="Hrvatski jez.">Hrvatski jez.</option>
+                                <option value="Engleski jez.">Engleski jez.</option>
+                                <option value="Njemački jez.">Njemački jez.</option>
+                                <option value="Matematika">Matematika</option>
+                                <option value="Fizika">Fizika</option>
+                                <option value="Kemija">Kemija</option>
+                                <option value="Priroda">Priroda</option>
+                                <option value="Biologija">Biologija</option>
+                                <option value="Povijest">Povijest</option>
+                                <option value="Geografija">Geografija</option>
+                                <option value="Informatika">Informatika</option>
+                                <option value="Tehnička kul">Tehnička kul.</option>
+                                <option value="Glazbena kul.">Glazbena kul.</option>
+                                <option value="Likovna kul.">Likovna kul.</option>
+                                <option value="Vjeronauk">Vjeronauk</option>
+                            </select></td>
+                        <td><select class="izbor2" name="predmet" required>
+                                <option selected>Izaberi predmet...</option>
+                                <option value="Hrvatski jez.">Hrvatski jez.</option>
+                                <option value="Engleski jez.">Engleski jez.</option>
+                                <option value="Njemački jez.">Njemački jez.</option>
+                                <option value="Matematika">Matematika</option>
+                                <option value="Fizika">Fizika</option>
+                                <option value="Kemija">Kemija</option>
+                                <option value="Priroda">Priroda</option>
+                                <option value="Biologija">Biologija</option>
+                                <option value="Povijest">Povijest</option>
+                                <option value="Geografija">Geografija</option>
+                                <option value="Informatika">Informatika</option>
+                                <option value="Tehnička kul">Tehnička kul.</option>
+                                <option value="Glazbena kul.">Glazbena kul.</option>
+                                <option value="Likovna kul.">Likovna kul.</option>
+                                <option value="Vjeronauk">Vjeronauk</option>
+                            </select></td>
+                    </tr>
+                    <tr>
+                        <th scope="row">2</th>
+                        <td><select class="izbor2" name="predmet" required>
+                                <option selected>Izaberi predmet...</option>
+                                <option value="Hrvatski jez.">Hrvatski jez.</option>
+                                <option value="Engleski jez.">Engleski jez.</option>
+                                <option value="Njemački jez.">Njemački jez.</option>
+                                <option value="Matematika">Matematika</option>
+                                <option value="Fizika">Fizika</option>
+                                <option value="Kemija">Kemija</option>
+                                <option value="Priroda">Priroda</option>
+                                <option value="Biologija">Biologija</option>
+                                <option value="Povijest">Povijest</option>
+                                <option value="Geografija">Geografija</option>
+                                <option value="Informatika">Informatika</option>
+                                <option value="Tehnička kul">Tehnička kul.</option>
+                                <option value="Glazbena kul.">Glazbena kul.</option>
+                                <option value="Likovna kul.">Likovna kul.</option>
+                                <option value="Vjeronauk">Vjeronauk</option>
+                            </select></td>
+                        <td><select class="izbor2" name="predmet" required>
+                                <option selected>Izaberi predmet...</option>
+                                <option value="Hrvatski jez.">Hrvatski jez.</option>
+                                <option value="Engleski jez.">Engleski jez.</option>
+                                <option value="Njemački jez.">Njemački jez.</option>
+                                <option value="Matematika">Matematika</option>
+                                <option value="Fizika">Fizika</option>
+                                <option value="Kemija">Kemija</option>
+                                <option value="Priroda">Priroda</option>
+                                <option value="Biologija">Biologija</option>
+                                <option value="Povijest">Povijest</option>
+                                <option value="Geografija">Geografija</option>
+                                <option value="Informatika">Informatika</option>
+                                <option value="Tehnička kul">Tehnička kul.</option>
+                                <option value="Glazbena kul.">Glazbena kul.</option>
+                                <option value="Likovna kul.">Likovna kul.</option>
+                                <option value="Vjeronauk">Vjeronauk</option>
+                            </select></td>
+                        <td><select class="izbor2" name="predmet" required>
+                                <option selected>Izaberi predmet...</option>
+                                <option value="Hrvatski jez.">Hrvatski jez.</option>
+                                <option value="Engleski jez.">Engleski jez.</option>
+                                <option value="Njemački jez.">Njemački jez.</option>
+                                <option value="Matematika">Matematika</option>
+                                <option value="Fizika">Fizika</option>
+                                <option value="Kemija">Kemija</option>
+                                <option value="Priroda">Priroda</option>
+                                <option value="Biologija">Biologija</option>
+                                <option value="Povijest">Povijest</option>
+                                <option value="Geografija">Geografija</option>
+                                <option value="Informatika">Informatika</option>
+                                <option value="Tehnička kul">Tehnička kul.</option>
+                                <option value="Glazbena kul.">Glazbena kul.</option>
+                                <option value="Likovna kul.">Likovna kul.</option>
+                                <option value="Vjeronauk">Vjeronauk</option>
+                            </select></td>
+                        <td><select class="izbor2" name="predmet" required>
+                                <option selected>Izaberi predmet...</option>
+                                <option value="Hrvatski jez.">Hrvatski jez.</option>
+                                <option value="Engleski jez.">Engleski jez.</option>
+                                <option value="Njemački jez.">Njemački jez.</option>
+                                <option value="Matematika">Matematika</option>
+                                <option value="Fizika">Fizika</option>
+                                <option value="Kemija">Kemija</option>
+                                <option value="Priroda">Priroda</option>
+                                <option value="Biologija">Biologija</option>
+                                <option value="Povijest">Povijest</option>
+                                <option value="Geografija">Geografija</option>
+                                <option value="Informatika">Informatika</option>
+                                <option value="Tehnička kul">Tehnička kul.</option>
+                                <option value="Glazbena kul.">Glazbena kul.</option>
+                                <option value="Likovna kul.">Likovna kul.</option>
+                                <option value="Vjeronauk">Vjeronauk</option>
+                            </select></td>
+                        <td><select class="izbor2" name="predmet" required>
+                                <option selected>Izaberi predmet...</option>
+                                <option value="Hrvatski jez.">Hrvatski jez.</option>
+                                <option value="Engleski jez.">Engleski jez.</option>
+                                <option value="Njemački jez.">Njemački jez.</option>
+                                <option value="Matematika">Matematika</option>
+                                <option value="Fizika">Fizika</option>
+                                <option value="Kemija">Kemija</option>
+                                <option value="Priroda">Priroda</option>
+                                <option value="Biologija">Biologija</option>
+                                <option value="Povijest">Povijest</option>
+                                <option value="Geografija">Geografija</option>
+                                <option value="Informatika">Informatika</option>
+                                <option value="Tehnička kul">Tehnička kul.</option>
+                                <option value="Glazbena kul.">Glazbena kul.</option>
+                                <option value="Likovna kul.">Likovna kul.</option>
+                                <option value="Vjeronauk">Vjeronauk</option>
+                            </select></td>
+                    </tr>
+                    <tr>
+                        <th scope="row">3</th>
+                        <td><select class="izbor2" name="predmet" required>
+                                <option selected>Izaberi predmet...</option>
+                                <option value="Hrvatski jez.">Hrvatski jez.</option>
+                                <option value="Engleski jez.">Engleski jez.</option>
+                                <option value="Njemački jez.">Njemački jez.</option>
+                                <option value="Matematika">Matematika</option>
+                                <option value="Fizika">Fizika</option>
+                                <option value="Kemija">Kemija</option>
+                                <option value="Priroda">Priroda</option>
+                                <option value="Biologija">Biologija</option>
+                                <option value="Povijest">Povijest</option>
+                                <option value="Geografija">Geografija</option>
+                                <option value="Informatika">Informatika</option>
+                                <option value="Tehnička kul">Tehnička kul.</option>
+                                <option value="Glazbena kul.">Glazbena kul.</option>
+                                <option value="Likovna kul.">Likovna kul.</option>
+                                <option value="Vjeronauk">Vjeronauk</option>
+                            </select></td>
+                        <td><select class="izbor2" name="predmet" required>
+                                <option selected>Izaberi predmet...</option>
+                                <option value="Hrvatski jez.">Hrvatski jez.</option>
+                                <option value="Engleski jez.">Engleski jez.</option>
+                                <option value="Njemački jez.">Njemački jez.</option>
+                                <option value="Matematika">Matematika</option>
+                                <option value="Fizika">Fizika</option>
+                                <option value="Kemija">Kemija</option>
+                                <option value="Priroda">Priroda</option>
+                                <option value="Biologija">Biologija</option>
+                                <option value="Povijest">Povijest</option>
+                                <option value="Geografija">Geografija</option>
+                                <option value="Informatika">Informatika</option>
+                                <option value="Tehnička kul">Tehnička kul.</option>
+                                <option value="Glazbena kul.">Glazbena kul.</option>
+                                <option value="Likovna kul.">Likovna kul.</option>
+                                <option value="Vjeronauk">Vjeronauk</option>
+                            </select></td>
+                        <td><select class="izbor2" name="predmet" required>
+                                <option selected>Izaberi predmet...</option>
+                                <option value="Hrvatski jez.">Hrvatski jez.</option>
+                                <option value="Engleski jez.">Engleski jez.</option>
+                                <option value="Njemački jez.">Njemački jez.</option>
+                                <option value="Matematika">Matematika</option>
+                                <option value="Fizika">Fizika</option>
+                                <option value="Kemija">Kemija</option>
+                                <option value="Priroda">Priroda</option>
+                                <option value="Biologija">Biologija</option>
+                                <option value="Povijest">Povijest</option>
+                                <option value="Geografija">Geografija</option>
+                                <option value="Informatika">Informatika</option>
+                                <option value="Tehnička kul">Tehnička kul.</option>
+                                <option value="Glazbena kul.">Glazbena kul.</option>
+                                <option value="Likovna kul.">Likovna kul.</option>
+                                <option value="Vjeronauk">Vjeronauk</option>
+                            </select></td>
+                        <td><select class="izbor2" name="predmet" required>
+                                <option selected>Izaberi predmet...</option>
+                                <option value="Hrvatski jez.">Hrvatski jez.</option>
+                                <option value="Engleski jez.">Engleski jez.</option>
+                                <option value="Njemački jez.">Njemački jez.</option>
+                                <option value="Matematika">Matematika</option>
+                                <option value="Fizika">Fizika</option>
+                                <option value="Kemija">Kemija</option>
+                                <option value="Priroda">Priroda</option>
+                                <option value="Biologija">Biologija</option>
+                                <option value="Povijest">Povijest</option>
+                                <option value="Geografija">Geografija</option>
+                                <option value="Informatika">Informatika</option>
+                                <option value="Tehnička kul">Tehnička kul.</option>
+                                <option value="Glazbena kul.">Glazbena kul.</option>
+                                <option value="Likovna kul.">Likovna kul.</option>
+                                <option value="Vjeronauk">Vjeronauk</option>
+                            </select></td>
+                        <td><select class="izbor2" name="predmet" required>
+                                <option selected>Izaberi predmet...</option>
+                                <option value="Hrvatski jez.">Hrvatski jez.</option>
+                                <option value="Engleski jez.">Engleski jez.</option>
+                                <option value="Njemački jez.">Njemački jez.</option>
+                                <option value="Matematika">Matematika</option>
+                                <option value="Fizika">Fizika</option>
+                                <option value="Kemija">Kemija</option>
+                                <option value="Priroda">Priroda</option>
+                                <option value="Biologija">Biologija</option>
+                                <option value="Povijest">Povijest</option>
+                                <option value="Geografija">Geografija</option>
+                                <option value="Informatika">Informatika</option>
+                                <option value="Tehnička kul">Tehnička kul.</option>
+                                <option value="Glazbena kul.">Glazbena kul.</option>
+                                <option value="Likovna kul.">Likovna kul.</option>
+                                <option value="Vjeronauk">Vjeronauk</option>
+                            </select></td>
+                    </tr>
+                    <tr>
+                        <th scope="row">4</th>
+                        <td><select class="izbor2" name="predmet" required>
+                                <option selected>Izaberi predmet...</option>
+                                <option value="Hrvatski jez.">Hrvatski jez.</option>
+                                <option value="Engleski jez.">Engleski jez.</option>
+                                <option value="Njemački jez.">Njemački jez.</option>
+                                <option value="Matematika">Matematika</option>
+                                <option value="Fizika">Fizika</option>
+                                <option value="Kemija">Kemija</option>
+                                <option value="Priroda">Priroda</option>
+                                <option value="Biologija">Biologija</option>
+                                <option value="Povijest">Povijest</option>
+                                <option value="Geografija">Geografija</option>
+                                <option value="Informatika">Informatika</option>
+                                <option value="Tehnička kul">Tehnička kul.</option>
+                                <option value="Glazbena kul.">Glazbena kul.</option>
+                                <option value="Likovna kul.">Likovna kul.</option>
+                                <option value="Vjeronauk">Vjeronauk</option>
+                            </select></td>
+                        <td><select class="izbor2" name="predmet" required>
+                                <option selected>Izaberi predmet...</option>
+                                <option value="Hrvatski jez.">Hrvatski jez.</option>
+                                <option value="Engleski jez.">Engleski jez.</option>
+                                <option value="Njemački jez.">Njemački jez.</option>
+                                <option value="Matematika">Matematika</option>
+                                <option value="Fizika">Fizika</option>
+                                <option value="Kemija">Kemija</option>
+                                <option value="Priroda">Priroda</option>
+                                <option value="Biologija">Biologija</option>
+                                <option value="Povijest">Povijest</option>
+                                <option value="Geografija">Geografija</option>
+                                <option value="Informatika">Informatika</option>
+                                <option value="Tehnička kul">Tehnička kul.</option>
+                                <option value="Glazbena kul.">Glazbena kul.</option>
+                                <option value="Likovna kul.">Likovna kul.</option>
+                                <option value="Vjeronauk">Vjeronauk</option>
+                            </select></td>
+                        <td><select class="izbor2" name="predmet" required>
+                                <option selected>Izaberi predmet...</option>
+                                <option value="Hrvatski jez.">Hrvatski jez.</option>
+                                <option value="Engleski jez.">Engleski jez.</option>
+                                <option value="Njemački jez.">Njemački jez.</option>
+                                <option value="Matematika">Matematika</option>
+                                <option value="Fizika">Fizika</option>
+                                <option value="Kemija">Kemija</option>
+                                <option value="Priroda">Priroda</option>
+                                <option value="Biologija">Biologija</option>
+                                <option value="Povijest">Povijest</option>
+                                <option value="Geografija">Geografija</option>
+                                <option value="Informatika">Informatika</option>
+                                <option value="Tehnička kul">Tehnička kul.</option>
+                                <option value="Glazbena kul.">Glazbena kul.</option>
+                                <option value="Likovna kul.">Likovna kul.</option>
+                                <option value="Vjeronauk">Vjeronauk</option>
+                            </select></td>
+                        <td><select class="izbor2" name="predmet" required>
+                                <option selected>Izaberi predmet...</option>
+                                <option value="Hrvatski jez.">Hrvatski jez.</option>
+                                <option value="Engleski jez.">Engleski jez.</option>
+                                <option value="Njemački jez.">Njemački jez.</option>
+                                <option value="Matematika">Matematika</option>
+                                <option value="Fizika">Fizika</option>
+                                <option value="Kemija">Kemija</option>
+                                <option value="Priroda">Priroda</option>
+                                <option value="Biologija">Biologija</option>
+                                <option value="Povijest">Povijest</option>
+                                <option value="Geografija">Geografija</option>
+                                <option value="Informatika">Informatika</option>
+                                <option value="Tehnička kul">Tehnička kul.</option>
+                                <option value="Glazbena kul.">Glazbena kul.</option>
+                                <option value="Likovna kul.">Likovna kul.</option>
+                                <option value="Vjeronauk">Vjeronauk</option>
+                            </select></td>
+                        <td><select class="izbor2" name="predmet" required>
+                                <option selected>Izaberi predmet...</option>
+                                <option value="Hrvatski jez.">Hrvatski jez.</option>
+                                <option value="Engleski jez.">Engleski jez.</option>
+                                <option value="Njemački jez.">Njemački jez.</option>
+                                <option value="Matematika">Matematika</option>
+                                <option value="Fizika">Fizika</option>
+                                <option value="Kemija">Kemija</option>
+                                <option value="Priroda">Priroda</option>
+                                <option value="Biologija">Biologija</option>
+                                <option value="Povijest">Povijest</option>
+                                <option value="Geografija">Geografija</option>
+                                <option value="Informatika">Informatika</option>
+                                <option value="Tehnička kul">Tehnička kul.</option>
+                                <option value="Glazbena kul.">Glazbena kul.</option>
+                                <option value="Likovna kul.">Likovna kul.</option>
+                                <option value="Vjeronauk">Vjeronauk</option>
+                            </select></td>
+                    </tr>
+                    <tr>
+                        <th scope="row">5</th>
+                        <td><select class="izbor2" name="predmet" required>
+                                <option selected>Izaberi predmet...</option>
+                                <option value="Hrvatski jez.">Hrvatski jez.</option>
+                                <option value="Engleski jez.">Engleski jez.</option>
+                                <option value="Njemački jez.">Njemački jez.</option>
+                                <option value="Matematika">Matematika</option>
+                                <option value="Fizika">Fizika</option>
+                                <option value="Kemija">Kemija</option>
+                                <option value="Priroda">Priroda</option>
+                                <option value="Biologija">Biologija</option>
+                                <option value="Povijest">Povijest</option>
+                                <option value="Geografija">Geografija</option>
+                                <option value="Informatika">Informatika</option>
+                                <option value="Tehnička kul">Tehnička kul.</option>
+                                <option value="Glazbena kul.">Glazbena kul.</option>
+                                <option value="Likovna kul.">Likovna kul.</option>
+                                <option value="Vjeronauk">Vjeronauk</option>
+                            </select></td>
+                        <td><select class="izbor2" name="predmet" required>
+                                <option selected>Izaberi predmet...</option>
+                                <option value="Hrvatski jez.">Hrvatski jez.</option>
+                                <option value="Engleski jez.">Engleski jez.</option>
+                                <option value="Njemački jez.">Njemački jez.</option>
+                                <option value="Matematika">Matematika</option>
+                                <option value="Fizika">Fizika</option>
+                                <option value="Kemija">Kemija</option>
+                                <option value="Priroda">Priroda</option>
+                                <option value="Biologija">Biologija</option>
+                                <option value="Povijest">Povijest</option>
+                                <option value="Geografija">Geografija</option>
+                                <option value="Informatika">Informatika</option>
+                                <option value="Tehnička kul">Tehnička kul.</option>
+                                <option value="Glazbena kul.">Glazbena kul.</option>
+                                <option value="Likovna kul.">Likovna kul.</option>
+                                <option value="Vjeronauk">Vjeronauk</option>
+                            </select></td>
+                        <td><select class="izbor2" name="predmet" required>
+                                <option selected>Izaberi predmet...</option>
+                                <option value="Hrvatski jez.">Hrvatski jez.</option>
+                                <option value="Engleski jez.">Engleski jez.</option>
+                                <option value="Njemački jez.">Njemački jez.</option>
+                                <option value="Matematika">Matematika</option>
+                                <option value="Fizika">Fizika</option>
+                                <option value="Kemija">Kemija</option>
+                                <option value="Priroda">Priroda</option>
+                                <option value="Biologija">Biologija</option>
+                                <option value="Povijest">Povijest</option>
+                                <option value="Geografija">Geografija</option>
+                                <option value="Informatika">Informatika</option>
+                                <option value="Tehnička kul">Tehnička kul.</option>
+                                <option value="Glazbena kul.">Glazbena kul.</option>
+                                <option value="Likovna kul.">Likovna kul.</option>
+                                <option value="Vjeronauk">Vjeronauk</option>
+                            </select></td>
+                        <td><select class="izbor2" name="predmet" required>
+                                <option selected>Izaberi predmet...</option>
+                                <option value="Hrvatski jez.">Hrvatski jez.</option>
+                                <option value="Engleski jez.">Engleski jez.</option>
+                                <option value="Njemački jez.">Njemački jez.</option>
+                                <option value="Matematika">Matematika</option>
+                                <option value="Fizika">Fizika</option>
+                                <option value="Kemija">Kemija</option>
+                                <option value="Priroda">Priroda</option>
+                                <option value="Biologija">Biologija</option>
+                                <option value="Povijest">Povijest</option>
+                                <option value="Geografija">Geografija</option>
+                                <option value="Informatika">Informatika</option>
+                                <option value="Tehnička kul">Tehnička kul.</option>
+                                <option value="Glazbena kul.">Glazbena kul.</option>
+                                <option value="Likovna kul.">Likovna kul.</option>
+                                <option value="Vjeronauk">Vjeronauk</option>
+                            </select></td>
+                        <td><select class="izbor2" name="predmet" required>
+                                <option selected>Izaberi predmet...</option>
+                                <option value="Hrvatski jez.">Hrvatski jez.</option>
+                                <option value="Engleski jez.">Engleski jez.</option>
+                                <option value="Njemački jez.">Njemački jez.</option>
+                                <option value="Matematika">Matematika</option>
+                                <option value="Fizika">Fizika</option>
+                                <option value="Kemija">Kemija</option>
+                                <option value="Priroda">Priroda</option>
+                                <option value="Biologija">Biologija</option>
+                                <option value="Povijest">Povijest</option>
+                                <option value="Geografija">Geografija</option>
+                                <option value="Informatika">Informatika</option>
+                                <option value="Tehnička kul">Tehnička kul.</option>
+                                <option value="Glazbena kul.">Glazbena kul.</option>
+                                <option value="Likovna kul.">Likovna kul.</option>
+                                <option value="Vjeronauk">Vjeronauk</option>
+                            </select></td>
+                    </tr>
+                    <tr>
+                        <th scope="row">6</th>
+                        <td><select class="izbor2" name="predmet" required>
+                                <option selected>Izaberi predmet...</option>
+                                <option value="Hrvatski jez.">Hrvatski jez.</option>
+                                <option value="Engleski jez.">Engleski jez.</option>
+                                <option value="Njemački jez.">Njemački jez.</option>
+                                <option value="Matematika">Matematika</option>
+                                <option value="Fizika">Fizika</option>
+                                <option value="Kemija">Kemija</option>
+                                <option value="Priroda">Priroda</option>
+                                <option value="Biologija">Biologija</option>
+                                <option value="Povijest">Povijest</option>
+                                <option value="Geografija">Geografija</option>
+                                <option value="Informatika">Informatika</option>
+                                <option value="Tehnička kul">Tehnička kul.</option>
+                                <option value="Glazbena kul.">Glazbena kul.</option>
+                                <option value="Likovna kul.">Likovna kul.</option>
+                                <option value="Vjeronauk">Vjeronauk</option>
+                            </select></td>
+                        <td><select class="izbor2" name="predmet" required>
+                                <option selected>Izaberi predmet...</option>
+                                <option value="Hrvatski jez.">Hrvatski jez.</option>
+                                <option value="Engleski jez.">Engleski jez.</option>
+                                <option value="Njemački jez.">Njemački jez.</option>
+                                <option value="Matematika">Matematika</option>
+                                <option value="Fizika">Fizika</option>
+                                <option value="Kemija">Kemija</option>
+                                <option value="Priroda">Priroda</option>
+                                <option value="Biologija">Biologija</option>
+                                <option value="Povijest">Povijest</option>
+                                <option value="Geografija">Geografija</option>
+                                <option value="Informatika">Informatika</option>
+                                <option value="Tehnička kul">Tehnička kul.</option>
+                                <option value="Glazbena kul.">Glazbena kul.</option>
+                                <option value="Likovna kul.">Likovna kul.</option>
+                                <option value="Vjeronauk">Vjeronauk</option>
+                            </select></td>
+                        <td><select class="izbor2" name="predmet" required>
+                                <option selected>Izaberi predmet...</option>
+                                <option value="Hrvatski jez.">Hrvatski jez.</option>
+                                <option value="Engleski jez.">Engleski jez.</option>
+                                <option value="Njemački jez.">Njemački jez.</option>
+                                <option value="Matematika">Matematika</option>
+                                <option value="Fizika">Fizika</option>
+                                <option value="Kemija">Kemija</option>
+                                <option value="Priroda">Priroda</option>
+                                <option value="Biologija">Biologija</option>
+                                <option value="Povijest">Povijest</option>
+                                <option value="Geografija">Geografija</option>
+                                <option value="Informatika">Informatika</option>
+                                <option value="Tehnička kul">Tehnička kul.</option>
+                                <option value="Glazbena kul.">Glazbena kul.</option>
+                                <option value="Likovna kul.">Likovna kul.</option>
+                                <option value="Vjeronauk">Vjeronauk</option>
+                            </select></td>
+                        <td><select class="izbor2" name="predmet" required>
+                                <option selected>Izaberi predmet...</option>
+                                <option value="Hrvatski jez.">Hrvatski jez.</option>
+                                <option value="Engleski jez.">Engleski jez.</option>
+                                <option value="Njemački jez.">Njemački jez.</option>
+                                <option value="Matematika">Matematika</option>
+                                <option value="Fizika">Fizika</option>
+                                <option value="Kemija">Kemija</option>
+                                <option value="Priroda">Priroda</option>
+                                <option value="Biologija">Biologija</option>
+                                <option value="Povijest">Povijest</option>
+                                <option value="Geografija">Geografija</option>
+                                <option value="Informatika">Informatika</option>
+                                <option value="Tehnička kul">Tehnička kul.</option>
+                                <option value="Glazbena kul.">Glazbena kul.</option>
+                                <option value="Likovna kul.">Likovna kul.</option>
+                                <option value="Vjeronauk">Vjeronauk</option>
+                            </select></td>
+                        <td><select class="izbor2" name="predmet" required>
+                                <option selected>Izaberi predmet...</option>
+                                <option value="Hrvatski jez.">Hrvatski jez.</option>
+                                <option value="Engleski jez.">Engleski jez.</option>
+                                <option value="Njemački jez.">Njemački jez.</option>
+                                <option value="Matematika">Matematika</option>
+                                <option value="Fizika">Fizika</option>
+                                <option value="Kemija">Kemija</option>
+                                <option value="Priroda">Priroda</option>
+                                <option value="Biologija">Biologija</option>
+                                <option value="Povijest">Povijest</option>
+                                <option value="Geografija">Geografija</option>
+                                <option value="Informatika">Informatika</option>
+                                <option value="Tehnička kul">Tehnička kul.</option>
+                                <option value="Glazbena kul.">Glazbena kul.</option>
+                                <option value="Likovna kul.">Likovna kul.</option>
+                                <option value="Vjeronauk">Vjeronauk</option>
+                            </select></td>
+                    </tr>
+                    <tr>
+                        <th scope="row">7</th>
+                        <td><select class="izbor2" name="predmet" required>
+                                <option selected>Izaberi predmet...</option>
+                                <option value="Hrvatski jez.">Hrvatski jez.</option>
+                                <option value="Engleski jez.">Engleski jez.</option>
+                                <option value="Njemački jez.">Njemački jez.</option>
+                                <option value="Matematika">Matematika</option>
+                                <option value="Fizika">Fizika</option>
+                                <option value="Kemija">Kemija</option>
+                                <option value="Priroda">Priroda</option>
+                                <option value="Biologija">Biologija</option>
+                                <option value="Povijest">Povijest</option>
+                                <option value="Geografija">Geografija</option>
+                                <option value="Informatika">Informatika</option>
+                                <option value="Tehnička kul">Tehnička kul.</option>
+                                <option value="Glazbena kul.">Glazbena kul.</option>
+                                <option value="Likovna kul.">Likovna kul.</option>
+                                <option value="Vjeronauk">Vjeronauk</option>
+                            </select></td>
+                        <td><select class="izbor2" name="predmet" required>
+                                <option selected>Izaberi predmet...</option>
+                                <option value="Hrvatski jez.">Hrvatski jez.</option>
+                                <option value="Engleski jez.">Engleski jez.</option>
+                                <option value="Njemački jez.">Njemački jez.</option>
+                                <option value="Matematika">Matematika</option>
+                                <option value="Fizika">Fizika</option>
+                                <option value="Kemija">Kemija</option>
+                                <option value="Priroda">Priroda</option>
+                                <option value="Biologija">Biologija</option>
+                                <option value="Povijest">Povijest</option>
+                                <option value="Geografija">Geografija</option>
+                                <option value="Informatika">Informatika</option>
+                                <option value="Tehnička kul">Tehnička kul.</option>
+                                <option value="Glazbena kul.">Glazbena kul.</option>
+                                <option value="Likovna kul.">Likovna kul.</option>
+                                <option value="Vjeronauk">Vjeronauk</option>
+                            </select></td>
+                        <td><select class="izbor2" name="predmet" required>
+                                <option selected>Izaberi predmet...</option>
+                                <option value="Hrvatski jez.">Hrvatski jez.</option>
+                                <option value="Engleski jez.">Engleski jez.</option>
+                                <option value="Njemački jez.">Njemački jez.</option>
+                                <option value="Matematika">Matematika</option>
+                                <option value="Fizika">Fizika</option>
+                                <option value="Kemija">Kemija</option>
+                                <option value="Priroda">Priroda</option>
+                                <option value="Biologija">Biologija</option>
+                                <option value="Povijest">Povijest</option>
+                                <option value="Geografija">Geografija</option>
+                                <option value="Informatika">Informatika</option>
+                                <option value="Tehnička kul">Tehnička kul.</option>
+                                <option value="Glazbena kul.">Glazbena kul.</option>
+                                <option value="Likovna kul.">Likovna kul.</option>
+                                <option value="Vjeronauk">Vjeronauk</option>
+                            </select></td>
+                        <td><select class="izbor2" name="predmet" required>
+                                <option selected>Izaberi predmet...</option>
+                                <option value="Hrvatski jez.">Hrvatski jez.</option>
+                                <option value="Engleski jez.">Engleski jez.</option>
+                                <option value="Njemački jez.">Njemački jez.</option>
+                                <option value="Matematika">Matematika</option>
+                                <option value="Fizika">Fizika</option>
+                                <option value="Kemija">Kemija</option>
+                                <option value="Priroda">Priroda</option>
+                                <option value="Biologija">Biologija</option>
+                                <option value="Povijest">Povijest</option>
+                                <option value="Geografija">Geografija</option>
+                                <option value="Informatika">Informatika</option>
+                                <option value="Tehnička kul">Tehnička kul.</option>
+                                <option value="Glazbena kul.">Glazbena kul.</option>
+                                <option value="Likovna kul.">Likovna kul.</option>
+                                <option value="Vjeronauk">Vjeronauk</option>
+                            </select></td>
+                        <td><select class="izbor2" name="predmet" required>
+                                <option selected>Izaberi predmet...</option>
+                                <option value="Hrvatski jez.">Hrvatski jez.</option>
+                                <option value="Engleski jez.">Engleski jez.</option>
+                                <option value="Njemački jez.">Njemački jez.</option>
+                                <option value="Matematika">Matematika</option>
+                                <option value="Fizika">Fizika</option>
+                                <option value="Kemija">Kemija</option>
+                                <option value="Priroda">Priroda</option>
+                                <option value="Biologija">Biologija</option>
+                                <option value="Povijest">Povijest</option>
+                                <option value="Geografija">Geografija</option>
+                                <option value="Informatika">Informatika</option>
+                                <option value="Tehnička kul">Tehnička kul.</option>
+                                <option value="Glazbena kul.">Glazbena kul.</option>
+                                <option value="Likovna kul.">Likovna kul.</option>
+                                <option value="Vjeronauk">Vjeronauk</option>
+                            </select></td>
+                    </tr>
+                    <tr>
+                        <th scope="row">*</th>
+                        <td><input type="tekst" id="slobunos"></td>
+                        <td><input type="tekst" id="slobunos"></td>
+                        <td><input type="tekst" id="slobunos"></td>
+                        <td><input type="tekst" id="slobunos"></td>
+                        <td><input type="tekst" id="slobunos"></td>
+                    </tr>
+                    <tr>
+                        <th scope="row">*</th>
+                        <td><input type="tekst" id="slobunos"></td>
+                        <td><input type="tekst" id="slobunos"></td>
+                        <td><input type="tekst" id="slobunos"></td>
+                        <td><input type="tekst" id="slobunos"></td>
+                        <td><input type="tekst" id="slobunos"></td>
+                    </tr>
+                </tbody>
+            </table>
+
+
+
+
+
+
+
+
+
+function dodaj_nulti($predmet1, $predmet2, $predmet3, $predmet4, $predmet5, $korisnik, $konekcija){
+    $sql = "INSERT INTO raspored VALUES (null, ?, ?, ?, ?, ?, ?)";
+    $upit = $konekcija->prepare($sql);
+    return $upit->execute([$predmet1, $predmet2, $predmet3, $predmet4, $predmet5, $korisnik]);
+}
+
+function dodaj_prvi($predmet1, $predmet2, $predmet3, $predmet4, $predmet5, $korisnik, $konekcija){
+    $sql = "INSERT INTO raspored VALUES (null, ?, ?, ?, ?, ?, ?)";
+    $upit = $konekcija->prepare($sql);
+    return $upit->execute([$predmet1, $predmet2, $predmet3, $predmet4, $predmet5, $korisnik]);
+}
+
+function dodaj_drugi($predmet1, $predmet2, $predmet3, $predmet4, $predmet5, $korisnik, $konekcija){
+    $sql = "INSERT INTO raspored VALUES (null, ?, ?, ?, ?, ?, ?)";
+    $upit = $konekcija->prepare($sql);
+    return $upit->execute([$predmet1, $predmet2, $predmet3, $predmet4, $predmet5, $korisnik]);
+}
+
+function dodaj_treci($predmet1, $predmet2, $predmet3, $predmet4, $predmet5, $korisnik, $konekcija){
+    $sql = "INSERT INTO raspored  VALUES (null, ?, ?, ?, ?, ?, ?)";
+    $upit = $konekcija->prepare($sql);
+    return $upit->execute([$predmet1, $predmet2, $predmet3, $predmet4, $predmet5, $korisnik]);
+}
+
+function dodaj_cetvrti($predmet1, $predmet2, $predmet3, $predmet4, $predmet5, $korisnik, $konekcija){
+    $sql = "INSERT INTO raspored  VALUES (null, ?, ?, ?, ?, ?, ?)";
+    $upit = $konekcija->prepare($sql);
+    return $upit->execute([$predmet1, $predmet2, $predmet3, $predmet4, $predmet5, $korisnik]);
+}
+function dodaj_peti($predmet1, $predmet2, $predmet3, $predmet4, $predmet5, $korisnik, $konekcija){
+    $sql = "INSERT INTO raspored  VALUES (null, ?, ?, ?, ?, ?, ?)";
+    $upit = $konekcija->prepare($sql);
+    return $upit->execute([$predmet1, $predmet2, $predmet3, $predmet4, $predmet5, $korisnik]);
+}
+function dodaj_sesti($predmet1, $predmet2, $predmet3, $predmet4, $predmet5, $korisnik, $konekcija){
+    $sql = "INSERT INTO raspored VALUES (null, ?, ?, ?, ?, ?, ?)";
+    $upit = $konekcija->prepare($sql);
+    return $upit->execute([$predmet1, $predmet2, $predmet3, $predmet4, $predmet5, $korisnik]);
+}
+function dodaj_sedmi($predmet1, $predmet2, $predmet3, $predmet4, $predmet5, $korisnik, $konekcija){
+    $sql = "INSERT INTO raspored  VALUES (null, ?, ?, ?, ?, ?, ?)";
+    $upit = $konekcija->prepare($sql);
+    return $upit->execute([$predmet1, $predmet2, $predmet3, $predmet4, $predmet5, $korisnik]);
+}
+function dodaj_aktivnost1($predmet1, $predmet2, $predmet3, $predmet4, $predmet5, $korisnik, $konekcija){
+    $sql = "INSERT INTO raspored  VALUES (null, ?, ?, ?, ?, ?, ?)";
+    $upit = $konekcija->prepare($sql);
+    return $upit->execute([$predmet1, $predmet2, $predmet3, $predmet4, $predmet5, $korisnik]);
+}
+function dodaj_aktivnost2($predmet1, $predmet2, $predmet3, $predmet4, $predmet5, $korisnik, $konekcija){
+    $sql = "INSERT INTO raspored VALUES (null, ?, ?, ?, ?, ?, ?)";
+    $upit = $konekcija->prepare($sql);
+    return $upit->execute([$predmet1, $predmet2, $predmet3, $predmet4, $predmet5, $korisnik]);
+}
+
+
+
+ if ((isset($_POST["nulti"])) || (isset($_POST["prvi"])) || (isset($_POST["drugi"])) || (isset($_POST["treci"])) || (isset($_POST["cetvrti"])) || (isset($_POST["peti"])) ||
+        (isset($_POST["sesti"])) || (isset($_POST["sedmi"])) || (isset($_POST["aktivnost1"])) || (isset($_POST["aktivnost2"]))) {
+            $korisnik = $_SESSION["userId"];
+            $predmet1 = $_POST["nulti"];
+            $predmet1 = $_POST["nulti"];
+            $predmet1 = $_POST["nulti"];
+            $predmet1 = $_POST["nulti"];
+            $predmet1 = $_POST["nulti"];
+            
+            dodaj_nulti($predmet1, $predmet2, $predmet3, $predmet4, $predmet5, $korisnik, $konekcija);
+            dodaj_prvi($predmet1, $predmet2, $predmet3, $predmet4, $predmet5, $korisnik, $konekcija);
+            dodaj_drugi($predmet1, $predmet2, $predmet3, $predmet4, $predmet5, $korisnik, $konekcija);
+            dodaj_treci($predmet1, $predmet2, $predmet3, $predmet4, $predmet5, $korisnik, $konekcija);
+            dodaj_cetvrti($predmet1, $predmet2, $predmet3, $predmet4, $predmet5, $korisnik, $konekcija);
+            dodaj_peti($predmet1, $predmet2, $predmet3, $predmet4, $predmet5, $korisnik, $konekcija);
+            dodaj_sesti($predmet1, $predmet2, $predmet3, $predmet4, $predmet5, $korisnik, $konekcija);
+            dodaj_sedmi($predmet1, $predmet2, $predmet3, $predmet4, $predmet5, $korisnik, $konekcija);
+            dodaj_aktivnost1($predmet1, $predmet2, $predmet3, $predmet4, $predmet5, $korisnik, $konekcija);
+            dodaj_aktivnost2($predmet1, $predmet2, $predmet3, $predmet4, $predmet5, $korisnik, $konekcija);
+            header("Location: ulogiran.php");
+            exit();
+
+
+
+    if ((isset($_POST["predmet01"])) || (isset($_POST["predmet11"])) || (isset($_POST["predmet21"])) || (isset($_POST["predmet31"])) || (isset($_POST["predmet41"])) ||
+        (isset($_POST["predmet02"])) || (isset($_POST["predmet12"])) || (isset($_POST["predmet22"])) || (isset($_POST["predmet32"])) || (isset($_POST["predmet42"])) ||
+        (isset($_POST["predmet03"])) || (isset($_POST["predmet13"])) || (isset($_POST["predmet23"])) || (isset($_POST["predmet33"])) || (isset($_POST["predmet43"])) ||
+        (isset($_POST["predmet04"])) || (isset($_POST["predmet14"])) || (isset($_POST["predmet24"])) || (isset($_POST["predmet34"])) || (isset($_POST["predmet44"]))
+    ) {
+        $korisnik = $_SESSION["userId"];
+        $predmet1 = $_POST["predmet01"];
+        $predmet2 = $_POST["predmet02"];
+        $predmet3 = $_POST["predmet03"];
+        $predmet4 = $_POST["predmet04"];
+        $predmet5 = $_POST["predmet05"];
+
+        $predmet11 = $_POST["predmet11"];
+        $predmet12 = $_POST["predmet12"];
+        $predmet13 = $_POST["predmet13"];
+        $predmet14 = $_POST["predmet14"];
+        $predmet15 = $_POST["predmet15"];
+
+        $predmet21 = $_POST["predmet21"];
+        $predmet22 = $_POST["predmet22"];
+        $predmet23 = $_POST["predmet23"];
+        $predmet24 = $_POST["predmet24"];
+        $predmet25 = $_POST["predmet25"];
+
+        $predmet31 = $_POST["predmet31"];
+        $predmet32 = $_POST["predmet32"];
+        $predmet33 = $_POST["predmet33"];
+        $predmet34 = $_POST["predmet34"];
+        $predmet35 = $_POST["predmet35"];
+
+        $predmet41 = $_POST["predmet41"];
+        $predmet42 = $_POST["predmet42"];
+        $predmet43 = $_POST["predmet43"];
+        $predmet44 = $_POST["predmet44"];
+        $predmet45 = $_POST["predmet45"];
+
+        $predmet51 = $_POST["predmet51"];
+        $predmet52 = $_POST["predmet52"];
+        $predmet53 = $_POST["predmet53"];
+        $predmet54 = $_POST["predmet54"];
+        $predmet55 = $_POST["predmet55"];
+
+        $predmet51 = $_POST["predmet61"];
+        $predmet52 = $_POST["predmet62"];
+        $predmet53 = $_POST["predmet63"];
+        $predmet54 = $_POST["predmet64"];
+        $predmet55 = $_POST["predmet65"];
+
+        $predmet61 = $_POST["predmet71"];
+        $predmet62 = $_POST["predmet72"];
+        $predmet63 = $_POST["predmet73"];
+        $predmet64 = $_POST["predmet74"];
+        $predmet65 = $_POST["predmet75"];
+
+        $predmet81 = $_POST["predmet81"];
+        $predmet82 = $_POST["predmet82"];
+        $predmet83 = $_POST["predmet83"];
+        $predmet84 = $_POST["predmet84"];
+        $predmet85 = $_POST["predmet85"];
+
+        $predmet91 = $_POST["predmet91"];
+        $predmet92 = $_POST["predmet92"];
+        $predmet93 = $_POST["predmet93"];
+        $predmet94 = $_POST["predmet94"];
+        $predmet95 = $_POST["predmet95"];
+
+
+        dodaj_predmet($predmet01, $predmet02, $predmet03, $predmet04, $predmet05, $korisnik, $konekcija);
+        dodaj_predmet($predmet11, $predmet12, $predmet13, $predmet14, $predmet15, $korisnik, $konekcija);
+        dodaj_predmet($predmet21, $predmet22, $predmet23, $predmet24, $predmet25, $korisnik, $konekcija);
+        dodaj_predmet($predmet31, $predmet32, $predmet33, $predmet34, $predmet35, $korisnik, $konekcija);
+        dodaj_predmet($predmet41, $predmet42, $predmet43, $predmet44, $predmet45, $korisnik, $konekcija);
+        dodaj_predmet($predmet51, $predmet52, $predmet53, $predmet54, $predmet55, $korisnik, $konekcija);
+        dodaj_predmet($predmet61, $predmet62, $predmet63, $predmet64, $predmet65, $korisnik, $konekcija);
+        dodaj_predmet($predmet71, $predmet72, $predmet73, $predmet74, $predmet75, $korisnik, $konekcija);
+        dodaj_predmet($predmet81, $predmet82, $predmet83, $predmet84, $predmet85, $korisnik, $konekcija);
+        dodaj_predmet($predmet91, $predmet92, $predmet93, $predmet94, $predmet95, $korisnik, $konekcija); //sad kad je ovako složeno dalo bi se ustvari i preko matrice [0][0], ...
+
+
+                header("Location: ulogiran.php");
+        exit();
+
+
+
+      /* dodaj_raspored($dan1, $nultipon, $prvipon, $drugipon, $trecipon, $cetvrtipon, $petipon, $sestipon, $sedmipon, $aktivnosti1pon, $aktivnosti2pon, $korisnik, $konekcija); 
+      dodaj_raspored($dan2, $nultiuto, $prviuto, $drugiuto, $treciuto, $cetvrtiuto, $petiuto, $sestiuto, $sedmiuto, $aktivnosti1uto, $aktivnosti2uto, $korisnik, $konekcija); 
+      dodaj_raspored($dan3, $nultisri, $prvisri, $drugisri, $trecisri, $cetvrtisri, $petisri, $sestisri, $sedmisri, $aktivnosti1sri, $aktivnosti2sri, $korisnik, $konekcija); 
+      dodaj_raspored($dan4, $nulticet, $prvicet, $drugicet, $trecicet, $cetvrticet, $peticet, $sesticet, $sedmicet, $aktivnosti1cet, $aktivnosti2cet, $korisnik, $konekcija); 
+      dodaj_raspored($dan5, $nultipet, $prvipet, $drugipet, $trecipet, $cetvrtipet, $petipet, $sestipet, $sedmipet, $aktivnosti1pet, $aktivnosti2pet, $korisnik, $konekcija); */
+
+pon
+uto
+sri
+cet
+pet
+
+<select class="izbor2" name="Ponedjeljak">
+    <option selected>-</option>
+    <option value="ponedjeljak">Ponedjeljak</option>
+    <option value="utorak">Utorak</option>
+    <option value="srijeda">Srijeda</option>
+    <option value="cetvrtak">Četvrtak</option>
+    <option value="petak">Petak</option>
+</select>
+
+
+
+<tr><!--
+                        <th scope="row">1</th>
+                        <td><?php echo $ras["1"]; ?></td>
+                        <td><?php echo $ras["1"]; ?></td>
+                        <td><?php echo $ras["1"]; ?></td>
+                        <td><?php echo $ras["1"]; ?></td>
+                        <td><?php echo $ras["1"]; ?></td>
+                    </tr>
+                    <tr>
+                        <th scope="row">2</th>
+                        <td><?php echo $ras["2"]; ?></td>
+                        <td><?php echo $ras["2"]; ?></td>
+                        <td><?php echo $ras["2"]; ?></td>
+                        <td><?php echo $ras["2"]; ?></td>
+                        <td><?php echo $ras["2"]; ?></td>
+                    </tr>
+                    <tr>
+                        <th scope="row">3</th>
+                        <td><?php echo $ras["3"]; ?></td>
+                        <td><?php echo $ras["3"]; ?></td>
+                        <td><?php echo $ras["3"]; ?></td>
+                        <td><?php echo $ras["3"]; ?></td>
+                        <td><?php echo $ras["3"]; ?></td>
+                    </tr>
+                    <tr>
+                        <th scope="row">4</th>
+                        <td><?php echo $ras["4"]; ?></td>
+                        <td><?php echo $ras["4"]; ?></td>
+                        <td><?php echo $ras["4"]; ?></td>
+                        <td><?php echo $ras["4"]; ?></td>
+                        <td><?php echo $ras["4"]; ?></td>
+                    </tr>
+                    <tr>
+                        <th scope="row">5</th>
+                        <td><?php echo $ras["5"]; ?></td>
+                        <td><?php echo $ras["5"]; ?></td>
+                        <td><?php echo $ras["5"]; ?></td>
+                        <td><?php echo $ras["5"]; ?></td>
+                        <td><?php echo $ras["5"]; ?></td>
+                    </tr>
+                    <tr>
+                        <th scope="row">6</th>
+                        <td><?php echo $ras["6"]; ?></td>
+                        <td><?php echo $ras["6"]; ?></td>
+                        <td><?php echo $ras["6"]; ?></td>
+                        <td><?php echo $ras["6"]; ?></td>
+                        <td><?php echo $ras["6"]; ?></td>
+                    </tr>
+                    <tr>
+                        <th scope="row">7</th>
+                        <td><?php echo $ras["7"]; ?></td>
+                        <td><?php echo $ras["7"]; ?></td>
+                        <td><?php echo $ras["7"]; ?></td>
+                        <td><?php echo $ras["7"]; ?></td>
+                        <td><?php echo $ras["7"]; ?></td>
+                    </tr>
+                    <tr>
+                        <th scope="row">akt1</th>
+                        <td><?php echo $ras["a1"];?></td>
+                        <td><?php echo $ras["a1"];?></td>
+                        <td><?php echo $ras["a1"];?></td>
+                        <td><?php echo $ras["a1"];?></td>
+                        <td><?php echo $ras["a1"];?></td>
+                    </tr>
+                    <tr>
+                        <th scope="row">akt2</th>
+                        <td><?php echo $ras["a2"];?></td>
+                        <td><?php echo $ras["a2"];?></td>
+                        <td><?php echo $ras["a2"];?></td>
+                        <td><?php echo $ras["a2"];?></td>
+                        <td><?php echo $ras["a2"];?></td>
+                        <td><?php echo $ras["a2"];?></td>
+                    </tr> -->

@@ -39,6 +39,24 @@ function pobrisi_test($id, $konekcija)
     return $upit->execute([$id]);
 }
 
+/* function dodaj_raspored($dan, $nulti, $prvi, $drugi, $treci, $cetvrti, $peti, $sesti, $sedmi, $aktivnosti1, $aktivnosti2, $korisnik, $konekcija){
+    $sql = "INSERT INTO raspored VALUES (null, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
+    $upit = $konekcija->prepare($sql);
+    return $upit->execute([$dan, $nulti, $prvi, $drugi, $treci, $cetvrti, $peti, $sesti, $sedmi, $aktivnosti1, $aktivnosti2, $korisnik]);
+} */
+function dodaj_raspored($sat, $pon, $uto, $sri, $cet, $pet, $korisnik, $konekcija){
+    $sql = "INSERT INTO raspored VALUES (null, ?, ?, ?, ?, ?, ?, ?)";
+    $upit = $konekcija->prepare($sql);
+    return $upit->execute([$sat, $pon, $uto, $sri, $cet, $pet, $korisnik]);
+}
+
+function dohvati_raspored($id, $konekcija){
+    $sql = "SELECT ponedjeljak,utorak,srijeda, cetvrtak, petak FROM raspored WHERE $id = fk_uid";
+    return $konekcija->query($sql)->fetchALL();
+}
+
+
+
 /* function uredi_test($id, $datum, $predmet, $vrsta, $konekcija){
     $sql = "UPDATE testovi SET datum=?, predmet=?, vrsta=?, WHERE id=?";
     $upit = $konekcija->prepare($sql);

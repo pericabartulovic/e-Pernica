@@ -2,7 +2,8 @@ body, html {
     height: 100%;
     margin: 0;
 }    
-    
+* {box-sizing: border-box;}
+
  .prvaPoz{  
     background-image: url("biljeznica.png");
     height: 100%; 
@@ -18,10 +19,8 @@ body, html {
     background-size: contain;
 }
 
-
-* {box-sizing: border-box;}
  
-  .meniLijevo {
+.meniLijevo {
     width: 20%;
     float: left;
     padding: 15px;
@@ -36,8 +35,15 @@ body, html {
 #upozorenje{
     margin-bottom: 3px;
     padding: 0px 8px;
-    border-radius: 12px;
+    border-radius: 13px;
     border-color: rgb(255, 255, 255);
+}
+#upozorenje2{
+    margin-bottom: 3px;
+    padding: 1px 8px;
+    border-radius: 13px;
+    border-color: rgb(255, 255, 255);
+    float: right;
 }
 #sveOkoUpozorenja{
     float: left;
@@ -48,7 +54,13 @@ body, html {
 }
 #plus{
     margin: -2px 2px -1px 0px;
+    border-color: #dc3545;
 }
+#plus2{
+    margin: -2px 2px -1px 0px;
+
+}
+
 #plusGumb{
     padding: 0px 5px;
     font-weight: bold;
@@ -67,11 +79,11 @@ body, html {
     float: right;
 }
 
-  .sredisnji {
+#sredisnji {
     width: 55%;
     float: left;
-    padding: 15px;
-    border: 5px solid rgb(65, 36, 145);
+    padding-bottom: 0px;
+
   }
 
 .btn.btn-lg{
@@ -101,7 +113,7 @@ li{
     margin: 0 auto;
 }
 .wrapper-main2{
-    padding-top: 150px;
+    padding-top: 100px;
     width: 90%;
     margin: 0 auto;
 }
@@ -163,7 +175,9 @@ input.form-control.mr-sm-2{
     max-width: 300px;
     padding: 10px;
     background-color: white;
+    margin-bottom: 0px;
   }
+  
   /* širina polja */
   .form-container input[type=date], .form-container input[type=tekst] {
     width: 100%;
@@ -198,6 +212,19 @@ input.form-control.mr-sm-2{
     margin-left: 10px;
     margin-right: 15px;
 }
+.izbor2 {
+    word-wrap: normal;
+    width: 100%;
+}
+
+#tablica{
+    margin-bottom: 0px;
+}
+#slobunos{
+    width: 111px;
+    height: 25px;
+}
+
 
 /* .form-group{
 margin-left: 5px;
@@ -208,3 +235,52 @@ margin-left: 5px;
 .sigup_form_button{
     margin-left: 5px;
 } */
+
+/* The popup form - po defaultu skriveno */
+
+  
+  /* stilovi za kontejner */
+  .form-container2 {
+    background-color: white;
+    margin-bottom: 0px;
+  }
+  
+  /* širina polja */
+  .form-container2 input[type=date], .form-container2 input[type=tekst] {
+    background: #f1f1f1;
+  }
+
+  /* Stilovi gumba */
+  .form-container2 .btn {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+    opacity: 0.8;
+    margin-left: 40px;
+  }
+  
+  /* crvena za odustani */
+  .form-container2 .cancel {
+    background-color: red;
+  }
+  
+  /* hover efekti */
+  .form-container2 .btn:hover, .open-button:hover {
+    opacity: 1;
+  }
+
+  #slobunos2{
+    width: 150px;
+    height: 25px;
+}
+
+#raspored-forma{
+    top: 120px;
+    left: 360px;
+}
+#obavijest{
+    float: right;
+    margin-right: 10px;
+}
+

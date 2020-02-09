@@ -15,4 +15,11 @@ $(document).ready(function(){
         $('[data-toggle="popover"]').popover()
       });
 
+
+    
+      $('[data-toggle="tooltip2"]').tooltip();
+
+      $(function () {
+          $('[data-toggle="popover2"]').popover()
+        });
 });
