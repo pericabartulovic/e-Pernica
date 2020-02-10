@@ -152,7 +152,7 @@ $korisnik = provjeri_korisnika($konekcija);
                                 $datumTesta = ($dt["datum"]);
                                 $razlikaDana = ((strtotime($datumTesta) - strtotime($datumDanas)) / 60 / 60 / 24); //pretvara stringove u timestamp i onda računa dane (u ovom slučaju)
                                 if ($razlikaDana == 0){
-                                    echo "⚠️";  $brojac=""; ?> <script> $("#upozorenje").css({"background-color":"white","padding-left":"3px"});</script> <?php break; 
+                                    echo "⚠️";  $brojac=""; ?> <script> $("#upozorenje").css({"font-size":"x-large","background-color":"transparent","padding-left":"3px", "border-color":"transparent","margin-top":"-10px","margin-left":"-5px"}); </script> <?php break; 
                                 } elseif ($razlikaDana > 0 && $razlikaDana <= 5) {
                                     $brojac += 1;
                                 }                                
@@ -208,7 +208,7 @@ $korisnik = provjeri_korisnika($konekcija);
                         </div>
                     </div>
                 </div>
-                <button type="button" class="btn btn-lg btn-warning" data-toggle="popover" title="Ne zaboravi..." data-content="And here's some amazing content. It's very engaging. Right?">Kontraturnus</button>
+                <button type="button" class="btn btn-lg btn-warning" data-toggle="popover" title="Ne zaboravi..." data-content="https://phppot.com/php/php-calendar-event-management-using-fullcalendar-javascript-library/">Kontraturnus</button>
                 <button type="button" class="btn btn-lg btn-info">Info učitelja</button>
             </div>
         </div>
