@@ -1042,3 +1042,11 @@ pet
                         <td><?php echo $ras["a2"];?></td>
                         <td><?php echo $ras["a2"];?></td>
                     </tr> -->
+
+
+
+
+data-toggle="tooltip2" title="Izbrisati raspored?"
+
+
+?> <script> document.getElementById('upozorenje').style='background-color:white;';</script> <?php

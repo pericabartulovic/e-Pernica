@@ -39,11 +39,6 @@ function pobrisi_test($id, $konekcija)
     return $upit->execute([$id]);
 }
 
-/* function dodaj_raspored($dan, $nulti, $prvi, $drugi, $treci, $cetvrti, $peti, $sesti, $sedmi, $aktivnosti1, $aktivnosti2, $korisnik, $konekcija){
-    $sql = "INSERT INTO raspored VALUES (null, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
-    $upit = $konekcija->prepare($sql);
-    return $upit->execute([$dan, $nulti, $prvi, $drugi, $treci, $cetvrti, $peti, $sesti, $sedmi, $aktivnosti1, $aktivnosti2, $korisnik]);
-} */
 function dodaj_raspored($sat, $pon, $uto, $sri, $cet, $pet, $korisnik, $konekcija){
     $sql = "INSERT INTO raspored VALUES (null, ?, ?, ?, ?, ?, ?, ?)";
     $upit = $konekcija->prepare($sql);
@@ -55,7 +50,27 @@ function dohvati_raspored($id, $konekcija){
     return $konekcija->query($sql)->fetchALL();
 }
 
+function brisi_raspored($id, $konekcija)
+{
+    $sql = "DELETE FROM raspored WHERE  fk_uid=?";
+    $upit = $konekcija->prepare($sql);
+    return $upit->execute([$id]);
+}
 
+
+
+
+
+
+
+
+
+
+/* function dodaj_raspored($dan, $nulti, $prvi, $drugi, $treci, $cetvrti, $peti, $sesti, $sedmi, $aktivnosti1, $aktivnosti2, $korisnik, $konekcija){
+    $sql = "INSERT INTO raspored VALUES (null, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
+    $upit = $konekcija->prepare($sql);
+    return $upit->execute([$dan, $nulti, $prvi, $drugi, $treci, $cetvrti, $peti, $sesti, $sedmi, $aktivnosti1, $aktivnosti2, $korisnik]);
+} */
 
 /* function uredi_test($id, $datum, $predmet, $vrsta, $konekcija){
     $sql = "UPDATE testovi SET datum=?, predmet=?, vrsta=?, WHERE id=?";

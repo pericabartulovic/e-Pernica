@@ -137,25 +137,28 @@ $korisnik = provjeri_korisnika($konekcija);
                                 <h5 class="bezDonje"><?php echo ($test["predmet"]) ?></h5>
                                 <h6 class="bezDonje"><?php echo date_format($date, "d.m.Y."); ?></h6>
                                 <p class="bezDonje"><?php echo ($test["vrsta"]) ?></p>
-                                <a id="maliG" href="brisi.php?id=<?php echo ($test["id"]) ?>" class="btn btn-outline-danger btn-sm">Izbriši</a>
+                                <a id="maliG" href="brisi_test.php?id=<?php echo ($test["id"]) ?>" class="btn btn-outline-danger btn-sm">Izbriši</a>
                             <?php
                             }
                             ?>
                         </div>
                     </div>
                     <div id="okoUpozorenja">
-                        <button id="upozorenje" type="button" class="btn btn-danger" data-toggle="tooltip" title="Broj ispita u narednih 5 dana!">
+                        <button id="upozorenje" type="button" class="btn btn-danger" data-toggle="tooltip" title="Broj ispita u narednih 5 dana! ⚠️ = danas ispit!">
                             <?php
                             $datumDanas = date("Y-m-d");
                             $brojac = 0;
                             foreach ($testovi as $dt) {
                                 $datumTesta = ($dt["datum"]);
                                 $razlikaDana = ((strtotime($datumTesta) - strtotime($datumDanas)) / 60 / 60 / 24); //pretvara stringove u timestamp i onda računa dane (u ovom slučaju)
-                                if ($razlikaDana > 0 && $razlikaDana <= 5) {
+                                if ($razlikaDana == 0){
+                                    echo "⚠️";  $brojac=""; ?> <script> $("#upozorenje").css({"background-color":"white","padding-left":"3px"});</script> <?php break; 
+                                } elseif ($razlikaDana > 0 && $razlikaDana <= 5) {
                                     $brojac += 1;
-                                } else echo '';
+                                }                                
                             }
-                            echo $brojac ?>
+                            echo $brojac;
+                        ?>
 
                         </button>
                         <div id="plus"><button id="plusGumb" type="button" class="btn btn-outline-danger open-button " data-toggle="tooltip" title="Unesi novi test" onclick="openForm()">+</button>
@@ -215,13 +218,13 @@ $korisnik = provjeri_korisnika($konekcija);
                 <thead>
                     <tr>
                         <th scope="col">
-                            <div id="plus2"><button id="plusGumb" type="button" class="btn btn-outline-success open-button " data-toggle="tooltip2" title="Unesi sate u raspored" onclick="openForm2()">+</button>
+                            <div id="plus2"><button id="plusGumb" type="button" class="btn btn-outline-success open-button " data-toggle="tooltip2" title="Unesi raspored sati" onclick="openForm2()">+</button>
                                 <div class="form-popup" id="raspored-forma">
                                     <form method="POST" action="ulogiran.php" class="form-container2">
                                         <table id="tablica" class="table table-bordered">
                                             <thead>
                                                 <tr>
-                                                    <th scope="col">Sat|Dan</th>
+                                                    <th id="redni_broj" scope="col">Sat|Dan</th>
                                                     <th scope="col"><select class="izbor2" name="Ponedjeljak" required>
                                                             <option selected></option>
                                                             <option value="ponedjeljak">Ponedjeljak</option>
@@ -231,7 +234,7 @@ $korisnik = provjeri_korisnika($konekcija);
                                                             <option value="petak">Petak</option>
                                                         </select></th>
                                                     <th scope="col"><select class="izbor2" name="Utorak" required>
-                                                            <option selected></option>
+                                                            <option selected>Utorak</option>
                                                             <option value="ponedjeljak">Ponedjeljak</option>
                                                             <option value="utorak">Utorak</option>
                                                             <option value="srijeda">Srijeda</option>
@@ -239,7 +242,7 @@ $korisnik = provjeri_korisnika($konekcija);
                                                             <option value="petak">Petak</option>
                                                         </select></th>
                                                     <th scope="col"><select class="izbor2" name="Srijeda" required>
-                                                            <option selected></option>
+                                                            <option selected>Srijeda</option>
                                                             <option value="ponedjeljak">Ponedjeljak</option>
                                                             <option value="utorak">Utorak</option>
                                                             <option value="srijeda">Srijeda</option>
@@ -247,7 +250,7 @@ $korisnik = provjeri_korisnika($konekcija);
                                                             <option value="petak">Petak</option>
                                                         </select></th>
                                                     <th scope="col"><select class="izbor2" name="Četvrtak" required>
-                                                            <option selected></option>
+                                                            <option selected>Četvrtak</option>
                                                             <option value="ponedjeljak">Ponedjeljak</option>
                                                             <option value="utorak">Utorak</option>
                                                             <option value="srijeda">Srijeda</option>
@@ -267,7 +270,7 @@ $korisnik = provjeri_korisnika($konekcija);
                                             </thead>
                                             <tbody>
                                                 <tr>
-                                                    <th scope="row"><input type="text" name="0" value="0."></th>
+                                                    <th scope="row"><input id="redni_broj" type="text" name="0" value="0."></th>
                                                     <td><select class="izbor2" name="nultipon">
                                                             <option selected>-</option>
                                                             <option value="Sat razrednika">Sat raredn.</option>                                                            
@@ -375,7 +378,7 @@ $korisnik = provjeri_korisnika($konekcija);
                                                     </td>
                                                 <tr>
                                                 <tr>
-                                                    <th scope="row"><input type="text" name="1" value="1."></th>
+                                                    <th scope="row"><input id="redni_broj" type="text" name="1" value="1."></th>
                                                     <td><select class="izbor2" name="prvipon">
                                                             <option selected>-</option>
                                                             <option value="Sat razrednika">Sat raredn.</option>
@@ -484,7 +487,7 @@ $korisnik = provjeri_korisnika($konekcija);
 
                                                 <tr>
                                                 <tr>
-                                                    <th scope="row"><input type="text" name="2" value="2."></th>
+                                                    <th scope="row"><input id="redni_broj" type="text" name="2" value="2."></th>
                                                     <td><select class="izbor2" name="drugipon">
                                                             <option selected>-</option>
                                                             <option value="Sat razrednika">Sat raredn.</option>
@@ -593,7 +596,7 @@ $korisnik = provjeri_korisnika($konekcija);
 
                                                 <tr>
                                                 <tr>
-                                                    <th scope="row"><input type="text" name="3" value="3."></th>
+                                                    <th scope="row"><input id="redni_broj" type="text" name="3" value="3."></th>
                                                     <td><select class="izbor2" name="trecipon">
                                                             <option selected>-</option>
                                                             <option value="Sat razrednika">Sat raredn.</option>
@@ -702,7 +705,7 @@ $korisnik = provjeri_korisnika($konekcija);
 
                                                 <tr>
                                                 <tr>
-                                                    <th scope="row"><input type="text" name="4" value="4."></th>
+                                                    <th scope="row"><input id="redni_broj" type="text" name="4" value="4."></th>
                                                     <td><select class="izbor2" name="cetvrtipon">
                                                             <option selected>-</option>
                                                             <option value="Sat razrednika">Sat raredn.</option>
@@ -810,7 +813,7 @@ $korisnik = provjeri_korisnika($konekcija);
                                                     </td>
                                                 <tr>
                                                 <tr>
-                                                    <th scope="row"><input type="text" name="5" value="5."></th>
+                                                    <th scope="row"><input id="redni_broj" type="text" name="5" value="5."></th>
                                                     <td><select class="izbor2" name="petipon">
                                                             <option selected>-</option>
                                                             <option value="Sat razrednika">Sat raredn.</option>
@@ -918,7 +921,7 @@ $korisnik = provjeri_korisnika($konekcija);
                                                     </td>
                                                 <tr>
                                                 <tr>
-                                                    <th scope="row"><input type="text" name="6" value="6."></th>
+                                                    <th scope="row"><input id="redni_broj" type="text" name="6" value="6."></th>
                                                     <td><select class="izbor2" name="sestipon">
                                                             <option selected>-</option>
                                                             <option value="Sat razrednika">Sat raredn.</option>
@@ -1026,7 +1029,7 @@ $korisnik = provjeri_korisnika($konekcija);
                                                     </td>
                                                 <tr>
                                                 <tr>
-                                                    <th scope="row"><input type="text" name="7" value="7."></th>
+                                                    <th scope="row"><input id="redni_broj" type="text" name="7" value="7."></th>
                                                     <td><select class="izbor2" name="sedmipon">
                                                             <option selected>-</option>
                                                             <option value="Sat razrednika">Sat raredn.</option>
@@ -1133,7 +1136,7 @@ $korisnik = provjeri_korisnika($konekcija);
                                                         </select>
                                                     </td>
                                                 <tr>
-                                                    <th scope="row"><input type="text" name="a1" value="akt1"></th>
+                                                    <th scope="row"><input id="redni_broj" type="text" name="a1" value="akt1"></th>
                                                     <td><input type="tekst" id="slobunos2" name="aktivnosti1pon"></td>
                                                     <td><input type="tekst" id="slobunos2" name="aktivnosti1uto"></td>
                                                     <td><input type="tekst" id="slobunos2" name="aktivnosti1sri"></td>
@@ -1142,7 +1145,7 @@ $korisnik = provjeri_korisnika($konekcija);
 
                                                 </tr>
                                                 <tr>
-                                                    <th scope="row"><input type="text" name="a2" value="akt2" ></th>
+                                                    <th scope="row"><input id="redni_broj" type="text" name="a2" value="akt2" ></th>
                                                     <td><input type="tekst" id="slobunos2" name="aktivnosti2pon"></td>
                                                     <td><input type="tekst" id="slobunos2" name="aktivnosti2uto"></td>
                                                     <td><input type="tekst" id="slobunos2" name="aktivnosti2sri"></td>
@@ -1179,8 +1182,8 @@ $korisnik = provjeri_korisnika($konekcija);
                     <?php $i=0;
                     foreach ($raspored as $ras) { 
                     ?>
-                        </tr>
-                        <th scope="row"><?php echo $i;?></th>
+                        <tr id="retci_tablice">
+                        <th scope="row"><?php echo $i.".";?></th>
                         <td><?php echo $ras["0"]; ?></td>
                         <td><?php echo $ras["1"]; ?></td>
                         <td><?php echo $ras["2"]; ?></td>
@@ -1192,7 +1195,8 @@ $korisnik = provjeri_korisnika($konekcija);
                     }
                     ?>
                 </tbody>
-            </table><button id="upozorenje2" type="button" class="btn btn-outline-danger open-button " data-toggle="tooltip2" title="Izbrisati raspored?">🗑️</button>
+            </table> 
+                <a id="upozorenje2" type="submit" class="btn btn-outline-danger open-button" data-toggle="tooltip2" title="Izbrisati raspored?" href="brisi_raspored.php?userId=<?php echo $id;?>" onclick="return confirm('Sigurno želite izbristati raspored?')">🗑️</a>
         </div>
         <div class="meniDesno">
             <div id="grupaDesno" role="group" aria-label="Group of buttons">

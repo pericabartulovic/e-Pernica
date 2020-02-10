@@ -22,4 +22,11 @@ $(document).ready(function(){
       $(function () {
           $('[data-toggle="popover2"]').popover()
         });
+
+  /* $("#supozorenje2").click(function() {
+      if (confirm("Jeste li sigurni da želite obristati raspored?")) {
+        $("#retci_tablice").remove();
+      } return false;
+  }); */
+  
 });
