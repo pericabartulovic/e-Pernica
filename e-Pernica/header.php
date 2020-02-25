@@ -22,7 +22,7 @@ session_start();
         <nav id="navigacija" class="navbar navbar-dark bg-dark">
             <ul class="nav">
                 <li><img src="img/avatar2.png" alt="logo" height="48" width="60"></li>
-                <li class="nav-item"><a class="nav-link active" href="index.php">e-Pernica</a></li>
+                <li class="nav-item"><a class="nav-link active" href="ulogiran.php">e-Pernica</a></li>
 
             </ul>
             <div id="login_out_upozorenje2">

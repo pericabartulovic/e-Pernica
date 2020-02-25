@@ -17,12 +17,17 @@ $(document).ready(function(){
 
 
     
-      $('[data-toggle="tooltip2"]').tooltip();
+    $('[data-toggle="tooltip2"]').tooltip();
 
-      $(function () {
-          $('[data-toggle="popover2"]').popover()
+    $(function () {
+         $('[data-toggle="popover2"]').popover()
         });
 
+ /*    $("#infoProfGumb").click(function(){
+          $("#plus3").toggle();
+        });
+ */
+  
   /* $("#supozorenje2").click(function() {
       if (confirm("Jeste li sigurni da želite obristati raspored?")) {
         $("#retci_tablice").remove();

@@ -1050,3 +1050,28 @@ data-toggle="tooltip2" title="Izbrisati raspored?"
 
 
 ?> <script> document.getElementById('upozorenje').style='background-color:white;';</script> <?php
+
+
+
+  } elseif ((isset($_POST["ucitelj2"])) || (isset($_POST["sat2"]))){
+        dodaj_info($ucitelj2, $dan2, $sat2, $korisnik, $konekcija);
+    } elseif ((isset($_POST["ucitelj3"])) || (isset($_POST["sat3"]))){
+        dodaj_info($ucitelj3, $dan3, $sat3, $korisnik, $konekcija);
+    } elseif ((isset($_POST["ucitelj4"])) || (isset($_POST["sat4"]))){
+        dodaj_info($ucitelj4, $dan4, $sat4, $korisnik, $konekcija);
+    } elseif ((isset($_POST["ucitelj5"])) || (isset($_POST["sat5"]))){
+        dodaj_info($ucitelj5, $dan5, $sat5, $korisnik, $konekcija);
+    } elseif ((isset($_POST["ucitelj6"])) || (isset($_POST["sat6"]))){
+        dodaj_info($ucitelj6, $dan6, $sat6, $korisnik, $konekcija);
+    } elseif ((isset($_POST["ucitelj7"])) || (isset($_POST["sat7"]))){
+        dodaj_info($ucitelj7, $dan7, $sat7, $korisnik, $konekcija);
+    } elseif ((isset($_POST["ucitelj8"])) || (isset($_POST["sat8"]))){
+        dodaj_info($ucitelj8, $dan8, $sat8, $korisnik, $konekcija);
+    } elseif ((isset($_POST["ucitelj9"])) || (isset($_POST["sat9"]))){
+        dodaj_info($ucitelj9, $dan9, $sat9, $korisnik, $konekcija);
+    } elseif ((isset($_POST["ucitelj10"])) || (isset($_POST["sat10"]))){
+        dodaj_info($ucitelj10, $dan10, $sat10s, $korisnik, $konekcija);
+    }
+
+
+<a id="upozorenje2" type="submit" class="btn btn-outline-danger open-button" data-toggle="tooltip2" title="Izbrisati tablicu informacija?" href="brisi_info.php?userId=<?php echo $id;?>" onclick="return confirm('Sigurno želite izbristati tablicu informacija?')">🗑️</a>

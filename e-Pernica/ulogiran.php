@@ -40,8 +40,7 @@ $korisnik = provjeri_korisnika($konekcija);
     <?php
     if ((isset($_POST["nultipon"])) || (isset($_POST["nultiuto"])) || (isset($_POST["nultisri"])) || (isset($_POST["nulticet"])) || (isset($_POST["nultipet"])) ||
         (isset($_POST["prvipon"])) || (isset($_POST["prviuto"])) || (isset($_POST["prvisri"])) || (isset($_POST["prvicet"])) || (isset($_POST["prvipet"])) ||
-        (isset($_POST["drugipon"])) || (isset($_POST["drugiuto"])) || (isset($_POST["drugisri"])) || (isset($_POST["drugicet"])) || (isset($_POST["drugipet"]))
-    ) {
+        (isset($_POST["drugipon"])) || (isset($_POST["drugiuto"])) || (isset($_POST["drugisri"])) || (isset($_POST["drugicet"])) || (isset($_POST["drugipet"]))) {
         $korisnik = $_SESSION["userId"];
         $sat0 = $_POST["0"];
         $sat1 = $_POST["1"];
@@ -119,16 +118,80 @@ $korisnik = provjeri_korisnika($konekcija);
     }
     $id = $_SESSION["userId"];
     $raspored = dohvati_raspored($id, $konekcija);
-
     ?>
+    <?php
+    if (isset($_POST["obavijest"])) {
+        $datumob = $_POST["datumob"];
+        $obavijest = $_POST["obavijest"];
+        $korisnik = $_SESSION["userId"];
+        dodaj_obavijest($datumob, $obavijest, $korisnik, $konekcija);
+        header("Location: ulogiran.php");
+        exit();
+    }
+    $id = $_SESSION["userId"];
+    $obavijest = dohvati_obavijesti($id, $konekcija);
+    ?>
+    <?php
+    if ((isset($_POST["ucitelj1"])) || (isset($_POST["ucitelj2"])) || (isset($_POST["sat1"])) || (isset($_POST["sat2"]))){
+        $korisnik = $_SESSION["userId"];
+        $ucitelj1 = $_POST["ucitelj1"];
+        $ucitelj2 = $_POST["ucitelj2"];
+        $ucitelj3 = $_POST["ucitelj3"];
+        $ucitelj4 = $_POST["ucitelj4"];
+        $ucitelj5 = $_POST["ucitelj5"];
+        $ucitelj6 = $_POST["ucitelj6"];
+        $ucitelj7 = $_POST["ucitelj7"];
+        $ucitelj8 = $_POST["ucitelj8"];
+        $ucitelj9 = $_POST["ucitelj9"];
+        $ucitelj10 = $_POST["ucitelj10"];
+
+        $dan1 = $_POST["dan1"];
+        $dan2 = $_POST["dan2"];
+        $dan3 = $_POST["dan3"];
+        $dan4 = $_POST["dan4"];
+        $dan5 = $_POST["dan5"];
+        $dan6 = $_POST["dan6"];
+        $dan7 = $_POST["dan7"];
+        $dan8 = $_POST["dan8"];
+        $dan9 = $_POST["dan9"];
+        $dan10 = $_POST["dan10"];
+
+        $sat1 = $_POST["sat1"];
+        $sat2 = $_POST["sat2"];
+        $sat3 = $_POST["sat3"];
+        $sat4 = $_POST["sat4"];
+        $sat5 = $_POST["sat5"];
+        $sat6 = $_POST["sat6"];
+        $sat7 = $_POST["sat7"];
+        $sat8 = $_POST["sat8"];
+        $sat9 = $_POST["sat9"];
+        $sat10 = $_POST["sat10"];
+
+        dodaj_info($ucitelj1, $dan1, $sat1, $korisnik, $konekcija);
+        dodaj_info($ucitelj2, $dan2, $sat2, $korisnik, $konekcija);
+        dodaj_info($ucitelj3, $dan3, $sat3, $korisnik, $konekcija);
+        dodaj_info($ucitelj4, $dan4, $sat4, $korisnik, $konekcija);
+        dodaj_info($ucitelj5, $dan5, $sat5, $korisnik, $konekcija);
+        dodaj_info($ucitelj6, $dan6, $sat6, $korisnik, $konekcija);
+        dodaj_info($ucitelj7, $dan7, $sat7, $korisnik, $konekcija);
+        dodaj_info($ucitelj8, $dan8, $sat8, $korisnik, $konekcija);
+        dodaj_info($ucitelj9, $dan9, $sat9, $korisnik, $konekcija);
+        dodaj_info($ucitelj10, $dan10, $sat10, $korisnik, $konekcija);
+        header("Location: ulogiran.php");
+        exit();
+    }    
+    $id = $_SESSION["userId"];
+    $info = dohvati_info($id, $konekcija);
+    ?>
+
 
     <div class="wrapper-main2">
         <div class="meniLijevo">
             <div role="group" aria-label="Group of buttons">
                 <!-- izbrisana classa class="btn-group-vertical" -->
-                <div id="sveOkoUpozorenja"> <button class="btn btn-lg btn-danger" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+                <div id="sveOkoUpozorenja"> <button class="btn btn-lg btn-danger" type="button" data-toggle="collapse" data-target="#testoviPadajuci" aria-expanded="false" aria-controls="collapseExample">
                         Pozor testovi</button>
-                    <div class="collapse" id="collapseExample">
+                    <div class="collapse" id="testoviPadajuci">
                         <div class="card card-body">
                             <?php
                             foreach ($testovi as $test) {
@@ -144,16 +207,16 @@ $korisnik = provjeri_korisnika($konekcija);
                         </div>
                     </div>
                     <div id="okoUpozorenja">
-                        <button id="upozorenje" type="button" class="btn btn-danger" data-toggle="tooltip" title="Broj ispita u narednih 5 dana! ⚠️ = danas ispit!">
+                        <button id="upozorenje" type="button" class="btn btn-danger" data-toggle="tooltip" title="Broj ispita u narednih 5 dana! *⚠️ = danas ili sutra ispit!">
                             <?php
                             $datumDanas = date("Y-m-d");
                             $brojac = 0;
                             foreach ($testovi as $dt) {
                                 $datumTesta = ($dt["datum"]);
                                 $razlikaDana = ((strtotime($datumTesta) - strtotime($datumDanas)) / 60 / 60 / 24); //pretvara stringove u timestamp i onda računa dane (u ovom slučaju)
-                                if ($razlikaDana == 0){
+                                if ($razlikaDana == 0 || $razlikaDana ==1){
                                     echo "⚠️";  $brojac=""; ?> <script> $("#upozorenje").css({"font-size":"x-large","background-color":"transparent","padding-left":"3px", "border-color":"transparent","margin-top":"-10px","margin-left":"-5px"}); </script> <?php break; 
-                                } elseif ($razlikaDana > 0 && $razlikaDana <= 5) {
+                                } elseif ($razlikaDana > 1 && $razlikaDana <= 5) {
                                     $brojac += 1;
                                 }                                
                             }
@@ -208,8 +271,275 @@ $korisnik = provjeri_korisnika($konekcija);
                         </div>
                     </div>
                 </div>
-                <button type="button" class="btn btn-lg btn-warning" data-toggle="popover" title="Ne zaboravi..." data-content="https://phppot.com/php/php-calendar-event-management-using-fullcalendar-javascript-library/">Kontraturnus</button>
-                <button type="button" class="btn btn-lg btn-info">Info učitelja</button>
+
+                <div id="sveOkoUpozorenja"> <button type="button" id="infoProfGumb" class="btn btn-lg btn-warning" data-toggle="collapse" data-target="#podsjetnikPadajuci" aria-expanded="false" aria-controls="collapseExample">Podsjetnici</button>
+                    <div class="collapse" id="podsjetnikPadajuci">
+                        <div class="card card-body">
+                            <?php
+                            foreach ($obavijest as $vijest) {
+                                $date = date_create($vijest["datumob"]);
+                            ?>
+                                <h5 class="bezDonje"><?php echo ($vijest["obavijest"]) ?></h5>
+                                <h6 class="bezDonje"><?php echo date_format($date, "d.m.Y."); ?></h6>
+                                <a id="maliG" href="brisi_obavijest.php?id=<?php echo ($vijest["id"]) ?>" class="btn btn-outline-danger btn-sm">Izbriši</a>
+                            <?php
+                            }
+                            ?>
+                        </div>
+                    </div>
+                    <div id="okoUpozorenja">
+                        <button id="upozorenjeOb" type="button" class="btn btn-warning" data-toggle="tooltip" title="Nadolazećih obveza i termina *⏰ = obveza sutra!">
+                        <?php
+                            $datumDanas = date("Y-m-d");
+                            $brojac2 = 0;
+                            foreach ($obavijest as $vj) {
+                                $datumObavijesti = ($vj["datumob"]);
+                                $razlikaDana = ((strtotime($datumObavijesti) - strtotime($datumDanas)) / 60 / 60 / 24); //pretvara stringove u timestamp i onda računa dane (u ovom slučaju)
+                                if ($razlikaDana == 1){
+                                    echo "⏰";  $brojac2=""; ?> <script> $("#upozorenjeOb").css({"font-size":"x-large","background-color":"transparent","padding-left":"3px", "border-color":"transparent","margin-top":"-10px","margin-left":"-5px"}); </script> <?php break; 
+                                } elseif ($razlikaDana > 1 && $razlikaDana <= 5) {
+                                    $brojac2 += 1;
+                                }                                
+                            }
+                            echo $brojac2;
+                        ?>
+
+                        </button>
+                        <div id="plus"><button id="plusGumb" type="button" class="btn btn-outline-warning open-button " data-toggle="tooltip" title="Unesi novu obavijest" onclick="openFormObavijest()">+</button>
+                            <div class="form-popup" id="obavijest">
+                                <form method="POST" action="ulogiran.php" class="form-container">
+                                    <!-- skinuto s w3.schools.com pop-up form -->
+                                    <label for="datumob"><b>Datum</b></label>
+                                    <input type="date" placeholder="Datum" name="datumob" required>
+
+                                    <label for="obavijest"><b>Obavijest</b></label>
+                                    <input type="tekst" placeholder="Unesi novu obavijest" name="obavijest">
+
+                                    <button type="submit" class="btn">Spremi</button>
+                                    <button type="submit" class="btn cancel" onclick="closeFormObavijest()">Odustani</button>
+                                </form>
+                            </div>
+                            <script>
+                                function openFormObavijest() {
+                                    document.getElementById("obavijest").style.display = "block";
+                                }
+
+                                function closeFormObavijest() {
+                                    document.getElementById("obavijest").style.display = "none";
+                                }
+                            </script>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- <button type="button" class="btn btn-lg btn-warning" data-toggle="popover" title="Ne zaboravi..." data-content="">Kontraturnus</button> -->
+                
+                <div id="sveOkoUpozorenja"> <button type="button" class="btn btn-lg btn-info" data-toggle="collapse" data-target="#infoUcitPada" aria-expanded="false" aria-controls="collapseExample">Info učitelja</button>
+                    <div class="collapse" id="infoUcitPada">
+                    <div id="infoTablicaIzgled" class="shadow-lg p-3 mb-5 bg-white rounded">
+            <table id="tablica" class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th scope="col">Učitelj</th>
+                        <th scope="col">Dan</th>
+                        <th scope="col">Sat</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <?php 
+                        foreach ($info as $inf) { 
+                    ?>
+                        <tr id="retci_tablice">
+                        <td><?php echo $inf["1"]; ?></td>
+                        <td><?php echo $inf["2"]; ?></td>
+                        <td><?php echo $inf["3"]; ?></td>
+                        </tr>
+
+                    <?php
+                    }
+                    ?>
+                </tbody>
+            </table> 
+            <a id="upozorenje2" type="submit" class="btn btn-outline-danger open-button" data-toggle="tooltip2" title="Izbrisati tablicu informacija?" href="brisi_info.php?userId=<?php echo $id;?>" onclick="return confirm('Sigurno želite izbristati tablicu informacija?')">🗑️</a>
+        </div>
+                    </div>
+                    <div id="okoUpozorenja">
+                        <div id="plus3"><button id="plusGumb" type="button" class="btn btn-outline-info open-button " data-toggle="tooltip" title="Unesi informacije učitelja" onclick="openFormInfo()">+</button>
+                            <div class="form-popup shadow-lg p-3 mb-5 bg-white rounded" id="info">
+                            <form method="POST" action="ulogiran.php" class="form-container2">
+                                        <table id="tablica" class="table table-bordered">
+                                            <thead>
+                                                <tr>                    
+                                                    <th scope="col">Učitelj</th>
+                                                    <th scope="col">Dan</th>
+                                                    <th scope="col">Sat</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+
+                                                <tr>
+                                                    <!-- <th scope="row"><input id="redni_broj" type="text" name="a1" value="akt1"></th> -->
+                                                    <td><input type="tekst" id="slobunos2" name="ucitelj1" required placeholder="Ime/prezime učitelja" oninvalid="this.setCustomValidity('Za prazno polje unesi barem neki znak: - ili * i sl.')"
+                                                            oninput="this.setCustomValidity('')"></td>
+                                                    <td><select class="izbor2" name="dan1" required>
+                                                            <option selected>-</option>
+                                                            <option value="ponedjeljak">Ponedjeljak</option>
+                                                            <option value="utorak">Utorak</option>
+                                                            <option value="srijeda">Srijeda</option>
+                                                            <option value="četvrtak">Četvrtak</option>
+                                                            <option value="petak">Petak</option>
+                                                        </select></td>
+                                                    <td><input type="tekst" id="slobunos2" name="sat1"></td>
+                                                </tr>
+                                                <tr>
+                                                    <!-- <th scope="row"><input id="redni_broj" type="text" name="a2" value="akt2" ></th> -->
+                                                    <td><input type="tekst" id="slobunos2" name="ucitelj2" required placeholder="Ime/prezime učitelja" oninvalid="this.setCustomValidity('Za prazno polje unesi barem neki znak: - ili * i sl.')"
+                                                            oninput="this.setCustomValidity('')"></td>
+                                                    <td><select class="izbor2" name="dan2" required>
+                                                            <option selected>-</option>
+                                                            <option value="ponedjeljak">Ponedjeljak</option>
+                                                            <option value="utorak">Utorak</option>
+                                                            <option value="srijeda">Srijeda</option>
+                                                            <option value="četvrtak">Četvrtak</option>
+                                                            <option value="petak">Petak</option>
+                                                        </select></td>
+                                                    <td><input type="tekst" id="slobunos2" name="sat2"></td>
+                                                </tr>
+                                                <tr>
+                                                    <!-- <th scope="row"><input id="redni_broj" type="text" name="a2" value="akt2" ></th> -->
+                                                    <td><input type="tekst" id="slobunos2" name="ucitelj3" required placeholder="Ime/prezime učitelja" oninvalid="this.setCustomValidity('Za prazno polje unesi barem neki znak: - ili * i sl.')"
+                                                            oninput="this.setCustomValidity('')"></td>
+                                                    <td><select class="izbor2" name="dan3" required>
+                                                            <option selected>-</option>
+                                                            <option value="ponedjeljak">Ponedjeljak</option>
+                                                            <option value="utorak">Utorak</option>
+                                                            <option value="srijeda">Srijeda</option>
+                                                            <option value="četvrtak">Četvrtak</option>
+                                                            <option value="petak">Petak</option>
+                                                        </select></td>
+                                                    <td><input type="tekst" id="slobunos2" name="sat3"></td>
+                                                </tr>
+                                                <tr>
+                                                    <!-- <th scope="row"><input id="redni_broj" type="text" name="a2" value="akt2" ></th> -->
+                                                    <td><input type="tekst" id="slobunos2" name="ucitelj4" required placeholder="Ime/prezime učitelja" oninvalid="this.setCustomValidity('Za prazno polje unesi barem neki znak: - ili * i sl.')"
+                                                            oninput="this.setCustomValidity('')"></td>
+                                                    <td><select class="izbor2" name="dan4" required>
+                                                            <option selected>-</option>
+                                                            <option value="ponedjeljak">Ponedjeljak</option>
+                                                            <option value="utorak">Utorak</option>
+                                                            <option value="srijeda">Srijeda</option>
+                                                            <option value="četvrtak">Četvrtak</option>
+                                                            <option value="petak">Petak</option>
+                                                        </select></td>
+                                                    <td><input type="tekst" id="slobunos2" name="sat4"></td>
+                                                </tr>
+                                                <tr>
+                                                    <!-- <th scope="row"><input id="redni_broj" type="text" name="a2" value="akt2" ></th> -->
+                                                    <td><input type="tekst" id="slobunos2" name="ucitelj5" required placeholder="Ime/prezime učitelja" oninvalid="this.setCustomValidity('Za prazno polje unesi barem neki znak: - ili * i sl.')"
+                                                            oninput="this.setCustomValidity('')"></td>
+                                                    <td><select class="izbor2" name="dan5" required>
+                                                            <option selected>-</option>
+                                                            <option value="ponedjeljak">Ponedjeljak</option>
+                                                            <option value="utorak">Utorak</option>
+                                                            <option value="srijeda">Srijeda</option>
+                                                            <option value="četvrtak">Četvrtak</option>
+                                                            <option value="petak">Petak</option>
+                                                        </select></td>
+                                                    <td><input type="tekst" id="slobunos2" name="sat5"></td>
+                                                </tr>
+                                                <tr>
+                                                    <!-- <th scope="row"><input id="redni_broj" type="text" name="a2" value="akt2" ></th> -->
+                                                    <td><input type="tekst" id="slobunos2" name="ucitelj6" required placeholder="Ime/prezime učitelja" oninvalid="this.setCustomValidity('Za prazno polje unesi barem neki znak: - ili * i sl.')"
+                                                            oninput="this.setCustomValidity('')"></td>
+                                                    <td><select class="izbor2" name="dan6" required>
+                                                            <option selected>-</option>
+                                                            <option value="ponedjeljak">Ponedjeljak</option>
+                                                            <option value="utorak">Utorak</option>
+                                                            <option value="srijeda">Srijeda</option>
+                                                            <option value="četvrtak">Četvrtak</option>
+                                                            <option value="petak">Petak</option>
+                                                        </select></td>
+                                                    <td><input type="tekst" id="slobunos2" name="sat6"></td>
+                                                </tr>
+                                                <tr>
+                                                    <!-- <th scope="row"><input id="redni_broj" type="text" name="a2" value="akt2" ></th> -->
+                                                    <td><input type="tekst" id="slobunos2" name="ucitelj7" required placeholder="Ime/prezime učitelja" oninvalid="this.setCustomValidity('Za prazno polje unesi barem neki znak: - ili * i sl.')"
+                                                            oninput="this.setCustomValidity('')"></td>
+                                                    <td><select class="izbor2" name="dan7" required>
+                                                            <option selected>-</option>
+                                                            <option value="ponedjeljak">Ponedjeljak</option>
+                                                            <option value="utorak">Utorak</option>
+                                                            <option value="srijeda">Srijeda</option>
+                                                            <option value="četvrtak">Četvrtak</option>
+                                                            <option value="petak">Petak</option>
+                                                        </select></td>
+                                                    <td><input type="tekst" id="slobunos2" name="sat7"></td>
+                                                </tr>
+                                                <tr>
+                                                    <!-- <th scope="row"><input id="redni_broj" type="text" name="a2" value="akt2" ></th> -->
+                                                    <td><input type="tekst" id="slobunos2" name="ucitelj8" required placeholder="Ime/prezime učitelja" oninvalid="this.setCustomValidity('Za prazno polje unesi barem neki znak: - ili * i sl.')"
+                                                            oninput="this.setCustomValidity('')"></td>
+                                                    <td><select class="izbor2" name="dan8" required>
+                                                            <option selected>-</option>
+                                                            <option value="ponedjeljak">Ponedjeljak</option>
+                                                            <option value="utorak">Utorak</option>
+                                                            <option value="srijeda">Srijeda</option>
+                                                            <option value="četvrtak">Četvrtak</option>
+                                                            <option value="petak">Petak</option>
+                                                        </select></td>
+                                                    <td><input type="tekst" id="slobunos2" name="sat8"></td>
+                                                </tr>
+                                                <tr>
+                                                    <!-- <th scope="row"><input id="redni_broj" type="text" name="a2" value="akt2" ></th> -->
+                                                    <td><input type="tekst" id="slobunos2" name="ucitelj9" required placeholder="Ime/prezime učitelja" oninvalid="this.setCustomValidity('Za prazno polje unesi barem neki znak: - ili * i sl.')"
+                                                            oninput="this.setCustomValidity('')"></td>
+                                                    <td><select class="izbor2" name="dan9" required>
+                                                            <option selected>-</option>
+                                                            <option value="ponedjeljak">Ponedjeljak</option>
+                                                            <option value="utorak">Utorak</option>
+                                                            <option value="srijeda">Srijeda</option>
+                                                            <option value="četvrtak">Četvrtak</option>
+                                                            <option value="petak">Petak</option>
+                                                        </select></td>
+                                                    <td><input type="tekst" id="slobunos2" name="sat9"></td>
+                                                </tr>
+                                                <tr>
+                                                    <!-- <th scope="row"><input id="redni_broj" type="text" name="a2" value="akt2" ></th> -->
+                                                    <td><input type="tekst" id="slobunos2" name="ucitelj10" required placeholder="Ime/prezime učitelja" oninvalid="this.setCustomValidity('Za prazno polje unesi barem neki znak: - ili * i sl.')"
+                                                            oninput="this.setCustomValidity('')"></td>
+                                                    <td><select class="izbor2" name="dan10">
+                                                            <option selected>-</option>
+                                                            <option value="ponedjeljak">Ponedjeljak</option>
+                                                            <option value="utorak">Utorak</option>
+                                                            <option value="srijeda">Srijeda</option>
+                                                            <option value="četvrtak">Četvrtak</option>
+                                                            <option value="petak">Petak</option>
+                                                        </select></td>
+                                                    <td><input type="tekst" id="slobunos2" name="sat10"></td>
+                                                </tr>
+
+                                            </tbody>
+                                        </table>
+
+                                        <button id="gumbInfo" type="submit" class="btn">Spremi</button>
+                                        <button id="gumbInfo" class="btn cancel" onclick="closeFormInfo()">Zatvori</button>
+                                        <p id="obavijest2"><small>*za nove informacije ili novu tablicu informacija najprije izbrišite staru<small></p>
+                                        
+                                    </form>
+                            </div>
+                            <script>
+                                function openFormInfo() {
+                                    document.getElementById("info").style.display = "block";
+                                }
+                                function closeFormInfo() {
+                                    document.getElementById("info").style.display = "none";
+                                }
+                            </script>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- <button type="button" class="btn btn-lg btn-info">Info učitelja</button> -->
             </div>
         </div>
 
@@ -288,7 +618,7 @@ $korisnik = provjeri_korisnika($konekcija);
                                                             <option value="Tehnička kul">Tehnička kul.</option>
                                                             <option value="Glazbena kul.">Glazbena kul.</option>
                                                             <option value="Likovna kul.">Likovna kul.</option>
-                                                            <option value="Tjelesna i zdr.kul.">TZK.</option>
+                                                            <option value="TZK">TZK.</option>
                                                             <option value="Vjeronauk">Vjeronauk</option>
                                                         </select>
                                                     </td>
@@ -309,7 +639,7 @@ $korisnik = provjeri_korisnika($konekcija);
                                                             <option value="Tehnička kul">Tehnička kul.</option>
                                                             <option value="Glazbena kul.">Glazbena kul.</option>
                                                             <option value="Likovna kul.">Likovna kul.</option>
-                                                            <option value="Tjelesna i zdr.kul.">TZK.</option>
+                                                            <option value="TZK">TZK.</option>
                                                             <option value="Vjeronauk">Vjeronauk</option>
                                                         </select>
                                                     </td>
@@ -330,7 +660,7 @@ $korisnik = provjeri_korisnika($konekcija);
                                                             <option value="Tehnička kul">Tehnička kul.</option>
                                                             <option value="Glazbena kul.">Glazbena kul.</option>
                                                             <option value="Likovna kul.">Likovna kul.</option>
-                                                            <option value="Tjelesna i zdr.kul.">TZK.</option>
+                                                            <option value="TZK">TZK.</option>
                                                             <option value="Vjeronauk">Vjeronauk</option>
                                                         </select>
                                                     </td>
@@ -351,7 +681,7 @@ $korisnik = provjeri_korisnika($konekcija);
                                                             <option value="Tehnička kul">Tehnička kul.</option>
                                                             <option value="Glazbena kul.">Glazbena kul.</option>
                                                             <option value="Likovna kul.">Likovna kul.</option>
-                                                            <option value="Tjelesna i zdr.kul.">TZK.</option>
+                                                            <option value="TZK">TZK.</option>
                                                             <option value="Vjeronauk">Vjeronauk</option>
                                                         </select>
                                                     </td>
@@ -372,7 +702,7 @@ $korisnik = provjeri_korisnika($konekcija);
                                                             <option value="Tehnička kul">Tehnička kul.</option>
                                                             <option value="Glazbena kul.">Glazbena kul.</option>
                                                             <option value="Likovna kul.">Likovna kul.</option>
-                                                            <option value="Tjelesna i zdr.kul.">TZK.</option>
+                                                            <option value="TZK">TZK.</option>
                                                             <option value="Vjeronauk">Vjeronauk</option>
                                                         </select>
                                                     </td>
@@ -396,7 +726,7 @@ $korisnik = provjeri_korisnika($konekcija);
                                                             <option value="Tehnička kul">Tehnička kul.</option>
                                                             <option value="Glazbena kul.">Glazbena kul.</option>
                                                             <option value="Likovna kul.">Likovna kul.</option>
-                                                            <option value="Tjelesna i zdr.kul.">TZK.</option>
+                                                            <option value="TZK">TZK.</option>
                                                             <option value="Vjeronauk">Vjeronauk</option>
                                                         </select>
                                                     </td>
@@ -417,7 +747,7 @@ $korisnik = provjeri_korisnika($konekcija);
                                                             <option value="Tehnička kul">Tehnička kul.</option>
                                                             <option value="Glazbena kul.">Glazbena kul.</option>
                                                             <option value="Likovna kul.">Likovna kul.</option>
-                                                            <option value="Tjelesna i zdr.kul.">TZK.</option>
+                                                            <option value="TZK">TZK.</option>
                                                             <option value="Vjeronauk">Vjeronauk</option>
                                                         </select>
                                                     </td>
@@ -438,7 +768,7 @@ $korisnik = provjeri_korisnika($konekcija);
                                                             <option value="Tehnička kul">Tehnička kul.</option>
                                                             <option value="Glazbena kul.">Glazbena kul.</option>
                                                             <option value="Likovna kul.">Likovna kul.</option>
-                                                            <option value="Tjelesna i zdr.kul.">TZK.</option>
+                                                            <option value="TZK">TZK.</option>
                                                             <option value="Vjeronauk">Vjeronauk</option>
                                                         </select>
                                                     </td>
@@ -459,7 +789,7 @@ $korisnik = provjeri_korisnika($konekcija);
                                                             <option value="Tehnička kul">Tehnička kul.</option>
                                                             <option value="Glazbena kul.">Glazbena kul.</option>
                                                             <option value="Likovna kul.">Likovna kul.</option>
-                                                            <option value="Tjelesna i zdr.kul.">TZK.</option>
+                                                            <option value="TZK">TZK.</option>
                                                             <option value="Vjeronauk">Vjeronauk</option>
                                                         </select>
                                                     </td>
@@ -480,7 +810,7 @@ $korisnik = provjeri_korisnika($konekcija);
                                                             <option value="Tehnička kul">Tehnička kul.</option>
                                                             <option value="Glazbena kul.">Glazbena kul.</option>
                                                             <option value="Likovna kul.">Likovna kul.</option>
-                                                            <option value="Tjelesna i zdr.kul.">TZK.</option>
+                                                            <option value="TZK">TZK.</option>
                                                             <option value="Vjeronauk">Vjeronauk</option>
                                                         </select>
                                                     </td>
@@ -505,7 +835,7 @@ $korisnik = provjeri_korisnika($konekcija);
                                                             <option value="Tehnička kul">Tehnička kul.</option>
                                                             <option value="Glazbena kul.">Glazbena kul.</option>
                                                             <option value="Likovna kul.">Likovna kul.</option>
-                                                            <option value="Tjelesna i zdr.kul.">TZK.</option>
+                                                            <option value="TZK">TZK.</option>
                                                             <option value="Vjeronauk">Vjeronauk</option>
                                                         </select>
                                                     </td>
@@ -526,7 +856,7 @@ $korisnik = provjeri_korisnika($konekcija);
                                                             <option value="Tehnička kul">Tehnička kul.</option>
                                                             <option value="Glazbena kul.">Glazbena kul.</option>
                                                             <option value="Likovna kul.">Likovna kul.</option>
-                                                            <option value="Tjelesna i zdr.kul.">TZK.</option>
+                                                            <option value="TZK">TZK.</option>
                                                             <option value="Vjeronauk">Vjeronauk</option>
                                                         </select>
                                                     </td>
@@ -547,7 +877,7 @@ $korisnik = provjeri_korisnika($konekcija);
                                                             <option value="Tehnička kul">Tehnička kul.</option>
                                                             <option value="Glazbena kul.">Glazbena kul.</option>
                                                             <option value="Likovna kul.">Likovna kul.</option>
-                                                            <option value="Tjelesna i zdr.kul.">TZK.</option>
+                                                            <option value="TZK">TZK.</option>
                                                             <option value="Vjeronauk">Vjeronauk</option>
                                                         </select>
                                                     </td>
@@ -568,7 +898,7 @@ $korisnik = provjeri_korisnika($konekcija);
                                                             <option value="Tehnička kul">Tehnička kul.</option>
                                                             <option value="Glazbena kul.">Glazbena kul.</option>
                                                             <option value="Likovna kul.">Likovna kul.</option>
-                                                            <option value="Tjelesna i zdr.kul.">TZK.</option>
+                                                            <option value="TZK">TZK.</option>
                                                             <option value="Vjeronauk">Vjeronauk</option>
                                                         </select>
                                                     </td>
@@ -589,7 +919,7 @@ $korisnik = provjeri_korisnika($konekcija);
                                                             <option value="Tehnička kul">Tehnička kul.</option>
                                                             <option value="Glazbena kul.">Glazbena kul.</option>
                                                             <option value="Likovna kul.">Likovna kul.</option>
-                                                            <option value="Tjelesna i zdr.kul.">TZK.</option>
+                                                            <option value="TZK">TZK.</option>
                                                             <option value="Vjeronauk">Vjeronauk</option>
                                                         </select>
                                                     </td>
@@ -614,7 +944,7 @@ $korisnik = provjeri_korisnika($konekcija);
                                                             <option value="Tehnička kul">Tehnička kul.</option>
                                                             <option value="Glazbena kul.">Glazbena kul.</option>
                                                             <option value="Likovna kul.">Likovna kul.</option>
-                                                            <option value="Tjelesna i zdr.kul.">TZK.</option>
+                                                            <option value="TZK">TZK.</option>
                                                             <option value="Vjeronauk">Vjeronauk</option>
                                                         </select>
                                                     </td>
@@ -635,7 +965,7 @@ $korisnik = provjeri_korisnika($konekcija);
                                                             <option value="Tehnička kul">Tehnička kul.</option>
                                                             <option value="Glazbena kul.">Glazbena kul.</option>
                                                             <option value="Likovna kul.">Likovna kul.</option>
-                                                            <option value="Tjelesna i zdr.kul.">TZK.</option>
+                                                            <option value="TZK">TZK.</option>
                                                             <option value="Vjeronauk">Vjeronauk</option>
                                                         </select>
                                                     </td>
@@ -656,7 +986,7 @@ $korisnik = provjeri_korisnika($konekcija);
                                                             <option value="Tehnička kul">Tehnička kul.</option>
                                                             <option value="Glazbena kul.">Glazbena kul.</option>
                                                             <option value="Likovna kul.">Likovna kul.</option>
-                                                            <option value="Tjelesna i zdr.kul.">TZK.</option>
+                                                            <option value="TZK">TZK.</option>
                                                             <option value="Vjeronauk">Vjeronauk</option>
                                                         </select>
                                                     </td>
@@ -677,7 +1007,7 @@ $korisnik = provjeri_korisnika($konekcija);
                                                             <option value="Tehnička kul">Tehnička kul.</option>
                                                             <option value="Glazbena kul.">Glazbena kul.</option>
                                                             <option value="Likovna kul.">Likovna kul.</option>
-                                                            <option value="Tjelesna i zdr.kul.">TZK.</option>
+                                                            <option value="TZK">TZK.</option>
                                                             <option value="Vjeronauk">Vjeronauk</option>
                                                         </select>
                                                     </td>
@@ -698,7 +1028,7 @@ $korisnik = provjeri_korisnika($konekcija);
                                                             <option value="Tehnička kul">Tehnička kul.</option>
                                                             <option value="Glazbena kul.">Glazbena kul.</option>
                                                             <option value="Likovna kul.">Likovna kul.</option>
-                                                            <option value="Tjelesna i zdr.kul.">TZK.</option>
+                                                            <option value="TZK">TZK.</option>
                                                             <option value="Vjeronauk">Vjeronauk</option>
                                                         </select>
                                                     </td>
@@ -723,7 +1053,7 @@ $korisnik = provjeri_korisnika($konekcija);
                                                             <option value="Tehnička kul">Tehnička kul.</option>
                                                             <option value="Glazbena kul.">Glazbena kul.</option>
                                                             <option value="Likovna kul.">Likovna kul.</option>
-                                                            <option value="Tjelesna i zdr.kul.">TZK.</option>
+                                                            <option value="TZK">TZK.</option>
                                                             <option value="Vjeronauk">Vjeronauk</option>
                                                         </select>
                                                     </td>
@@ -744,7 +1074,7 @@ $korisnik = provjeri_korisnika($konekcija);
                                                             <option value="Tehnička kul">Tehnička kul.</option>
                                                             <option value="Glazbena kul.">Glazbena kul.</option>
                                                             <option value="Likovna kul.">Likovna kul.</option>
-                                                            <option value="Tjelesna i zdr.kul.">TZK.</option>
+                                                            <option value="TZK">TZK.</option>
                                                             <option value="Vjeronauk">Vjeronauk</option>
                                                         </select>
                                                     </td>
@@ -765,7 +1095,7 @@ $korisnik = provjeri_korisnika($konekcija);
                                                             <option value="Tehnička kul">Tehnička kul.</option>
                                                             <option value="Glazbena kul.">Glazbena kul.</option>
                                                             <option value="Likovna kul.">Likovna kul.</option>
-                                                            <option value="Tjelesna i zdr.kul.">TZK.</option>
+                                                            <option value="TZK">TZK.</option>
                                                             <option value="Vjeronauk">Vjeronauk</option>
                                                         </select>
                                                     </td>
@@ -786,7 +1116,7 @@ $korisnik = provjeri_korisnika($konekcija);
                                                             <option value="Tehnička kul">Tehnička kul.</option>
                                                             <option value="Glazbena kul.">Glazbena kul.</option>
                                                             <option value="Likovna kul.">Likovna kul.</option>
-                                                            <option value="Tjelesna i zdr.kul.">TZK.</option>
+                                                            <option value="TZK">TZK.</option>
                                                             <option value="Vjeronauk">Vjeronauk</option>
                                                         </select>
                                                     </td>
@@ -807,7 +1137,7 @@ $korisnik = provjeri_korisnika($konekcija);
                                                             <option value="Tehnička kul">Tehnička kul.</option>
                                                             <option value="Glazbena kul.">Glazbena kul.</option>
                                                             <option value="Likovna kul.">Likovna kul.</option>
-                                                            <option value="Tjelesna i zdr.kul.">TZK.</option>
+                                                            <option value="TZK">TZK.</option>
                                                             <option value="Vjeronauk">Vjeronauk</option>
                                                         </select>
                                                     </td>
@@ -831,7 +1161,7 @@ $korisnik = provjeri_korisnika($konekcija);
                                                             <option value="Tehnička kul">Tehnička kul.</option>
                                                             <option value="Glazbena kul.">Glazbena kul.</option>
                                                             <option value="Likovna kul.">Likovna kul.</option>
-                                                            <option value="Tjelesna i zdr.kul.">TZK.</option>
+                                                            <option value="TZK">TZK.</option>
                                                             <option value="Vjeronauk">Vjeronauk</option>
                                                         </select>
                                                     </td>
@@ -852,7 +1182,7 @@ $korisnik = provjeri_korisnika($konekcija);
                                                             <option value="Tehnička kul">Tehnička kul.</option>
                                                             <option value="Glazbena kul.">Glazbena kul.</option>
                                                             <option value="Likovna kul.">Likovna kul.</option>
-                                                            <option value="Tjelesna i zdr.kul.">TZK.</option>
+                                                            <option value="TZK">TZK.</option>
                                                             <option value="Vjeronauk">Vjeronauk</option>
                                                         </select>
                                                     </td>
@@ -873,7 +1203,7 @@ $korisnik = provjeri_korisnika($konekcija);
                                                             <option value="Tehnička kul">Tehnička kul.</option>
                                                             <option value="Glazbena kul.">Glazbena kul.</option>
                                                             <option value="Likovna kul.">Likovna kul.</option>
-                                                            <option value="Tjelesna i zdr.kul.">TZK.</option>
+                                                            <option value="TZK">TZK.</option>
                                                             <option value="Vjeronauk">Vjeronauk</option>
                                                         </select>
                                                     </td>
@@ -894,7 +1224,7 @@ $korisnik = provjeri_korisnika($konekcija);
                                                             <option value="Tehnička kul">Tehnička kul.</option>
                                                             <option value="Glazbena kul.">Glazbena kul.</option>
                                                             <option value="Likovna kul.">Likovna kul.</option>
-                                                            <option value="Tjelesna i zdr.kul.">TZK.</option>
+                                                            <option value="TZK">TZK.</option>
                                                             <option value="Vjeronauk">Vjeronauk</option>
                                                         </select>
                                                     </td>
@@ -915,7 +1245,7 @@ $korisnik = provjeri_korisnika($konekcija);
                                                             <option value="Tehnička kul">Tehnička kul.</option>
                                                             <option value="Glazbena kul.">Glazbena kul.</option>
                                                             <option value="Likovna kul.">Likovna kul.</option>
-                                                            <option value="Tjelesna i zdr.kul.">TZK.</option>
+                                                            <option value="TZK">TZK.</option>
                                                             <option value="Vjeronauk">Vjeronauk</option>
                                                         </select>
                                                     </td>
@@ -939,7 +1269,7 @@ $korisnik = provjeri_korisnika($konekcija);
                                                             <option value="Tehnička kul">Tehnička kul.</option>
                                                             <option value="Glazbena kul.">Glazbena kul.</option>
                                                             <option value="Likovna kul.">Likovna kul.</option>
-                                                            <option value="Tjelesna i zdr.kul.">TZK.</option>
+                                                            <option value="TZK">TZK.</option>
                                                             <option value="Vjeronauk">Vjeronauk</option>
                                                         </select>
                                                     </td>
@@ -960,7 +1290,7 @@ $korisnik = provjeri_korisnika($konekcija);
                                                             <option value="Tehnička kul">Tehnička kul.</option>
                                                             <option value="Glazbena kul.">Glazbena kul.</option>
                                                             <option value="Likovna kul.">Likovna kul.</option>
-                                                            <option value="Tjelesna i zdr.kul.">TZK.</option>
+                                                            <option value="TZK">TZK.</option>
                                                             <option value="Vjeronauk">Vjeronauk</option>
                                                         </select>
                                                     </td>
@@ -981,7 +1311,7 @@ $korisnik = provjeri_korisnika($konekcija);
                                                             <option value="Tehnička kul">Tehnička kul.</option>
                                                             <option value="Glazbena kul.">Glazbena kul.</option>
                                                             <option value="Likovna kul.">Likovna kul.</option>
-                                                            <option value="Tjelesna i zdr.kul.">TZK.</option>
+                                                            <option value="TZK">TZK.</option>
                                                             <option value="Vjeronauk">Vjeronauk</option>
                                                         </select>
                                                     </td>
@@ -1002,7 +1332,7 @@ $korisnik = provjeri_korisnika($konekcija);
                                                             <option value="Tehnička kul">Tehnička kul.</option>
                                                             <option value="Glazbena kul.">Glazbena kul.</option>
                                                             <option value="Likovna kul.">Likovna kul.</option>
-                                                            <option value="Tjelesna i zdr.kul.">TZK.</option>
+                                                            <option value="TZK">TZK.</option>
                                                             <option value="Vjeronauk">Vjeronauk</option>
                                                         </select>
                                                     </td>
@@ -1023,7 +1353,7 @@ $korisnik = provjeri_korisnika($konekcija);
                                                             <option value="Tehnička kul">Tehnička kul.</option>
                                                             <option value="Glazbena kul.">Glazbena kul.</option>
                                                             <option value="Likovna kul.">Likovna kul.</option>
-                                                            <option value="Tjelesna i zdr.kul.">TZK.</option>
+                                                            <option value="TZK">TZK.</option>
                                                             <option value="Vjeronauk">Vjeronauk</option>
                                                         </select>
                                                     </td>
@@ -1047,7 +1377,7 @@ $korisnik = provjeri_korisnika($konekcija);
                                                             <option value="Tehnička kul">Tehnička kul.</option>
                                                             <option value="Glazbena kul.">Glazbena kul.</option>
                                                             <option value="Likovna kul.">Likovna kul.</option>
-                                                            <option value="Tjelesna i zdr.kul.">TZK.</option>
+                                                            <option value="TZK">TZK.</option>
                                                             <option value="Vjeronauk">Vjeronauk</option>
                                                         </select>
                                                     </td>
@@ -1068,7 +1398,7 @@ $korisnik = provjeri_korisnika($konekcija);
                                                             <option value="Tehnička kul">Tehnička kul.</option>
                                                             <option value="Glazbena kul.">Glazbena kul.</option>
                                                             <option value="Likovna kul.">Likovna kul.</option>
-                                                            <option value="Tjelesna i zdr.kul.">TZK.</option>
+                                                            <option value="TZK">TZK.</option>
                                                             <option value="Vjeronauk">Vjeronauk</option>
                                                         </select>
                                                     </td>
@@ -1089,7 +1419,7 @@ $korisnik = provjeri_korisnika($konekcija);
                                                             <option value="Tehnička kul">Tehnička kul.</option>
                                                             <option value="Glazbena kul.">Glazbena kul.</option>
                                                             <option value="Likovna kul.">Likovna kul.</option>
-                                                            <option value="Tjelesna i zdr.kul.">TZK.</option>
+                                                            <option value="TZK">TZK.</option>
                                                             <option value="Vjeronauk">Vjeronauk</option>
                                                         </select>
                                                     </td>
@@ -1110,7 +1440,7 @@ $korisnik = provjeri_korisnika($konekcija);
                                                             <option value="Tehnička kul">Tehnička kul.</option>
                                                             <option value="Glazbena kul.">Glazbena kul.</option>
                                                             <option value="Likovna kul.">Likovna kul.</option>
-                                                            <option value="Tjelesna i zdr.kul.">TZK.</option>
+                                                            <option value="TZK">TZK.</option>
                                                             <option value="Vjeronauk">Vjeronauk</option>
                                                         </select>
                                                     </td>
@@ -1131,7 +1461,7 @@ $korisnik = provjeri_korisnika($konekcija);
                                                             <option value="Tehnička kul">Tehnička kul.</option>
                                                             <option value="Glazbena kul.">Glazbena kul.</option>
                                                             <option value="Likovna kul.">Likovna kul.</option>
-                                                            <option value="Tjelesna i zdr.kul.">TZK.</option>
+                                                            <option value="TZK">TZK.</option>
                                                             <option value="Vjeronauk">Vjeronauk</option>
                                                         </select>
                                                     </td>
@@ -1201,8 +1531,8 @@ $korisnik = provjeri_korisnika($konekcija);
         <div class="meniDesno">
             <div id="grupaDesno" role="group" aria-label="Group of buttons">
                 <!-- izbrisana classa class="btn-group-vertical" -->
-                <button type="button" class="btn btn-lg btn-primary">Prosjek ukupno</button>
-                <button type="button" class="btn btn-lg btn-dark">Neriješeni izostanci</button>
+                <button type="button" class="btn btn-lg btn-primary">Ukupni prosjek</button>
+                <button type="button" class="btn btn-lg btn-dark">Izostanci</button>
                 <button type="button" class="btn btn-lg btn-success">Za popravak...</button>
             </div>
         </div>

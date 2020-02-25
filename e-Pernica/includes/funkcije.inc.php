@@ -57,6 +57,41 @@ function brisi_raspored($id, $konekcija)
     return $upit->execute([$id]);
 }
 
+function dodaj_obavijest($datumob, $obavijest, $korisnik, $konekcija)
+{
+    $sql = "INSERT INTO obavijesti VALUES (null, ?, ?, ?)";
+    $upit = $konekcija->prepare($sql);
+    return $upit->execute([$datumob, $obavijest, $korisnik]);
+}
+function dohvati_obavijesti($id, $konekcija)
+{
+    $sql = "SELECT * FROM obavijesti WHERE $id = fk_uid ORDER BY datumob";
+    return $konekcija->query($sql)->fetchAll();
+}
+function pobrisi_obavijest($id, $konekcija)
+{
+    $sql = "DELETE FROM obavijesti WHERE id=?";
+    $upit = $konekcija->prepare($sql);
+    return $upit->execute([$id]);
+}
+
+function dodaj_info($ucitelj, $dan, $sat, $korisnik, $konekcija)
+{
+    $sql = "INSERT INTO informacije VALUES (null, ?, ?, ?, ?)";
+    $upit = $konekcija->prepare($sql);
+    return $upit->execute([$ucitelj, $dan, $sat, $korisnik]);
+}
+function dohvati_info($id, $konekcija)
+{
+    $sql = "SELECT * FROM informacije WHERE $id = fk_uid";
+    return $konekcija->query($sql)->fetchAll();
+}
+function pobrisi_info($id, $konekcija)
+{
+    $sql = "DELETE FROM informacije WHERE fk_uid=?";
+    $upit = $konekcija->prepare($sql);
+    return $upit->execute([$id]);
+}
 
 
 
