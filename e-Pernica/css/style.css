@@ -45,13 +45,29 @@ body, html {
     float: right;
 }
 
+#upozorenje3{
+    background-color: transparent;
+    margin-top: 10px;
+    margin-bottom: 3px;
+    padding: 1px 8px;
+    border-radius: 13px;
+    border-color: rgb(255, 255, 255);
+    float: right;
+}
+
+
 #upozorenjeOb{
     margin-bottom: 3px;
     padding: 0px 8px;
     border-radius: 13px;
     border-color: rgb(255, 255, 255);
 }
-
+#infoPodsjGumb {
+    margin-left: 16px;
+}
+#infoProfGumb {
+    margin-left: 16px;
+}
 
 #sveOkoUpozorenja{
     float: left;
@@ -63,11 +79,16 @@ body, html {
 #plus{
     margin: -2px 2px -1px 0px;
     border-color: #dc3545;
+    
 }
 #plus2{
     margin: -2px 2px -1px 0px;}
 
 #plus3{margin-top: 25px;}
+#plus4{
+    margin-top: 20px; margin-left: -5px;
+
+}
 
 #plusGumb{
     padding: 0px 5px;
@@ -77,6 +98,11 @@ body, html {
     margin-left: 2px;
     font: icon;
 }
+
+#testoviPadajuci{
+    margin-top: -45px;
+}
+
 #maliG{
     padding: 0px;
     width: 50%;
@@ -96,13 +122,24 @@ body, html {
     padding-bottom: 0px;
 }
 
-.btn.btn-lg{
-    border-top-right-radius: 5px;
+.btn.btn-lg.desno{
+    border-top-right-radius: 15px;
     border-top-left-radius: 5px;
     border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 50px;
+    margin-bottom: 50px;
+    box-shadow: 0 16px 32px 0 rgba(0,0,0,2.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+} 
+
+.btn.btn-lg.lijevo{
+    border-top-right-radius: 5px;
+    border-top-left-radius: 15px;
+    border-bottom-right-radius: 50px;
     border-bottom-left-radius: 5px;
     margin-bottom: 50px;
+    box-shadow: 0 16px 32px 0 rgba(0,0,0,2.2), 0 6px 20px 0 rgba(0,0,0,0.19);
 } 
+
 #navigacija{    
     padding: 0rem 1rem;
 }
@@ -123,7 +160,7 @@ li{
     margin: 0 auto;
 }
 .wrapper-main2{
-    padding-top: 100px;
+    padding-top: 90px;
     width: 90%;
     margin: 0 auto;
 }
@@ -230,6 +267,40 @@ input.form-control.mr-sm-2{
 #tablica{
     margin-bottom: 0px;
 }
+
+table.table-bordered{
+    border:2px solid rgb(60, 93, 131);
+    margin-top:20px;
+  }
+table.table-bordered > thead > tr > th{
+    border:2px solid rgb(60, 93, 131);
+}
+table.table-bordered > tbody > tr > td{
+    border:2px solid rgb(60, 93, 131);
+}
+table.table-bordered > tbody > tr > td{
+    border:2px solid rgb(60, 93, 131);
+}
+
+#retci_tablice{
+    border:2px solid rgb(60, 93, 131);
+}
+#c1 {
+    background-color: rgb(163, 209, 216);
+}
+#c2 {
+    background-color: rgb(221, 175, 180);
+}
+#c3 {
+    background-color: rgb(213, 193, 132);
+}
+#c4 {
+    background-color: rgb(221, 175, 180);
+}
+#c5 {
+    background-color: rgb(126, 182, 139);
+}
+
 #slobunos{
     width: 111px;
     height: 25px;
@@ -297,7 +368,18 @@ margin-left: 5px;
     float: right;
     margin-left: 10px;
 }
-
+#padajuciTest {
+    margin-top: 10px;
+    margin-bottom: 20px;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    z-index: -1;
+}
+#podsjPadajuci{
+    margin-top: -40px;
+    margin-bottom: 20px;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    z-index: -1;
+}
 
 #redni_broj{
     width: 40px;
@@ -309,6 +391,7 @@ margin-left: 5px;
 }
 #gumbInfo{
     margin-top: 10px;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
 }
 #infoTablicaIzgled{
     position: absolute;
@@ -317,4 +400,41 @@ margin-left: 5px;
     margin-bottom: 0px;
     bottom: 10px;
     left: 250px;
+    box-shadow: 0 16px 32px 0 rgba(0,0,0,2.2), 0 6px 20px 0 rgba(0,0,0,0.19);
 }
+
+#prosjekTablica{
+    position: inherit;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    z-index: 1;
+    margin-top: -35;
+}
+
+#ocjena {
+    right: 10px;
+    margin-top: 10px;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+
+#maliProsjek{
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    margin-top: -30px;
+    float: right;
+    border-top-right-radius: 5px;
+    border-top-left-radius: 15px;
+    border-bottom-right-radius: 50px;
+    border-bottom-left-radius: 5px;
+    background-color: #208036;
+    border-color: #7dac87;
+}
+
+.footer {
+    position: fixed;
+    left: 5px;
+    bottom: 0;
+    width: 100%;
+    background-color: transparent;
+    color: rgb(204, 200, 200);
+    text-align: left;
+    height: 15px;
+ }

@@ -10,5 +10,5 @@ if (!$korisnik) {
 
 $id = intval($_GET["userId"]);
 
-pobrisi_info($id, $konekcija);
+pobrisi_ocjenu($id, $konekcija);
 header("Location: ulogiran.php");

@@ -50,6 +50,11 @@ function dohvati_raspored($id, $konekcija){
     return $konekcija->query($sql)->fetchALL();
 }
 
+function dohvati_nultiSat($id, $konekcija){
+    $sql = "SELECT ponedjeljak, utorak, srijeda, cetvrtak, petak FROM raspored WHERE $id = fk_uid AND (sat = '0.' OR sat = 'akt1' OR sat = 'akt2')";
+    return $konekcija->query($sql)->fetchAll();
+}
+
 function brisi_raspored($id, $konekcija)
 {
     $sql = "DELETE FROM raspored WHERE  fk_uid=?";
@@ -89,6 +94,35 @@ function dohvati_info($id, $konekcija)
 function pobrisi_info($id, $konekcija)
 {
     $sql = "DELETE FROM informacije WHERE fk_uid=?";
+    $upit = $konekcija->prepare($sql);
+    return $upit->execute([$id]);
+}
+
+function dodaj_ocjenu($predmetOcj, $ocjena, $korisnik, $konekcija)
+{
+    $sql = "INSERT INTO ocjene VALUES (null, ?, ?, ?)";
+    $upit = $konekcija->prepare($sql);
+    return $upit->execute([$predmetOcj, $ocjena, $korisnik]);
+}
+function dohvati_ocjene($id, $konekcija)
+{
+    $sql = "SELECT predmet, ROUND(AVG(ocjena),2) FROM ocjene WHERE $id = fk_uid GROUP BY predmet"; //AND $predmetOcj = predmet
+    return $konekcija->query($sql)->fetchAll();
+}
+function dohvati_ocjOdDna($id, $konekcija)
+{
+    $sql = "SELECT predmet, ROUND(AVG(ocjena),2) FROM ocjene WHERE $id = fk_uid GROUP BY predmet ORDER BY ROUND(AVG(ocjena),2) ASC LIMIT 2"; //AND $predmetOcj = predmet
+    return $konekcija->query($sql)->fetchAll();
+}
+function dohvati_prosjek($id, $konekcija)
+{
+    $sql = "SELECT ROUND(AVG(ocjena),2) FROM ocjene WHERE $id = fk_uid"; //AND $predmetOcj = predmet
+    return $konekcija->query($sql)->fetchAll();
+}
+
+function pobrisi_ocjenu($id, $konekcija)
+{
+    $sql = "DELETE FROM ocjene WHERE fk_uid=? ORDER BY oid DESC LIMIT 1";
     $upit = $konekcija->prepare($sql);
     return $upit->execute([$id]);
 }

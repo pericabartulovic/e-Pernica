@@ -1075,3 +1075,6 @@ data-toggle="tooltip2" title="Izbrisati raspored?"
 
 
 <a id="upozorenje2" type="submit" class="btn btn-outline-danger open-button" data-toggle="tooltip2" title="Izbrisati tablicu informacija?" href="brisi_info.php?userId=<?php echo $id;?>" onclick="return confirm('Sigurno želite izbristati tablicu informacija?')">🗑️</a>
+
+
+SELECT r.sat, r.ponedjeljak, r.utorak, r.srijeda, r.cetvrtak, r.petak, u.idUsers FROM raspored r, users u WHERE u.idUsers = r.fk_uid AND (r.sat = '0.' OR r.sat = 'akt1' OR r.sat = 'akt2')
