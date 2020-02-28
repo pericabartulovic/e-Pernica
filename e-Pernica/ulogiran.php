@@ -302,7 +302,7 @@ $korisnik = provjeri_korisnika($konekcija);
 
                 <div id="sveOkoUpozorenja"> <button type="button" id="infoPodsjGumb" class="btn btn-lg desno btn-warning" data-toggle="collapse" data-target="#podsjetnikPadajuci" aria-expanded="false" aria-controls="collapseExample">Podsjetnici</button>
                     <div id="okoUpozorenja">
-                        <button id="upozorenjeOb" type="button" class="btn btn-warning" data-toggle="tooltip" title="Broj obveza u narednih 5 dana! *⏰⏱️=>obveza sutra ili extra sati!">
+                        <button id="upozorenjeOb" type="button" class="btn btn-warning" data-toggle="tooltip" title="Broj obveza u narednih 5 dana! *⏰⏱️=>obveza danas/sutra ili extra sati!">
                             <?php
                             $datumDanas = date("Y-m-d"); // $danDanas = date('l');
                             $datumSutra = new DateTime('tomorrow');
@@ -311,7 +311,7 @@ $korisnik = provjeri_korisnika($konekcija);
                             foreach ($obavijest as $vj) {
                                 $datumObavijesti = ($vj["datumob"]);
                                 $razlikaDana = ((strtotime($datumObavijesti) - strtotime($datumDanas)) / 60 / 60 / 24); //pretvara stringove u timestamp i onda računa dane (u ovom slučaju)
-                                if ($razlikaDana == 1) {
+                                if ($razlikaDana <= 1) {
                                     echo "⏱️";
                                     $brojac2 = ""; ?> <script>
                                         $("#upozorenjeOb").css({
