@@ -1632,7 +1632,7 @@ $korisnik = provjeri_korisnika($konekcija);
         <div class="meniDesno">
             <div id="grupaDesno" role="group" aria-label="Group of buttons">
                 <!-- izbrisana classa class="btn-group-vertical" -->
-                <div id="sveOkoUpozorenja"> <button type="button" class="btn btn-lg lijevo btn-primary"  data-toggle="collapse" data-target="#prosjekPadajuci" aria-expanded="false" aria-controls="collapseExample" title="Ovo je tvoj ukupni prosjek. Za detaljnije klikni!"><?php foreach ($prosjek as $pro){echo "Prosjek: ".$pro["0"];};?></button>
+                <div id="sveOkoUpozorenja2"> <button id="prosjekGumb" type="button" class="btn btn-lg lijevo btn-primary"  data-toggle="collapse" data-target="#prosjekPadajuci" aria-expanded="false" aria-controls="collapseExample" title="Ovo je tvoj ukupni prosjek. Za detaljnije klikni!"><?php foreach ($prosjek as $pro){echo "Prosjek: ".$pro["0"];};?></button>
                     <div id="okoUpozorenja">
                         <div id="plus4"><button id="plusGumb" type="button" class="btn btn-outline-primary open-button " data-toggle="tooltip" title="Unesi novu ocjenu" onclick="openFormOcjena()">+</button>
                             <div class="form-popup shadow-lg p-3 mb-5 bg-white rounded" id="ocjena">

@@ -72,6 +72,11 @@ body, html {
 #sveOkoUpozorenja{
     float: left;
 }
+#sveOkoUpozorenja2{
+    float: left;
+    margin-right: 25px;
+}
+
 #okoUpozorenja{
     float: right;
     margin-left: 3px;
@@ -137,6 +142,7 @@ body, html {
     border-bottom-right-radius: 50px;
     border-bottom-left-radius: 5px;
     margin-bottom: 50px;
+    margin-right: 15px;
     box-shadow: 0 16px 32px 0 rgba(0,0,0,2.2), 0 6px 20px 0 rgba(0,0,0,0.19);
 } 
 
@@ -372,13 +378,11 @@ margin-left: 5px;
     margin-top: 10px;
     margin-bottom: 20px;
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
-    z-index: -1;
 }
 #podsjPadajuci{
     margin-top: -40px;
     margin-bottom: 20px;
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
-    z-index: -1;
 }
 
 #redni_broj{
@@ -420,12 +424,16 @@ margin-left: 5px;
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
     margin-top: -30px;
     float: right;
+    font-size: initial;
     border-top-right-radius: 5px;
     border-top-left-radius: 15px;
     border-bottom-right-radius: 50px;
     border-bottom-left-radius: 5px;
     background-color: #208036;
     border-color: #7dac87;
+}
+#prosjekGumb{
+    margin-right: 0;
 }
 
 .footer {
