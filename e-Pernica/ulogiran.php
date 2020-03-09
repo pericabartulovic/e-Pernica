@@ -311,7 +311,7 @@ $korisnik = provjeri_korisnika($konekcija);
                             foreach ($obavijest as $vj) {
                                 $datumObavijesti = ($vj["datumob"]);
                                 $razlikaDana = ((strtotime($datumObavijesti) - strtotime($datumDanas)) / 60 / 60 / 24); //pretvara stringove u timestamp i onda računa dane (u ovom slučaju)
-                                if ($razlikaDana <= 1) {
+                                if ($razlikaDana >= 0 && $razlikaDana <= 1) {
                                     echo "⏱️";
                                     $brojac2 = ""; ?> <script>
                                         $("#upozorenjeOb").css({
