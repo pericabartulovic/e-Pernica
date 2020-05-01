@@ -22,7 +22,7 @@ body, html {
 .meniLijevo {
     width: 20%;
     float: left;
-    padding: 15px;
+    padding: 40px;
   }
 
 .okvir_upozorenja{
@@ -55,7 +55,6 @@ body, html {
     float: right;
 }
 
-
 #upozorenjeOb{
     margin-bottom: 3px;
     padding: 0px 8px;
@@ -76,7 +75,6 @@ body, html {
     float: left;
     margin-right: 25px;
 }
-
 #okoUpozorenja{
     float: right;
     margin-left: 3px;
@@ -92,7 +90,6 @@ body, html {
 #plus3{margin-top: 25px;}
 #plus4{
     margin-top: 20px; margin-left: -5px;
-
 }
 
 #plusGumb{
@@ -115,16 +112,18 @@ body, html {
 .meniDesno {
     width: 20%;
     float: right;
-    padding: 15px;
+    padding: 15px 0px 15px 75px;
+    margin-top: 25px;
   }
-#grupaDesno{
+/* #grupaDesno{
     float: right;
-}
+} */
 
 #sredisnji {
     width: 55%;
     float: left;
     padding-bottom: 0px;
+    margin-left: 35;
 }
 
 .btn.btn-lg.desno{
@@ -166,7 +165,7 @@ li{
     margin: 0 auto;
 }
 .wrapper-main2{
-    padding-top: 90px;
+    padding-top: 50px;
     width: 90%;
     margin: 0 auto;
 }
@@ -398,13 +397,16 @@ margin-left: 5px;
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
 }
 #infoTablicaIzgled{
-    position: absolute;
     float: left;
     padding-bottom: 20px;
     margin-bottom: 0px;
     bottom: 10px;
     left: 250px;
     box-shadow: 0 16px 32px 0 rgba(0,0,0,2.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+#infoUcitPada{
+    margin-bottom: -350;
+    margin-left: 200px;
 }
 
 #prosjekTablica{
@@ -424,7 +426,6 @@ margin-left: 5px;
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
     margin-top: -30px;
     float: right;
-    font-size: initial;
     border-top-right-radius: 5px;
     border-top-left-radius: 15px;
     border-bottom-right-radius: 50px;
@@ -434,6 +435,11 @@ margin-left: 5px;
 }
 #prosjekGumb{
     margin-right: 0;
+}
+#zaPop
+{
+    margin-left: 5px;
+    z-index: 3;
 }
 
 .footer {
