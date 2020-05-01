@@ -21,7 +21,7 @@ session_start();
     <header class="sticky-top">
         <nav id="navigacija" class="navbar navbar-dark bg-dark">
             <ul class="nav">
-                <li><img src="img/avatar2.png" alt="logo" height="48" width="60"></li>
+                <li class="nav-item"><a href="index.php"><img src="img/avatar2.png" alt="logo" height="48" width="60"></a></li>
                 <li class="nav-item"><a class="nav-link active" href="ulogiran.php">e-Pernica</a></li>
 
             </ul>
