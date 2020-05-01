@@ -304,7 +304,7 @@ $korisnik = provjeri_korisnika($konekcija);
                 <div id="sveOkoUpozorenja">
                     <button type="button" id="infoPodsjGumb" class="btn btn-lg desno btn-warning" data-toggle="collapse" data-target="#podsjetnikPadajuci" aria-expanded="false" aria-controls="collapseExample">Podsjetnici</button>
                     <div id="okoUpozorenja">
-                        <button id="upozorenjeOb" type="button" class="btn btn-warning" data-toggle="tooltip" title="Broj obveza u narednih 5 dana! *⏰⏱️=>obveza danas/sutra ili extra sati!">
+                        <button id="upozorenjeOb" type="button" class="btn btn-warning" data-toggle="tooltip" title="Broj obveza u narednih 5 dana! *⏰=>predsat ili kontraturnus ⏱️=>obveza danas/sutra!">
                             <?php
                             $datumDanas = date("Y-m-d"); // $danDanas = date('l');
                             $datumSutra = new DateTime('tomorrow');
