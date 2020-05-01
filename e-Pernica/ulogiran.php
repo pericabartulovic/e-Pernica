@@ -186,7 +186,7 @@ $korisnik = provjeri_korisnika($konekcija);
     $info = dohvati_info($id, $konekcija);
     ?>
     <?php
-    if ((isset($_POST["predmetOcj"]))){
+    if ((isset($_POST["predmetOcj"]))) {
         $korisnik = $_SESSION["userId"];
         $predmetOcj = $_POST["predmetOcj"];
         $ocjena = $_POST["ocjena"];
@@ -199,6 +199,7 @@ $korisnik = provjeri_korisnika($konekcija);
     $ocjene = dohvati_ocjene($id, $konekcija);
     $prosjek = dohvati_prosjek($id, $konekcija);
     $zapopr = dohvati_ocjOdDna($id, $konekcija);
+    $zapopr2 = dohvati_ocjOdDnaPredz($id, $konekcija);
     ?>
 
 
@@ -444,7 +445,7 @@ $korisnik = provjeri_korisnika($konekcija);
 
                 <!-- <button type="button" class="btn btn-lg btn-warning" data-toggle="popover" title="Ne zaboravi..." data-content="">Kontraturnus</button> -->
 
-                <div id="sveOkoUpozorenja"> 
+                <div id="sveOkoUpozorenja">
                     <button type="button" id="infoProfGumb" class="btn btn-lg desno btn-info" data-toggle="collapse" data-target="#infoUcitPada" aria-expanded="false" aria-controls="collapseExample">Info učitelja</button>
                     <div id="okoUpozorenja">
                         <div id="plus3"><button id="plusGumb" type="button" class="btn btn-outline-info open-button " data-toggle="tooltip" title="Unesi informacije učitelja" onclick="openFormInfo()">+</button>
@@ -613,33 +614,33 @@ $korisnik = provjeri_korisnika($konekcija);
                     </div>
                 </div>
                 <div class="collapse" id="infoUcitPada">
-                        <div id="infoTablicaIzgled" class="shadow-lg p-3 mb-5 bg-white rounded">
-                            <table class="table table-bordered">
-                                <thead class="bg-dark text-white">
-                                    <tr>
-                                        <th scope="col">Učitelj</th>
-                                        <th scope="col">Dan</th>
-                                        <th scope="col">Sat</th>
+                    <div id="infoTablicaIzgled" class="shadow-lg p-3 mb-5 bg-white rounded">
+                        <table class="table table-bordered">
+                            <thead class="bg-dark text-white">
+                                <tr>
+                                    <th scope="col">Učitelj</th>
+                                    <th scope="col">Dan</th>
+                                    <th scope="col">Sat</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <?php
+                                foreach ($info as $inf) {
+                                ?>
+                                    <tr id="retci_tablice" class="bg-info text-dark">
+                                        <td><?php echo $inf["1"]; ?></td>
+                                        <td><?php echo $inf["2"]; ?></td>
+                                        <td><?php echo $inf["3"]; ?></td>
                                     </tr>
-                                </thead>
-                                <tbody>
-                                    <?php
-                                    foreach ($info as $inf) {
-                                    ?>
-                                        <tr id="retci_tablice" class="bg-info text-dark">
-                                            <td><?php echo $inf["1"]; ?></td>
-                                            <td><?php echo $inf["2"]; ?></td>
-                                            <td><?php echo $inf["3"]; ?></td>
-                                        </tr>
 
-                                    <?php
-                                    }
-                                    ?>
-                                </tbody>
-                            </table>
-                            <a id="upozorenje2" type="submit" class="btn btn-outline-danger open-button" data-toggle="tooltip2" title="Izbrisati tablicu informacija?" href="brisi_info.php?userId=<?php echo $id; ?>" onclick="return confirm('Sigurno želite izbristati tablicu informacija?')">🗑️</a>
-                        </div>
+                                <?php
+                                }
+                                ?>
+                            </tbody>
+                        </table>
+                        <a id="upozorenje2" type="submit" class="btn btn-outline-danger open-button" data-toggle="tooltip2" title="Izbrisati tablicu informacija?" href="brisi_info.php?userId=<?php echo $id; ?>" onclick="return confirm('Sigurno želite izbristati tablicu informacija?')">🗑️</a>
                     </div>
+                </div>
 
                 <!-- <button type="button" class="btn btn-lg btn-info">Info učitelja</button> -->
             </div>
@@ -1607,7 +1608,7 @@ $korisnik = provjeri_korisnika($konekcija);
                         <th id="c2" scope="col" class="table-danger">Utorak</th>
                         <th id="c3" scope="col" class="table-warning">Srijeda</th>
                         <th id="c4" scope="col" class="table-danger">Četvrtak</th>
-                        <th id="c5" scope="col"class="table-success">Petak</th>
+                        <th id="c5" scope="col" class="table-success">Petak</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -1633,7 +1634,9 @@ $korisnik = provjeri_korisnika($konekcija);
         <div class="meniDesno">
             <div id="grupaDesno" role="group" aria-label="Group of buttons" class="btn-group-vertical">
                 <!-- izbrisana classa class="btn-group-vertical" -->
-                <div id="sveOkoUpozorenja2"> <button id="prosjekGumb" type="button" class="btn btn-lg lijevo btn-primary" data-toggle="collapse" data-target="#prosjekPadajuci" aria-expanded="false" aria-controls="collapseExample" title="Ovo je tvoj ukupni prosjek. Za detaljnije klikni!"><?php foreach ($prosjek as $pro){echo "Prosjek: ".$pro["0"];};?></button>
+                <div id="sveOkoUpozorenja2"> <button id="prosjekGumb" type="button" class="btn btn-lg lijevo btn-primary" data-toggle="collapse" data-target="#prosjekPadajuci" aria-expanded="false" aria-controls="collapseExample" title="Ovo je tvoj ukupni prosjek. Za detaljnije klikni!"><?php foreach ($prosjek as $pro) {
+                                                                                                                                                                                                                                                                                                    echo "Prosjek: " . $pro["0"];
+                                                                                                                                                                                                                                                                                                }; ?></button>
                     <div id="okoUpozorenja">
                         <div id="plus4"><button id="plusGumb" type="button" class="btn btn-outline-primary open-button " data-toggle="tooltip" title="Unesi novu ocjenu" onclick="openFormOcjena()">+</button>
                             <div class="form-popup shadow-lg p-3 mb-5 bg-white rounded" id="ocjena">
@@ -1730,10 +1733,17 @@ $korisnik = provjeri_korisnika($konekcija);
                 </div>
                 <div>
                     <button type="button" class="btn btn-lg lijevo btn-success">Za popravak...</button>
+                    <!--role="group" aria-label="Group of buttons" class="btn-group-vertical"-->
                     <div id="zaPop">
-                        <?php foreach ($zapopr as $popr){?><button id="maliProsjek" type="button" class="btn btn-sm lijevo btn-success"><?php echo $popr["0"].": ".$popr["1"];};?></button>
+                        <?php foreach ($zapopr as $popr) { ?><button id="maliProsjek" type="button" class="btn btn-sm lijevo btn-success"><?php echo $popr["0"] . ": " . $popr["1"];
+                                                                                                                                    }; ?></button>
                     </div>
-                </div>       
+                    <div id="zaPop2">
+                        <?php foreach ($zapopr2 as $popr) { ?><button id="maliProsjek2" type="button" class="btn btn-sm lijevo btn-success"><?php echo $popr["0"] . ": " . $popr["1"];
+                                                                                                                                        }; ?></button>
+                    </div>
+                </div>
+
             </div>
         </div>
     </div>

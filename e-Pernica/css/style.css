@@ -424,23 +424,36 @@ margin-left: 5px;
 
 #maliProsjek{
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    position: relative;
     margin-top: -30px;
-    float: right;
+    margin-left: 15px;
     border-top-right-radius: 5px;
     border-top-left-radius: 15px;
     border-bottom-right-radius: 50px;
     border-bottom-left-radius: 5px;
     background-color: #208036;
-    border-color: #7dac87;
+    border-color: #4c6b53;
 }
+#maliProsjek2{
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    margin-top: -5px;
+    margin-left: 50px;
+    border-top-right-radius: 5px;
+    border-top-left-radius: 15px;
+    border-bottom-right-radius: 50px;
+    border-bottom-left-radius: 5px;
+    background-color: #1a6b2d;
+    border-color: #165e27;
+}
+
 #prosjekGumb{
     margin-right: 0;
 }
-#zaPop
+/* #zaPop
 {
     margin-left: 5px;
-    z-index: 3;
-}
+    
+} */
 
 .footer {
     position: fixed;

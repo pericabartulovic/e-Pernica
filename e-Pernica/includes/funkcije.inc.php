@@ -109,9 +109,15 @@ function dohvati_ocjene($id, $konekcija)
     $sql = "SELECT predmet, ROUND(AVG(ocjena),2) FROM ocjene WHERE $id = fk_uid GROUP BY predmet"; //AND $predmetOcj = predmet
     return $konekcija->query($sql)->fetchAll();
 }
+//za zadnju i predzadnju ocjenu po prosjeku
 function dohvati_ocjOdDna($id, $konekcija)
 {
-    $sql = "SELECT predmet, ROUND(AVG(ocjena),2) FROM ocjene WHERE $id = fk_uid GROUP BY predmet ORDER BY ROUND(AVG(ocjena),2) ASC LIMIT 2"; //AND $predmetOcj = predmet
+    $sql = "SELECT predmet, ROUND(AVG(ocjena),2) FROM ocjene WHERE $id = fk_uid GROUP BY predmet ORDER BY ROUND(AVG(ocjena),2) ASC LIMIT 1"; //AND $predmetOcj = predmet
+    return $konekcija->query($sql)->fetchAll();
+}
+function dohvati_ocjOdDnaPredz($id, $konekcija)
+{
+    $sql = "SELECT predmet, ROUND(AVG(ocjena),2) FROM ocjene WHERE $id = fk_uid GROUP BY predmet ORDER BY ROUND(AVG(ocjena),2) ASC LIMIT 1, 1"; //AND $predmetOcj = predmet
     return $konekcija->query($sql)->fetchAll();
 }
 function dohvati_prosjek($id, $konekcija)
