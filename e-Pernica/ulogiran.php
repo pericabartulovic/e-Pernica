@@ -207,7 +207,7 @@ $korisnik = provjeri_korisnika($konekcija);
         <div class="meniLijevo">
             <div role="group" aria-label="Group of buttons" class="btn-group-vertical">
                 <!-- izbrisana classa class="btn-group-vertical" -->
-                <div id="sveOkoUpozorenja"> <button class="btn btn-lg desno btn-danger" type="button" data-toggle="collapse" data-target="#testoviPadajuci" aria-expanded="false" aria-controls="collapseExample">
+                <div id="sveOkoUpozorenja"> <button id="infoTestGumb" class="btn btn-lg desno btn-danger" type="button" data-toggle="collapse" data-target="#testoviPadajuci" aria-expanded="false" aria-controls="collapseExample">
                         Pozor testovi</button>
                     <div id="okoUpozorenja">
                         <button id="upozorenje" type="button" class="btn btn-danger" data-toggle="tooltip" title="Broj ispita u narednih 5 dana! *⚠️ = danas ili sutra ispit!">
