@@ -23,7 +23,6 @@ session_start();
             <ul class="nav">
                 <li class="nav-item"><a href="index.php"><img src="img/avatar2.png" alt="logo" height="48" width="60"></a></li>
                 <li class="nav-item"><a class="nav-link active" href="ulogiran.php">e-Pernica</a></li>
-
             </ul>
             <div id="login_out_upozorenje2">
                 <h3>
@@ -33,4 +32,7 @@ session_start();
                     }
                     ?>
                 </h3>
+            </div>
+            <div>
+                <button id="gumbLoginProf"class="btn btn-outline-info btn-sm" onclick="window.location.href = 'loginProf.php';">Login za učitelje</button>
             </div>

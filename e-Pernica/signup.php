@@ -14,13 +14,13 @@ require "header.php";
                 } elseif ($_GET["error"] == "invaliduidmail") {
                     echo '<p style="margin-left: 5px; color: crimson">Neispravno korisničko ime i lozinka!</p>';
                 } elseif ($_GET["error"] == "invaliduid") {
-                    echo '<p style="margin-left: 5px; color: crimson">Neispravno korisničko ime!</p>';
+                    echo '<p style="margin-left: 5px; color: crimson">Neispravna forma imena i prezimena!</p>';
                 } elseif ($_GET["error"] == "invalidmail") {
                     echo '<p style="margin-left: 5px; color: crimson">Neispravan e-mail format!</p>';
                 } elseif ($_GET["error"] == "passwordcheck") {
                     echo '<p style="margin-left: 5px; color: crimson">Vaše lozinke se ne podudaraju!</p>';
                 } elseif ($_GET["error"] == "usertaken") {
-                    echo '<p style="margin-left: 5px; color: crimson">Korisničko ime se već koristi!</p>';
+                    echo '<p style="margin-left: 5px; color: crimson">Korisnik već postoji! Dodajte slovo ili broj po želji.</p>';
                 }
               } 
               elseif (isset($_GET["signup"])) {
@@ -33,7 +33,7 @@ require "header.php";
             ?>
             <form id="sakrij" action="includes/signup.inc.php" method="post">
                 <div class="form-group">
-                    <input type="text" name="uid" placeholder="Korisničko ime">
+                    <input type="text" name="ucImePrez" placeholder="Ime i prezime">
                 </div>
                 <div class="form-group">
                     <input type="text" name="mail" placeholder="E-mail">

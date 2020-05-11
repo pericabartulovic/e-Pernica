@@ -18,6 +18,12 @@ body, html {
     background-repeat: no-repeat;
     background-size: contain;
 }
+.trecaPoz{  
+    background-image: url("treca.png");
+    height: 100%; 
+    background-position: center;
+    background-size: contain;
+}
 
 .meniLijevo {
     width: 20%;
@@ -184,7 +190,7 @@ li{
     margin-bottom: 0px;
 }
 .wrapper-main{
-    padding-top: 250px;
+    padding-top: 215px;
     width: 300px;
     margin: 0 auto;
 }
@@ -218,9 +224,13 @@ a#signupbutton:hover{
     color: mintcream;
     border-radius: 2px;
 }
-.wrapper-main{
-    margin-top: 10px;
+
+.btn.btn-outline-info.my-2.my-sm-0
+{
+    padding-top: 2px;
+    padding-bottom: 2px;
 }
+
 a.nav-link.active{
     color: seashell;
     padding: 0.5rem 0rem 0.5rem 1rem;

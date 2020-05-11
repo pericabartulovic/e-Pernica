@@ -2,7 +2,7 @@
 if (isset($_POST['signup-submit'])) {
     require 'dbh.inc.php';
 
-    $username = $_POST['uid'];
+    $username = $_POST['ucImePrez'];
     $email = $_POST['mail'];
     $password = $_POST['pwd'];
     $passwordPonovi = $_POST['pwd-ponovi'];
@@ -10,15 +10,15 @@ if (isset($_POST['signup-submit'])) {
     if (/* empty */!($username) || (!$email) || (!$password) || (!$passwordPonovi)) {
         header("Location: ../signup.php?error=emptyfields&uid=" . $username . "&mail=" . $email);
         exit();
-    } elseif (!filter_var($email, FILTER_VALIDATE_EMAIL) && !preg_match("/^[a-zA-Z0-9]*$/", $username)) {
+/*     } elseif (!filter_var($email, FILTER_VALIDATE_EMAIL) && !preg_match("/^[a-zA-Z0-9_-]*$/", $username)) {
         header("Location: ../signup.php?error=invalidmailuid");
-        exit();
+        exit(); */
     } elseif (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
         header("Location: ../signup.php?error=invalidmail&uid=" . $username);
         exit();
-    } elseif (!preg_match("/^[a-zA-Z0-9]*$/", $username)) {
+/*     } elseif (!preg_match("/^[a-zA-Z0-9]*$/", $username)) {
         header("Location: ../signup.php?error=invaliduid&mail=" . $email);
-        exit();
+        exit(); */
     } elseif ($password !== $passwordPonovi) {
         header("Location: ../signup.php?error=passwordcheck&uid=" . $username . "&mail=" . $email);
         exit();

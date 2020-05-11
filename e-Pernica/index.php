@@ -28,7 +28,8 @@ require "header.php";
                         <button class="btn btn-outline-info btn-sm" type="submit" name="login-submit">Login</button>
                     </form>
                     <a id="signupbutton" href="#">AAI@EduHr prijava</a> <br>
-                    <a id="signupbutton" href="signup.php">Registracija</a>';
+                    <a id="signupbutton" href="signup.php">Registracija za učenike</a> <br>
+                    <a id="signupbutton" href="signupprof.php">Registracija za učitelje</a>';
         }
         ?>
     </div>

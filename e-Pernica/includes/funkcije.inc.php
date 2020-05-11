@@ -32,6 +32,17 @@ function provjeri_korisnika($konekcija)
     return $korisnik;
 }
 
+function provjeri_profesora($konekcija)
+{
+    $sql = "SELECT * FROM profesori WHERE pid=? AND pwd=?";
+    $upit = $konekcija->prepare($sql);
+    if (!isset($_SESSION["pid"])) return false;
+    $upit->execute([$_SESSION["pid"], $_SESSION["pwd"]]);
+    $profesor = $upit->fetch();
+    if (!isset($profesor["pid"])) return false;
+    return $profesor;
+}
+
 function pobrisi_test($id, $konekcija)
 {
     $sql = "DELETE FROM testovi WHERE id=?";

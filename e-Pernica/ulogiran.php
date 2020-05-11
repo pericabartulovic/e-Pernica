@@ -6,20 +6,26 @@ $korisnik = provjeri_korisnika($konekcija);
 ?>
 
 <div>
+    <script>
+        $("#gumbLoginProf").css({
+            "display": "none"
+        });
+    </script>
     <?php
     if (isset($_SESSION['userId'])) {
         echo '<form id="logOutGumb" class="form-inline" action="includes/logout.inc.php" method="post">
                         <button class="btn btn-outline-info my-2 my-sm-0" type="submit" name="logout-submit">Logout</button>
                         </form>';
-    } /* else {
-            echo '<form class="form-inline" action="includes/login.inc.php" method="post">
-                        <input class="form-control mr-sm-2" type="text" name="mailuid" placeholder="korisničko ime...">
-                        <input class="form-control mr-sm-2" type="password" name="pwd" placeholder="lozinka...">
-                        <button class="btn btn-outline-info" type="submit" name="login-submit">Login</button>
-                        </form>
-                        <a id="signupbutton" href="signup.php">Registracija</a>';
-        } */
+    } else {
+        echo '<div id="login_out_upozorenje2">
+            <h5>
+            Niste ulogirani! Idite na početni zaslon 👥 
+            </h5>
+        </div>';
+        exit();
+    }
     ?>
+
 </div>
 </nav>
 </header>
@@ -1736,7 +1742,7 @@ $korisnik = provjeri_korisnika($konekcija);
                     <!--role="group" aria-label="Group of buttons" class="btn-group-vertical"-->
                     <div id="zaPop">
                         <?php foreach ($zapopr as $popr) { ?><button id="maliProsjek" type="button" class="btn btn-sm lijevo btn-success"><?php echo $popr["0"] . ": " . $popr["1"];
-                                                                                                                                    }; ?></button>
+                                                                                                                                        }; ?></button>
                     </div>
                     <div id="zaPop2">
                         <?php foreach ($zapopr2 as $popr) { ?><button id="maliProsjek2" type="button" class="btn btn-sm lijevo btn-success"><?php echo $popr["0"] . ": " . $popr["1"];
